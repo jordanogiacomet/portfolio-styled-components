@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeroSection /> should match snapshot 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.c1 {
+  grid-column: span 1;
+}
+
+.c1.self-center {
+  place-self: center;
+}
+
+.c1.text-center {
+  text-align: center;
+}
+
+.c1.mt-4 {
+  margin-top: 5rem;
+}
+
+.c10 {
+  grid-column: span 1;
+}
+
+.c10.self-center {
+  place-self: center;
+}
+
+.c10.text-center {
+  text-align: center;
+}
+
+.c10.mt-4 {
+  margin-top: 5rem;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.c5 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.c3 {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c7 {
+  padding: 1rem 1.5rem;
+  border-radius: 9999px;
+  color: #FFFFFF;
+  background: linear-gradient(to bottom right, blue, purple, pink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+}
+
+.c7:hover {
+  background-color: slategray;
+}
+
+.c8 {
+  padding: 0.4rem;
+  border-radius: 9999px;
+  color: #FFFFFF;
+  background: linear-gradient(to bottom right, blue, purple, pink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+}
+
+.c8:hover {
+  background-color: darkslategray;
+}
+
+.c9 {
+  display: block;
+  background-color: #121212;
+  border-radius: 9999px;
+  padding: 1rem 3rem;
+}
+
+.c9:hover {
+  background-color: darkslategray;
+}
+
+.c11 {
+  border-radius: 9999px;
+  background-color: #181818;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.c11 img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+.c6 {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .c0 {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .c1 {
+    grid-column: span 7;
+  }
+}
+
+@media (min-width: 640px) {
+  .c1 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1.mt-4 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .c10 {
+    grid-column: span 5;
+  }
+}
+
+@media (min-width: 640px) {
+  .c10 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c10.mt-4 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .c2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c2 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .c5 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c5 {
+    font-size: 2rem;
+  }
+}
+
+@media ((max-width: 640px)) {
+  .c7 {
+    width: 100%;
+  }
+}
+
+@media ((max-width: 640px)) {
+  .c8 {
+    width: 100%;
+  }
+}
+
+@media ((max-width: 640px)) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c11 {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+<div>
+  <section>
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+        span="7"
+      >
+        <h1
+          class="c2"
+        >
+          <span
+            class="c3"
+          >
+            Hello, I'm
+             
+          </span>
+          <span
+            class="index-module_type__E-SaG c4 animated-text"
+          />
+        </h1>
+        <p
+          class="c5"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!
+        </p>
+        <div
+          class="c6"
+        >
+          <button
+            class="c7"
+            type="hireMe"
+          >
+            Hire Me
+          </button>
+          <button
+            class="c8"
+            type="downloadCV"
+          >
+            <span
+              class="c9"
+              type="downloadCV"
+            >
+              Download CV
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c10 self-center mt-4"
+        span="5"
+      >
+        <div
+          class="c11"
+        >
+          <img
+            alt="hero image"
+            src="/images/hero-image.png"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

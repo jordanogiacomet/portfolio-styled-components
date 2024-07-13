@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeroContainer /> should match snapshot 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .c0 {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      Test
+    </div>
+  </div>
+</div>
+`;

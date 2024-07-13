@@ -1,7 +1,7 @@
 import { renderTheme } from '../../styles/render-theme';
 import { ImageWrapper } from '.';
 import { screen } from '@testing-library/react';
-import 'jest-styled-components';
+
 
 describe('<ImageWrapper />', () => {
   it('should render ImageWrapper with children', () => {
@@ -28,5 +28,10 @@ describe('<ImageWrapper />', () => {
     expect(wrapper).toHaveStyleRule('width', '250px');
     expect(wrapper).toHaveStyleRule('height', '250px');
     expect(wrapper).toHaveStyleRule('position', 'relative');
+  });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<ImageWrapper><img src="/images/hero-image.png" alt="hero image" /></ImageWrapper>);
+
+    expect(container).toMatchSnapshot();
   });
 });

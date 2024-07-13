@@ -12,4 +12,9 @@ describe('<HeroContainer />', () => {
     const element = screen.getByText('Test');
     expect(element).toBeInTheDocument();
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<HeroContainer><div>Test</div></HeroContainer>);
+
+    expect(container).toMatchSnapshot();
+  });
 });

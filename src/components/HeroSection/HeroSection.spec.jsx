@@ -12,4 +12,9 @@ describe('<HeroSection />', () => {
     expect(screen.getByAltText('hero image')).toBeInTheDocument();
     expect(screen.getByText('Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!')).toBeInTheDocument();
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<HeroSection />);
+
+    expect(container).toMatchSnapshot();
+  })
 });
