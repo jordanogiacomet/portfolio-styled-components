@@ -6,6 +6,8 @@ export const Container = styled.div`
 
   @media ${({ theme }) => theme.media.sm} {
     grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 5rem;
   }
 `;
 
@@ -28,7 +30,7 @@ export const Col = styled.div`
   };
 
   &.mt-4 {
-    margin-top: 1rem;
+    margin-top: 5rem;
 
     @media ${({ theme }) => theme.media.lg} {
       margin-top: 0;

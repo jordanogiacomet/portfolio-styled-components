@@ -4,7 +4,7 @@ export const Container = styled.p`
   ${({ theme, $colorDark }) => css`
     font-size: ${theme.font.sizes.base};
     color: ${$colorDark ? theme.colors.primaryColor : theme.colors.white};
-  
+    margin-bottom: 20px;
     @media ${theme.media.sm} {
       font-size: ${theme.font.sizes.lg};
     };

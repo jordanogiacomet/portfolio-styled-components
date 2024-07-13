@@ -9,6 +9,9 @@ const getInnerButtonStyles = ({ theme, type }) => {
   &:hover {
     background-color: ${buttonType.hoverBgColor}
   };
+  @media (${theme.media.lteMedium}) {
+      width: 100%; /* Largura 100% em telas menores */
+    }
   ` : ''; 
 };
 

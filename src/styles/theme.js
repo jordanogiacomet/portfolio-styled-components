@@ -16,7 +16,7 @@ export const theme = {
     sizes: {
       xsmall: '0.8rem',
       small: '1.6rem',
-      base: '1rem', // text-base
+      base: '1.5rem', // text-base
       lg: '1.8rem', // text-lg
       xl: '2rem', // text-xl
       medium: '2.4rem',
@@ -28,7 +28,7 @@ export const theme = {
     },
   },
   media: {
-    lteMedium: '(max-width: 768px)',
+    lteMedium: '(max-width: 640px)',
     sm: '(min-width: 640px)', // Adicionando breakpoint sm
     md: '(min-width: 768px)', // Adicionando breakpoint md
     lg: '(min-width: 1024px)', // Adicionando breakpoint lg
@@ -71,13 +71,13 @@ export const theme = {
       hoverBgColor: 'slategray',
     },
     downloadCV: {
-      padding: '0.5rem',
+      padding: '0.4rem',
       borderRadius: '9999px',
       textColor: '#FFFFFF',
       background: 'linear-gradient(to bottom right, blue, purple, pink)',
       hoverBgColor: 'darkslategray',
       innerBgColor: '#121212',
-      innerPadding: '1rem 2rem',
+      innerPadding: '1rem 3rem',
     },
   },
 };
