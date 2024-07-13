@@ -9,7 +9,7 @@ export const Heading = ({
   uppercase = false, 
 }) => {
   return (
-    <Styled.Title as={as} colorDark={colorDark} size={size} uppercase={uppercase}>
+    <Styled.Title as={as} $colorDark={colorDark} size={size} $uppercase={uppercase}>
       {children}
     </Styled.Title>
   );
