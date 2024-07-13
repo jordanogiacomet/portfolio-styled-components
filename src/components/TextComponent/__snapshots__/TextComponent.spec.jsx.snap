@@ -1,9 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextComponent /> should match snapshot 1`] = `
+.c0 {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+@media (min-width: 640px) {
+  .c0 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c0 {
+    font-size: 2rem;
+  }
+}
+
 <div>
   <p
-    class="sc-aYaIB bhhkfF"
+    class="c0"
   >
     texto
   </p>

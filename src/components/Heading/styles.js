@@ -17,19 +17,19 @@ const titleSize = {
 };
 
 const mediaFont = (theme) => css`
-  @media ${theme.media.lteMedium}{
+  @media ${theme.media.lteMedium} {
     font-size: ${theme.font.sizes.xbig};
-  };
+  }
 `;
 
-const titleCase = (uppercase) => css`
-  text-transform: ${uppercase ? 'uppercase' : 'none'};
+const titleCase = ($uppercase) => css`
+  text-transform: ${$uppercase ? 'uppercase' : 'none'};
 `;
 
 export const Title = styled.h1`
-  ${({ theme, colorDark, size, uppercase}) => css`
-    color: ${colorDark ? theme.colors.primaryColor : theme.colors.white};
-    ${titleSize[size](theme)};
-    ${titleCase(uppercase)}
+  ${({ theme, $colorDark, $size, $uppercase }) => css`
+    color: ${$colorDark ? theme.colors.primaryColor : theme.colors.white};
+    ${titleSize[$size](theme)};
+    ${titleCase($uppercase)}
   `}
 `;

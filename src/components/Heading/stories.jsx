@@ -5,9 +5,20 @@ export default {
   component: Heading,
   args: {
     children: 'O texto está escuro',
+    colorDark: true,
+    size: 'huge',
+    uppercase: false,
   },
   argTypes: {
     children: { type: 'string' },
+    colorDark: { control: 'boolean' },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'big', 'huge'],
+      },
+    },
+    uppercase: { control: 'boolean' },
   },
   parameters: {
     backgrounds: {
@@ -16,8 +27,8 @@ export default {
   },
 };
 
-export const Light = (args) => <Heading {...args} />
-export const Dark = (args) => <Heading {...args} />
+export const Light = (args) => <Heading {...args} />;
+export const Dark = (args) => <Heading {...args} />;
 
 Light.parameters = {
   backgrounds: {
@@ -25,9 +36,7 @@ Light.parameters = {
   },
 };
 
-Dark.parameters = {
-  backgrounds: {
-    default: 'dark',
-    children: 'O texto está claro',
-  },
+Dark.args = {
+  colorDark: false,
+  children: 'O texto está claro',
 };

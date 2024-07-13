@@ -3,7 +3,7 @@ import * as Styled from './styles';
 
 export const TextComponent = ({ children, colorDark=false }) => {
   return (
-    <Styled.Container colorDark={colorDark}>
+    <Styled.Container $colorDark={colorDark}>
       {children}
     </Styled.Container>
   );

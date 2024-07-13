@@ -1,15 +1,14 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Button = ({ children, type="default", ...props }) => {
+export const Title = ({ children }) => {
   return (
-    <Styled.Container type={type} {...props}>
+    <Styled.Container>
       {children}
     </Styled.Container>
   );
 };
 
-Button.propTypes = {
+Title.propTypes = {
   children: P.node.isRequired,
-  type: P.string,
 };
