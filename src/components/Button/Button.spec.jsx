@@ -17,6 +17,10 @@ describe('<Button />', () => {
     expect(container.firstChild).toHaveStyleRule('border-radius', theme.button.default.borderRadius);
     expect(container.firstChild).toHaveStyleRule('color', theme.button.default.textColor);
     expect(container.firstChild).toHaveStyleRule('background', theme.button.default.background);
+    expect(container.firstChild).toHaveStyleRule('display', 'inline-flex');
+    expect(container.firstChild).toHaveStyleRule('align-items', 'center');
+    expect(container.firstChild).toHaveStyleRule('justify-content', 'center');
+    expect(container.firstChild).toHaveStyleRule('min-width', '150px');
   });
   it('should apply hireMe button styles', () => {
     const { container } = renderTheme(<Button type="hireMe">Hire me</Button>)
