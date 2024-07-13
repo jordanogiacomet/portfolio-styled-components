@@ -22,4 +22,9 @@ describe('<GradientText />', () => {
 
     expect(container.firstChild).toHaveStyleRule('background', 'linear-gradient(to right, #121212, #ffffff, #f2f2f2)');
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<GradientText>texto</GradientText>);
+
+    expect(container).toMatchSnapshot();
+  });
 });

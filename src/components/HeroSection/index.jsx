@@ -1,8 +1,8 @@
-import P from 'prop-types';
-import * as Styled from './styles';
+/* eslint-disable react/no-unescaped-entities */
+
 import { HeroContainer } from '../HeroContainer';
 import { Col } from '../HeroContainer/styles';
-import { AnimatedText } from '../TypeAnimation';
+import { AnimatedText } from '../AnimatedText';
 import { Title } from '../Title';
 import { TextComponent } from '../TextComponent'; 
 import { GradientText } from '../GradientText';

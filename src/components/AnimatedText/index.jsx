@@ -1,9 +1,9 @@
-import P from 'prop-types';
 import * as Styled from './styles';
 
 export const AnimatedText = () => {
   return (
     <Styled.Container
+    className="animated-text"
     sequence={[
       'Jordano',
       1000,

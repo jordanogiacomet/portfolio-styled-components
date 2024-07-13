@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GradientText /> should match snapshot 1`] = `
+.c0 {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+<div>
+  <span
+    class="c0"
+  >
+    texto
+  </span>
+</div>
+`;

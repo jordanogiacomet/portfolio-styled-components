@@ -1,7 +1,7 @@
 import { renderTheme } from '../../styles/render-theme';
 import { Title } from '.';
 import { screen } from '@testing-library/react';
-import { theme } from '../../styles/theme';
+
 
 describe('<Title />', () => {
   it('should render title with children', () => {
