@@ -1,7 +1,7 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const GradientText = ({ children, from="#a855f7", via="#ec4899", to="#f87171" }) => {
+export const GradientText = ({ children, from, via, to }) => {
   return (
     <Styled.Container from={from} via={via} to={to}>
       {children}
