@@ -1,7 +1,7 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const InnerButton = ({ children, type="default" }) => {
+export const InnerButton = ({ children, type="downloadCV" }) => {
   return (
     <Styled.Container type={type}>
       {children}
