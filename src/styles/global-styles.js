@@ -11,10 +11,14 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 1.6rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  button {
     font-family: 'Montserrat', sans-serif;
   }
 `;

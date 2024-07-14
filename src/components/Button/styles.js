@@ -7,6 +7,7 @@ const getButtonStyles = ({ theme, type }) => {
     border-radius: ${buttonType.borderRadius};
     color: ${buttonType.textColor};
     background: ${buttonType.background};
+    font-weight: bold;
     cursor: pointer; 
     display: inline-flex;
     align-items: center;

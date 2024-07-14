@@ -28,7 +28,7 @@ export const theme = {
     },
   },
   media: {
-    lteMedium: '(max-width: 640px)',
+    lteMedium: '(max-width: 768px)',
     sm: '(min-width: 640px)', // Adicionando breakpoint sm
     md: '(min-width: 768px)', // Adicionando breakpoint md
     lg: '(min-width: 1024px)', // Adicionando breakpoint lg
