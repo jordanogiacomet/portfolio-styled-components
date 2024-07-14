@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuButton } from './MenuButton';
+import { MenuButton } from '.';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 export default {

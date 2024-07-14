@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuOverlay } from './MenuOverlay';
+import { MenuOverlay } from '.';
 
 const navLinks = [
   {
@@ -21,6 +21,11 @@ export default {
   component: MenuOverlay,
   argTypes: {
     links: { control: 'object' },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
   },
 };
 

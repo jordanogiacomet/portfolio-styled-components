@@ -9,6 +9,11 @@ export default {
     srcImg: { control: 'text' },
     link: { control: 'text' },
   },
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
+  },
 };
 
 const Template = (args) => <LogoLink {...args} />;
