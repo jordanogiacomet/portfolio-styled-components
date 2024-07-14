@@ -8,9 +8,10 @@ export const Container = styled.a`
   padding-right: 1rem;  /* pr-4 */
   color: #ADB7BE;  /* text-[#ADB7BE] */
   border-radius: 0.375rem;  /* rounded */
+  text-decoration: none;
 
   @media (${({theme}) => theme.media.sm}) {  /* sm:text-xl */
-    font-size: 1.25rem;
+    font-size: 1.8rem;
   }
 
   @media (${({theme}) => theme.media.md}) {  /* md:p-0 */
