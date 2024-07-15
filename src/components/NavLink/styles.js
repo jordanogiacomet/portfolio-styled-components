@@ -10,9 +10,11 @@ export const Container = styled.a`
   border-radius: 0.375rem;  /* rounded */
   text-decoration: none;
   transition: ease-in-out 0.3s;
-  margin-left: 15px;
   &:hover{
     color: #4169E1;
+  }
+  @media (min-width: 768px) {
+    margin-left: 15px;
   }
 
   @media (${({theme}) => theme.media.sm}) {  /* sm:text-xl */

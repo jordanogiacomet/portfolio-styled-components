@@ -6,6 +6,7 @@ const getInnerButtonStyles = ({ theme, type }) => {
   background-color: ${buttonType.innerBgColor};
   border-radius: ${buttonType.borderRadius};
   padding: ${buttonType.innerPadding};
+  transition: ease-in-out 0.3s;
   &:hover {
     background-color: ${buttonType.hoverBgColor}
   };
