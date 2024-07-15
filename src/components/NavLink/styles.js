@@ -9,6 +9,11 @@ export const Container = styled.a`
   color: #ADB7BE;  /* text-[#ADB7BE] */
   border-radius: 0.375rem;  /* rounded */
   text-decoration: none;
+  transition: ease-in-out 0.3s;
+  margin-left: 15px;
+  &:hover{
+    color: #4169E1;
+  }
 
   @media (${({theme}) => theme.media.sm}) {  /* sm:text-xl */
     font-size: 1.8rem;

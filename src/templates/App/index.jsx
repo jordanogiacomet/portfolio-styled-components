@@ -1,3 +1,4 @@
+import { AboutSection } from '../../components/AboutSection';
 import { HeroSection } from '../../components/HeroSection';
 import { HomeContainer } from '../../components/HomeContainer';
 import { Navbar } from '../../components/Navbar';
@@ -10,6 +11,7 @@ function Home() {
         <Navbar />
         <HomeContainer>
           <HeroSection />
+          <AboutSection />
         </HomeContainer>
       </Styled.Wrapper>
     </div>

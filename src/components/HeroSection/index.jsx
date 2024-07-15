@@ -17,7 +17,7 @@ export const HeroSection = () => {
       <HeroContainer>
         <Col span={7}>
           <Title>
-            <GradientText>
+            <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
               Hello, I'm{" "}
             </GradientText>
             <AnimatedText />
@@ -37,7 +37,7 @@ export const HeroSection = () => {
         <Col span={5} className="self-center mt-4">
             <ImageWrapper>
               <img
-                src="/images/hero-image.png"
+                src="/images/hero_avatar.png"
                 alt="hero image"
               />
             </ImageWrapper>

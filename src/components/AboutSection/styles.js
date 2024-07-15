@@ -2,15 +2,18 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   color: white;
-  padding: 8px 4px;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 16px 16px;
+    gap: 50px;
+    align-items: center;
+    margin-top: 80px;
   }
   @media (min-width: 1280px) {
-    gap: 16px;
-    padding: 16px;
+    gap: 50px;
+
   };
 `;
