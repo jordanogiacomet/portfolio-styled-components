@@ -1,7 +1,6 @@
 import React from 'react';
 import { AboutImageWrapper } from '.';
-import { StyledImage } from '../StyledImage';
-import { renderTheme } from '../../styles/render-theme';
+import { StyledImage } from '../StyledImage/styles';
 
 export default {
   title: 'AboutImageWrapper',
@@ -13,7 +12,7 @@ export default {
   },
 };
 
-const Template = (args) => renderTheme(
+const Template = (args) => (
   <AboutImageWrapper {...args}>
     <StyledImage src='/images/casual-image.webp' alt='About image' />
   </AboutImageWrapper>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AboutSection } from '.';
-import { renderTheme } from '../../styles/render-theme';
+
 
 export default {
   title: 'AboutSection',
@@ -12,7 +12,7 @@ export default {
   },
 };
 
-const Template = (args) => renderTheme(<AboutSection {...args} />);
+const Template = (args) => <AboutSection {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

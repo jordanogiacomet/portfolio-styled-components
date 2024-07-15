@@ -1,6 +1,6 @@
 import React from 'react';
 import { AboutButton } from '.';
-import { renderTheme } from '../../styles/render-theme';
+
 
 export default {
   title: 'AboutButton',
@@ -17,16 +17,11 @@ export default {
   },
 };
 
-const Template = (args) => renderTheme(<AboutButton {...args} />);
+const Template = (args) => <AboutButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Skills',
+  children: 'Button Text',
   active: false,
-};
-
-export const Active = Template.bind({});
-Active.args = {
-  children: 'Skills',
-  active: true,
+  selectTab: () => alert('Button clicked'),
 };

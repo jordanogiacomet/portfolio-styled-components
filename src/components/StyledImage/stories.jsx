@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledImage } from '.';
-import { renderTheme } from '../../styles/render-theme';
+import { StyledImage } from './styles';
+
 
 export default {
   title: 'StyledImage',
@@ -16,7 +16,7 @@ export default {
   },
 };
 
-const Template = (args) => renderTheme(<StyledImage {...args} />);
+const Template = (args) => <StyledImage {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
