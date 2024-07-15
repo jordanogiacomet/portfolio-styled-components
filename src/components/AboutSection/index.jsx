@@ -68,11 +68,11 @@ export const AboutSection = () => {
       <AboutImageWrapper>
         <StyledImage src='/images/casual-image.webp' alt='About image'/>
       </AboutImageWrapper>
-      <TextContainer>
+      <TextContainer type="about">
         <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-          <Heading as='h2' size='small' colorDark={false}>About Me</Heading>
+          <Heading as='h2' size='medium' colorDark={false}>About Me</Heading>
         </GradientText>
-        <TextComponent>
+        <TextComponent type="about">
         I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
         I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
         </TextComponent>
