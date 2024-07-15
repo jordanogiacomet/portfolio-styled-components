@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should match snapshot 1`] = `
+.c0 {
+  list-style-type: disc;
+  padding-left: 0.5rem;
+}
+
+.c0 >li {
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .c0 {
+    font-size: 1.5rem;
+  }
+}
+
+<div>
+  <ul
+    class="c0"
+  >
+    <li>
+      text
+    </li>
+  </ul>
+</div>
+`;

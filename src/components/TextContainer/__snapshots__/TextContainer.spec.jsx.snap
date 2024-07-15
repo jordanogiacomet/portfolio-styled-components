@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextContainer /> should match snapshot 1`] = `
+.c0 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .c0 {
+    margin-top: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      Test
+    </div>
+  </div>
+</div>
+`;

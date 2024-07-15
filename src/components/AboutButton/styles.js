@@ -34,7 +34,7 @@ export const Container = styled.button`
   ${({ active }) =>
     active &&
     css`
-      color: lightblue;
+      color: #1E90FF;
       &::after{
         width: 100%;
       }
