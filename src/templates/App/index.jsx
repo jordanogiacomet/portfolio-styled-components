@@ -1,4 +1,5 @@
 import { AboutSection } from '../../components/AboutSection';
+import { EmaiLSection } from '../../components/EmailSection';
 import { HeroSection } from '../../components/HeroSection';
 import { HomeContainer } from '../../components/HomeContainer';
 import { Navbar } from '../../components/Navbar';
@@ -14,6 +15,7 @@ function Home() {
           <HeroSection />
           <AboutSection />
           <ProjectSection />
+          <EmaiLSection />
         </HomeContainer>
       </Styled.Wrapper>
     </div>

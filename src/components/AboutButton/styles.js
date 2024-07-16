@@ -4,7 +4,7 @@ export const Container = styled.button`
   background: transparent;
   position: relative;
   border: none;
-  color: white;
+  color: #ADB7BE;
   margin-right: 12px;
   cursor: pointer;
   padding: 0.5rem 1rem;

@@ -13,8 +13,10 @@ const getButtonStyles = ({ theme, type }) => {
     align-items: center;
     justify-content: center;
     min-width: 150px; /* Ajuste a largura mínima conforme necessário */
+    transition: scale ease-in-out 0.2s;
     &:hover {
-      background-color: ${buttonType.hoverBgColor};
+      transition: scale ease-in-out 0.2s;
+      scale: calc(1.03);
     };
 
     @media (${theme.media.lteMedium}) {
