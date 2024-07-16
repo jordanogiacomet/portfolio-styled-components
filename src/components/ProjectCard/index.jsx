@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import P from 'prop-types';
 import * as Styled from './styles';
 import { ImageContainer } from '../ImageContainer';
@@ -12,15 +13,10 @@ export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
     <Styled.Container>
       <ImageContainer imgUrl={imgUrl}>
         <ProjectOverlay>
-          <Link href={gitUrl} className="group">
-              <CodeBracketIcon className="icon"/>
-            </Link>
-            <Link href={previewUrl} className="group">
-              <EyeIcon className="icon"/>
-          </Link>
+          
         </ProjectOverlay>  
         <ProjectContent>
-          <Heading colorDark={false} size='small'>{title}</Heading>
+          <Heading colorDark={false} size='small' zIndex='2'>{title}</Heading>
         </ProjectContent>
       </ImageContainer>
     </Styled.Container>

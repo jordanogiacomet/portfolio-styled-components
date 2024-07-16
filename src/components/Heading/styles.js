@@ -26,10 +26,15 @@ const titleCase = ($uppercase) => css`
   text-transform: ${$uppercase ? 'uppercase' : 'none'};
 `;
 
+const zIndex = ($zIndex) => css`
+  z-index: ${$zIndex ? '2' : 'none'};
+`
+
 export const Title = styled.h1`
-  ${({ theme, $colorDark, $size, $uppercase }) => css`
+  ${({ theme, $colorDark, $size, $uppercase, $zIndex }) => css`
     color: ${$colorDark ? theme.colors.primaryColor : theme.colors.white};
     ${titleSize[$size](theme)};
-    ${titleCase($uppercase)}
+    ${titleCase($uppercase)};
+    ${zIndex($zIndex)};
   `}
 `;
