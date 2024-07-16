@@ -3,15 +3,19 @@ import styled from 'styled-components';
 export const Container = styled.a`
   height: 3.5rem;
   width: 3.5rem;
-  margin-right: 0.5rem;
   border: 0.125rem solid #adb7be;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: border-color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+
   &:hover {
     border-color: white;
+
     .icon {
       color: white;
     }
@@ -22,5 +26,15 @@ export const Container = styled.a`
     width: 2.5rem;
     color: #adb7be;
     transition: color 0.3s ease-in-out;
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.hide {
+    visibility: hidden;
+    opacity: 0;
   }
 `;
