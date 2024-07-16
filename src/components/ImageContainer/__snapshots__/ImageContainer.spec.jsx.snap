@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageContainer /> should match snapshot 1`] = `
+.c0 {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: url(/test.jpg) no-repeat center center/cover;
+  position: relative;
+  height: 100%;
+}
+
+<div>
+  <div
+    class="c0"
+    imgurl="/test.jpg"
+  >
+    Content
+  </div>
+</div>
+`;

@@ -27,14 +27,4 @@ export const Container = styled.a`
     color: #adb7be;
     transition: color 0.3s ease-in-out;
   }
-
-  &.show {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  &.hide {
-    visibility: hidden;
-    opacity: 0;
-  }
 `;

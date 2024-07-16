@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectCard /> should match snapshot 1`] = `
+.c0 {
+  width: 300px;
+  height: 300px;
+  background: #181818;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.c0:hover {
+  transform: scale(1.05);
+}
+
+.c4 {
+  position: absolute;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out,visibility 0.3s ease-in-out;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: 50%;
+  width: 100%;
+  line-break: auto;
+  font-size: 2.5rem;
+}
+
+.c4.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.c4.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c1 {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: url(/test.jpg) no-repeat center center/cover;
+  position: relative;
+  height: 100%;
+}
+
+.c3 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 0.125rem solid #adb7be;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border-color 0.3s ease-in-out,visibility 0.2s ease-in-out,opacity 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c3:hover {
+  border-color: white;
+}
+
+.c3:hover .icon {
+  color: white;
+}
+
+.c3 .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #adb7be;
+  transition: color 0.3s ease-in-out;
+}
+
+.c2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 24, 24, 0.8);
+  z-index: 1;
+}
+
+.c2.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c2:hover a {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out,visibility 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .c4 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .c4 {
+    bottom: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+      imgurl="/test.jpg"
+    >
+      <div
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="/git"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a
+          class="c3"
+          href="/preview"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+      <h2
+        class="c4 show"
+      >
+        Test Project
+      </h2>
+    </div>
+  </div>
+</div>
+`;

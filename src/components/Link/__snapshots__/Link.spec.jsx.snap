@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> should match snapshot 1`] = `
+.c0 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 0.125rem solid #adb7be;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border-color 0.3s ease-in-out,visibility 0.2s ease-in-out,opacity 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c0:hover {
+  border-color: white;
+}
+
+.c0:hover .icon {
+  color: white;
+}
+
+.c0 .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #adb7be;
+  transition: color 0.3s ease-in-out;
+}
+
+<div>
+  <a
+    class="c0"
+    href="/test"
+  >
+    Content
+  </a>
+</div>
+`;

@@ -1,12 +1,9 @@
-/* eslint-disable no-unused-vars */
 import P from 'prop-types';
 import { useState } from 'react';
 import * as Styled from './styles';
 import { ImageContainer } from '../ImageContainer';
 import { Link } from '../Link'; // Certifique-se de que está importando corretamente
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline';
-import { ProjectContent } from '../ProjectContent';
-import { Heading } from './styles';
 import { ProjectOverlay } from '../ProjectOverlay';
 
 export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {

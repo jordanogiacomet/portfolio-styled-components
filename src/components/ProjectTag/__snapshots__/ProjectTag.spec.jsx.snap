@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectTag /> should match snapshot 1`] = `
+.c0 {
+  background: transparent;
+  border: 2px solid #ADB7BE;
+  color: #ADB7BE;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.c0:hover {
+  border-color: #4169E1;
+  color: #4169E1;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Test
+  </div>
+</div>
+`;
