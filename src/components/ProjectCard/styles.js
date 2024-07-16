@@ -10,6 +10,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
   @media(max-width: 768px){
     width: 100%;
   }
@@ -18,7 +22,7 @@ export const Container = styled.div`
 export const Heading = styled.h2`
   position: absolute;
   z-index: 2;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   color: white;
   text-align: center;
   overflow: hidden;
@@ -26,6 +30,7 @@ export const Heading = styled.h2`
   top: 50%;
   width: 100%;
   line-break: auto;
+  font-size: 2.5rem;
   @media(max-width: 768px){
     width: 100%;
   }

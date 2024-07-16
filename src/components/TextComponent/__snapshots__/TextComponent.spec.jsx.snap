@@ -5,6 +5,7 @@ exports[`<TextComponent /> should match snapshot 1`] = `
   font-size: 1.5rem;
   color: #FFFFFF;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 @media (min-width: 640px) {
@@ -22,6 +23,7 @@ exports[`<TextComponent /> should match snapshot 1`] = `
 <div>
   <p
     class="c0"
+    type="default"
   >
     texto
   </p>

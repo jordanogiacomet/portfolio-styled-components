@@ -53,10 +53,11 @@ exports[`<HeroSection /> should match snapshot 1`] = `
   font-size: 1.5rem;
   color: #FFFFFF;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .c3 {
-  background: linear-gradient(to right, #a855f7, #ec4899);
+  background: linear-gradient(to right, #1E90FF, #4169E1, #00008B);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -65,7 +66,8 @@ exports[`<HeroSection /> should match snapshot 1`] = `
   padding: 1rem 1.5rem;
   border-radius: 9999px;
   color: #FFFFFF;
-  background: linear-gradient(to bottom right, blue, purple, pink);
+  background: linear-gradient(to bottom right, #1E90FF, #4169E1, #00008B);
+  font-weight: bold;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -81,7 +83,8 @@ exports[`<HeroSection /> should match snapshot 1`] = `
   padding: 0.4rem;
   border-radius: 9999px;
   color: #FFFFFF;
-  background: linear-gradient(to bottom right, blue, purple, pink);
+  background: linear-gradient(to bottom right, #1E90FF, #4169E1, #00008B);
+  font-weight: bold;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -90,7 +93,7 @@ exports[`<HeroSection /> should match snapshot 1`] = `
 }
 
 .c8:hover {
-  background-color: darkslategray;
+  background-color: slategray;
 }
 
 .c9 {
@@ -98,10 +101,11 @@ exports[`<HeroSection /> should match snapshot 1`] = `
   background-color: #121212;
   border-radius: 9999px;
   padding: 1rem 3rem;
+  transition: ease-in-out 0.3s;
 }
 
 .c9:hover {
-  background-color: darkslategray;
+  background-color: slategray;
 }
 
 .c11 {
@@ -197,19 +201,19 @@ exports[`<HeroSection /> should match snapshot 1`] = `
   }
 }
 
-@media ((max-width: 640px)) {
+@media ((max-width: 768px)) {
   .c7 {
     width: 100%;
   }
 }
 
-@media ((max-width: 640px)) {
+@media ((max-width: 768px)) {
   .c8 {
     width: 100%;
   }
 }
 
-@media ((max-width: 640px)) {
+@media ((max-width: 768px)) {
   .c9 {
     width: 100%;
   }
@@ -219,6 +223,12 @@ exports[`<HeroSection /> should match snapshot 1`] = `
   .c11 {
     width: 400px;
     height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c6 {
+    flex-direction: column;
   }
 }
 
@@ -236,6 +246,9 @@ exports[`<HeroSection /> should match snapshot 1`] = `
         >
           <span
             class="c3"
+            from="#1E90FF"
+            to="#00008B"
+            via="#4169E1"
           >
             Hello, I'm
              
@@ -246,8 +259,9 @@ exports[`<HeroSection /> should match snapshot 1`] = `
         </h1>
         <p
           class="c5"
+          type="default"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!
+          Hello! Im a technology enthusiast with a deep love for programming. I believe in the power of technology to transform ideas into reality and improve our world. Every challenge I face in the world of coding is a chance to not only develop innovative solutions, but also to develop as a professional and individual.
         </p>
         <div
           class="c6"
@@ -280,7 +294,7 @@ exports[`<HeroSection /> should match snapshot 1`] = `
         >
           <img
             alt="hero image"
-            src="/images/hero-image.png"
+            src="/images/hero_avatar.png"
           />
         </div>
       </div>

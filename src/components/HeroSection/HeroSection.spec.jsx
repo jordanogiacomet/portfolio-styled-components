@@ -10,7 +10,7 @@ describe('<HeroSection />', () => {
     expect(screen.getByText('Hire Me')).toBeInTheDocument();
     expect(screen.getByText('Download CV')).toBeInTheDocument();
     expect(screen.getByAltText('hero image')).toBeInTheDocument();
-    expect(screen.getByText('Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio autem eveniet molestias, obcaecati nam ab numquam blanditiis ipsam minima odio quidem ea accusantium minus similique deleniti itaque rem. Ab!')).toBeInTheDocument();
+    expect(screen.getByText('Hello! Im a technology enthusiast with a deep love for programming. I believe in the power of technology to transform ideas into reality and improve our world. Every challenge I face in the world of coding is a chance to not only develop innovative solutions, but also to develop as a professional and individual.')).toBeInTheDocument();
   });
   it('should match snapshot', () => {
     const { container } = renderTheme(<HeroSection />);

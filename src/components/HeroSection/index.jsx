@@ -22,7 +22,7 @@ export const HeroSection = () => {
             </GradientText>
             <AnimatedText />
           </Title>
-          <TextComponent $colorDark={false}>👋 Hello! I'm a technology enthusiast with a deep love for programming. I believe in the power of technology to transform ideas into reality and improve our world. Every challenge I face in the world of coding is a chance to not only develop innovative solutions, but also to develop as a professional and individual.</TextComponent>
+          <TextComponent $colorDark={false}>Hello! Im a technology enthusiast with a deep love for programming. I believe in the power of technology to transform ideas into reality and improve our world. Every challenge I face in the world of coding is a chance to not only develop innovative solutions, but also to develop as a professional and individual.</TextComponent>
           <ButtonWrapper>
             <Button type="hireMe">
                   Hire Me

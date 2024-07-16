@@ -11,7 +11,6 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(24, 24, 24, 0.8);
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   z-index: 1;
 
   &.show {
@@ -22,6 +21,6 @@ export const Container = styled.div`
   &:hover a {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   }
 `;

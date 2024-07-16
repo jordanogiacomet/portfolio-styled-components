@@ -10,6 +10,17 @@ exports[`<NavLink /> should match snapshot 1`] = `
   color: #ADB7BE;
   border-radius: 0.375rem;
   text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
+
+.c0:hover {
+  color: #4169E1;
+}
+
+@media (min-width: 768px) {
+  .c0 {
+    margin-left: 15px;
+  }
 }
 
 @media ((min-width: 640px)) {

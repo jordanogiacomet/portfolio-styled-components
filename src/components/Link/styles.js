@@ -9,7 +9,7 @@ export const Container = styled.a`
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: border-color 0.3s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: border-color 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
   visibility: hidden;
   opacity: 0;
 

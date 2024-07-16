@@ -7,6 +7,7 @@ exports[`<NavContainer /> should match snapshot 1`] = `
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  margin: 1rem;
 }
 
 <div>
