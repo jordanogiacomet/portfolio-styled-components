@@ -26,6 +26,9 @@ export const Col = styled.div`
     text-align: center;
   };
 
+  &.text-element{
+    text-align: right !important;
+  }
 
   @media ${({ theme }) => theme.media.sm} {
     text-align: left;

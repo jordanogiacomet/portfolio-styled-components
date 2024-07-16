@@ -18,23 +18,6 @@ import { EmailButton } from '../EmailButton';
 export const EmaiLSection = () => {
   return (
     <Styled.Container>
-        <Styled.Col span={8} className='text-element'>
-          <Heading as='h5' size='medium'>
-              <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-                Let's connect
-              </GradientText>
-            </Heading>
-          <TextComponent>
-          {" "}
-            I'm currently looking for new opportunities, my inbox is always
-            open. Whether you have a question or just want to say hi, I&apos;ll
-            try my best to get back to you!
-          </TextComponent>
-          <Socials>
-            <Link href='/' className='mail-icons'><img src={GithubIcon}/></Link>
-            <Link href='/' className='mail-icons'><img src={LinkedinIcon}/></Link>
-          </Socials>
-        </Styled.Col>
         <Styled.Col span={4}>
           <Form>
             <Styled.FormDiv>
@@ -53,6 +36,23 @@ export const EmaiLSection = () => {
             <EmailButton type="submit">Send Message</EmailButton>
           </Styled.FormDiv>
           </Form>
+        </Styled.Col>
+        <Styled.Col span={8} className='text-element'>
+          <Heading as='h5' size='medium'>
+              <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
+                Let's connect
+              </GradientText>
+            </Heading>
+          <TextComponent>
+          {" "}
+            I'm currently looking for new opportunities, my inbox is always
+            open. Whether you have a question or just want to say hi, I&apos;ll
+            try my best to get back to you!
+          </TextComponent>
+          <Socials>
+            <Link href='/' className='mail-icons'><img src={GithubIcon}/></Link>
+            <Link href='/' className='mail-icons'><img src={LinkedinIcon}/></Link>
+          </Socials>
         </Styled.Col>
     </Styled.Container>
   );
