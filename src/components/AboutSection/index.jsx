@@ -83,7 +83,7 @@ export const AboutSection = () => {
           <Container type='tab-container'>
             <AboutButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</AboutButton>
             <AboutButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</AboutButton>
-            { /* <AboutButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</AboutButton> */}
+            <AboutButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</AboutButton>
           </Container>
           <TabContent>{TAB_DATA.find((t) => t.id === tab).content}</TabContent>
         </Container>
