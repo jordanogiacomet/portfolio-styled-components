@@ -64,6 +64,11 @@ exports[`<ProjectCard /> should match snapshot 1`] = `
   opacity: 0;
 }
 
+.c3.mail-icons {
+  opacity: 1!important;
+  visibility: visible!important;
+}
+
 .c3:hover {
   border-color: white;
 }
@@ -138,6 +143,7 @@ exports[`<ProjectCard /> should match snapshot 1`] = `
     >
       <div
         class="c2"
+        type="project-overlay"
       >
         <a
           class="c3"

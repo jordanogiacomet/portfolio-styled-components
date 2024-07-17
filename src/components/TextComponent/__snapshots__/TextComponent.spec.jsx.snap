@@ -3,7 +3,7 @@
 exports[`<TextComponent /> should match snapshot 1`] = `
 .c0 {
   font-size: 1.5rem;
-  color: #FFFFFF;
+  color: #ADB7BE;
   margin-bottom: 20px;
   margin-top: 20px;
 }

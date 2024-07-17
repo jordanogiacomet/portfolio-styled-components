@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should match snapshot 1`] = `
+.c0 {
+  border-top: 1px solid #33353F;
+  border-left: transparent;
+  border-right: transparent;
+  z-index: 10;
+  color: white;
+  width: 100%;
+  background-color: #18191E;
+}
+
+.c1 {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c4 {
+  color: #9CA2A9;
+  font-size: 1.5rem;
+}
+
+.c3 {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.c3 >img {
+  max-height: 3rem;
+}
+
+.c2 {
+  color: #ADB7BE;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+<div>
+  <footer
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h1
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="/"
+        >
+          <span>
+            LOGO
+          </span>
+        </a>
+      </h1>
+      <p
+        class="c4"
+      >
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+</div>
+`;

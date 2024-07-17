@@ -1,0 +1,420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmaiLSection /> should match snapshot 1`] = `
+.c1 {
+  grid-column: span 1;
+}
+
+.c1.self-center {
+  place-self: center;
+}
+
+.c1.text-center {
+  text-align: center;
+}
+
+.c1.text-element {
+  text-align: right!important;
+  margin-left: 30px;
+}
+
+.c1.mt-4 {
+  margin-top: 5rem;
+}
+
+.c8 {
+  grid-column: span 1;
+}
+
+.c8.self-center {
+  place-self: center;
+}
+
+.c8.text-center {
+  text-align: center;
+}
+
+.c8.text-element {
+  text-align: right!important;
+  margin-left: 30px;
+}
+
+.c8.mt-4 {
+  margin-top: 5rem;
+}
+
+.c11 {
+  font-size: 1.5rem;
+  color: #ADB7BE;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.c13 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 0.125rem solid #adb7be;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border-color 0.3s ease-in-out,visibility 0.2s ease-in-out,opacity 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c13.mail-icons {
+  opacity: 1!important;
+  visibility: visible!important;
+}
+
+.c13:hover {
+  border-color: white;
+}
+
+.c13:hover .icon {
+  color: white;
+}
+
+.c13 .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #adb7be;
+  transition: color 0.3s ease-in-out;
+}
+
+.c12 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: right;
+}
+
+.c10 {
+  background: linear-gradient(to right, #1E90FF, #4169E1, #00008B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c9 {
+  color: #0A1128;
+  font-size: 3.2rem;
+  text-transform: none;
+  z-index: 2;
+}
+
+.c2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c4 {
+  color: white;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.c5 {
+  background: #18191E;
+  border: 1px solid #33353F;
+  color: #9CA2A9;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1.5rem;
+  display: block;
+}
+
+.c5:focus {
+  outline: none;
+  border-color: #1E90FF;
+}
+
+.c5::placeholder {
+  color: #9CA2A9;
+  font-size: 1.5rem;
+}
+
+.c6 {
+  background-color: #18191E;
+  border: 1px solid #33353F;
+  color: #9CA2A9;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  resize: vertical;
+  height: 200px;
+}
+
+.c6::placeholder {
+  color: #9CA2A9;
+  font-size: 1.5rem;
+}
+
+.c6:focus {
+  outline: none;
+  border-color: #1E90FF;
+}
+
+.c7 {
+  background: linear-gradient(to bottom right, #1E90FF, #4169E1, #00008B);
+  color: white;
+  font-weight: 500;
+  padding: 1rem 1.25rem;
+  border-radius: 10rem;
+  width: 100%;
+  transition: scale 0.2s ease-in-out;
+}
+
+.c7:hover {
+  background-color: #4169E1;
+  transition: scale ease-in-out 0.2s;
+  scale: calc(1.02);
+}
+
+.c7:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.5);
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 100px;
+}
+
+.c3 {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .c1 {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c1.form-element {
+    order: 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c1.text-element {
+    order: 1;
+    margin-left: 0px;
+    margin-bottom: 40px;
+    text-align: left!important;
+  }
+}
+
+@media (min-width: 640px) {
+  .c1 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1.mt-4 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .c8 {
+    grid-column: span 8;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c8.form-element {
+    order: 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c8.text-element {
+    order: 1;
+    margin-left: 0px;
+    margin-bottom: 40px;
+    text-align: left!important;
+  }
+}
+
+@media (min-width: 640px) {
+  .c8 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c8.mt-4 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .c11 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c11 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c12 {
+    justify-content: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .c0 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c0 {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+    type="email-section"
+  >
+    <div
+      class="c1 form-element"
+      span="4"
+    >
+      <form
+        class="c2"
+      >
+        <div
+          class="c3"
+          type="form-container"
+        >
+          <label
+            class="c4"
+            for="email"
+          >
+            Your email
+          </label>
+          <input
+            class="c5"
+            id="email"
+            name="email"
+            placeholder="user@example.com"
+            required=""
+            type="email"
+          />
+        </div>
+        <div
+          class="c3"
+          type="form-container"
+        >
+          <label
+            class="c4"
+            for="subject"
+          >
+            Your subject
+          </label>
+          <input
+            class="c5"
+            id="subject"
+            name="subject"
+            placeholder="Just saying hi"
+            required=""
+            type="text"
+          />
+        </div>
+        <div
+          class="c3"
+          type="form-container"
+        >
+          <label
+            class="c4"
+            for="message"
+          >
+            Your message
+          </label>
+          <textarea
+            class="c6"
+            id="message"
+            name="message"
+            placeholder="Lets talk about..."
+          />
+        </div>
+        <div
+          class="c3"
+          type="form-container"
+        >
+          <button
+            class="c7"
+            type="submit"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="c8 text-element"
+      span="8"
+    >
+      <h5
+        class="c9"
+      >
+        <span
+          class="c10"
+          from="#1E90FF"
+          to="#00008B"
+          via="#4169E1"
+        >
+          Let's connect
+        </span>
+      </h5>
+      <p
+        class="c11"
+        type="default"
+      >
+         
+        I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+      </p>
+      <div
+        class="c12"
+      >
+        <a
+          class="c13 mail-icons"
+          href="/"
+        >
+          <img
+            src="github-icon.svg"
+          />
+        </a>
+        <a
+          class="c13 mail-icons"
+          href="/"
+        >
+          <img
+            src="linkedin-icon.svg"
+          />
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;

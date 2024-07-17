@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should match snapshot 1`] = `
+.c0 {
+  background: #18191E;
+  border: 1px solid #33353F;
+  color: #9CA2A9;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1.5rem;
+  display: block;
+}
+
+.c0:focus {
+  outline: none;
+  border-color: #1E90FF;
+}
+
+.c0::placeholder {
+  color: #9CA2A9;
+  font-size: 1.5rem;
+}
+
+<div>
+  <input
+    class="c0"
+    id="email"
+    name="email"
+    placeholder="user@example.com"
+    required=""
+    type="email"
+  />
+</div>
+`;

@@ -3,6 +3,7 @@
 exports[`<TabContent /> should match snapshot 1`] = `
 .c0 {
   margin-top: 8px;
+  color: #ADB7BE;
 }
 
 <div>

@@ -1,27 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ProjectSection /> should match snapshot 1`] = `
-.c0 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-}
-
 .c2 {
-  color: #FFFFFF;
+  color: #ADB7BE;
   font-size: 3.2rem;
   text-transform: none;
   z-index: 2;
-}
-
-.c3 {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 5rem;
 }
 
 .c4 {
@@ -52,13 +36,6 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 .c5:hover {
   border-color: #4169E1;
   color: #4169E1;
-}
-
-.c6 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5rem;
 }
 
 .c7 {
@@ -164,6 +141,11 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   opacity: 0;
 }
 
+.c10.mail-icons {
+  opacity: 1!important;
+  visibility: visible!important;
+}
+
 .c10:hover {
   border-color: white;
 }
@@ -210,10 +192,27 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 768px) {
-  .c0 {
-    margin-top: 0;
-  }
+.c0 {
+  margin-top: 30px;
+  margin-bottom: 240px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.c3 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5rem;
+}
+
+.c6 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
 }
 
 @media (max-width: 768px) {
@@ -240,9 +239,22 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   }
 }
 
+@media (min-width: 768px) {
+  .c0 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c0 {
+    margin-bottom: 100px;
+  }
+}
+
 <div>
-  <div
+  <section
     class="c0"
+    type="projects-section"
   >
     <span
       class="c1"
@@ -258,6 +270,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
     </span>
     <div
       class="c3"
+      type="tag-container"
     >
       <div
         class="c4"
@@ -277,6 +290,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
     </div>
     <div
       class="c6"
+      type="card-container"
     >
       <div
         class="c7"
@@ -287,6 +301,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
         >
           <div
             class="c9"
+            type="project-overlay"
           >
             <a
               class="c10"
@@ -352,6 +367,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
         >
           <div
             class="c9"
+            type="project-overlay"
           >
             <a
               class="c10"
@@ -417,6 +433,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
         >
           <div
             class="c9"
+            type="project-overlay"
           >
             <a
               class="c10"
@@ -482,6 +499,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
         >
           <div
             class="c9"
+            type="project-overlay"
           >
             <a
               class="c10"
@@ -547,6 +565,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
         >
           <div
             class="c9"
+            type="project-overlay"
           >
             <a
               class="c10"
@@ -612,6 +631,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
         >
           <div
             class="c9"
+            type="project-overlay"
           >
             <a
               class="c10"
@@ -669,6 +689,6 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
