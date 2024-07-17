@@ -10,4 +10,7 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     margin-top: 0;
   }
+  @media(max-width: 1024px) {
+     margin-bottom: 100px;
+    };
 `;

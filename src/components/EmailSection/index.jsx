@@ -18,7 +18,7 @@ import { EmailButton } from '../EmailButton';
 export const EmaiLSection = () => {
   return (
     <Styled.Container>
-        <Styled.Col span={4}>
+        <Styled.Col span={4} className='form-element'>
           <Form>
             <Styled.FormDiv>
                 <Label htmlFor='email'>Your email</Label>

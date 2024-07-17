@@ -4,7 +4,7 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 
-  @media ${({ theme }) => theme.media.sm} {
+  @media ${({ theme }) => theme.media.lg} {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     justify-content: space-between;
@@ -26,8 +26,21 @@ export const Col = styled.div`
     text-align: center;
   };
 
+  &.form-element{
+    @media(max-width: 1024px) {
+      order: 2;
+    };
+  }
+
   &.text-element{
     text-align: right !important;
+    margin-left: 30px;
+    @media(max-width: 1024px) {
+      order: 1;
+      margin-left: 0px;
+      margin-bottom: 40px;
+      text-align: left !important;
+    };
   }
 
   @media ${({ theme }) => theme.media.sm} {
