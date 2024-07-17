@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Heading } from '../Heading';
 import { TagContainer } from '../TagContainer';
 import ProjectTag from '../ProjectTag';
-import { CardContainer } from '../CardContainer';
 import { ProjectCard } from '../ProjectCard';
 import { GradientText } from '../GradientText';
 import { Section } from '../Section';
+import { Container } from '../Container';
 
 
 const projectsData = [
@@ -84,11 +84,11 @@ export const ProjectSection = () => {
           <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
           <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
         </TagContainer>
-        <CardContainer>
-        {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
-          ))}
-        </CardContainer>
+        <Container type='card-container'>
+          {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
+            ))}
+        </Container>
       </Section>
   );
 };
