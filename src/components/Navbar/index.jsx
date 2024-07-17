@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Nav } from '../Nav';
-import { NavContainer } from '../NavContainer';
 import { LogoLink } from '../LogoLink';
 import { Menu } from '../Menu';
 import { NavLink } from '../NavLink';
@@ -9,6 +8,7 @@ import { MobileMenu } from '../MobileMenu';
 import { MenuButton } from '../MenuButton';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { MenuOverlay } from '../MenuOverlay';
+import { Container } from '../Container';
 
 
 const navLinks = [
@@ -30,7 +30,7 @@ export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <Nav>
-      <NavContainer>
+      <Container type='nav-container'>
         <LogoLink text="LOGO" link="/"/>
         <MobileMenu>
           {!navbarOpen ? (
@@ -51,8 +51,8 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
-      </Menu>
-      </NavContainer>
+       </Menu>
+      </Container>
       {navbarOpen && <MenuOverlay links={navLinks}/>}
     </Nav>
   );

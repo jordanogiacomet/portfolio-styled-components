@@ -1,10 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { AboutImageWrapper } from '../AboutImageWrapper';
-import { TextContainer } from '../TextContainer';
 import { Heading } from '../Heading';
 import { TextComponent } from '../TextComponent';
-import { TabContainerButton } from '../TabContainerButton';
 import { AboutButton } from '../AboutButton';
 import { useState, useTransition } from 'react';
 import { TabContent } from '../TabContent';
@@ -13,6 +10,7 @@ import { StyledImage } from '../StyledImage/styles';
 import { GradientText } from '../GradientText';
 import { Section } from '../Section';
 import { ImageWrapper } from '../ImageWrapper';
+import { Container } from '../Container';
 
 
 
@@ -69,7 +67,7 @@ export const AboutSection = () => {
       <ImageWrapper type='about-wrapper'>
         <StyledImage src='/images/casual-image.webp' alt='About image'/>
       </ImageWrapper>
-      <TextContainer type="about">
+      <Container type='text-container-about'>
         <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
           <Heading as='h2' size='medium' colorDark={false}>About Me</Heading>
         </GradientText>
@@ -77,13 +75,13 @@ export const AboutSection = () => {
         I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
         I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
         </TextComponent>
-        <TabContainerButton>
+        <Container type='tab-container'>
           <AboutButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</AboutButton>
           <AboutButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</AboutButton>
           <AboutButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</AboutButton>
-        </TabContainerButton>
+        </Container>
         <TabContent>{TAB_DATA.find((t) => t.id === tab).content}</TabContent>
-      </TextContainer>
+      </Container>
     </Section>
   );
 };

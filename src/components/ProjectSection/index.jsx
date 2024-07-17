@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Heading } from '../Heading';
-import { TagContainer } from '../TagContainer';
 import ProjectTag from '../ProjectTag';
 import { ProjectCard } from '../ProjectCard';
 import { GradientText } from '../GradientText';
@@ -79,11 +78,11 @@ export const ProjectSection = () => {
         <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
             <Heading as='h2' size='medium' colorDark={false}>Projects</Heading>
         </GradientText>
-        <TagContainer>
+        <Container type='tag-container'>
           <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
           <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
           <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
-        </TagContainer>
+        </Container>
         <Container type='card-container'>
           {filteredProjects.map((project) => (
               <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />

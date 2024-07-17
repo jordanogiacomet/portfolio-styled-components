@@ -1,8 +1,8 @@
 import { AboutSection } from '../../components/AboutSection';
+import { Container } from '../../components/Container';
 import { EmaiLSection } from '../../components/EmailSection';
 import { Footer } from '../../components/Footer';
 import { HeroSection } from '../../components/HeroSection';
-import { HomeContainer } from '../../components/HomeContainer';
 import { Navbar } from '../../components/Navbar';
 import { ProjectSection } from '../../components/ProjectSection';
 import * as Styled from './styles';
@@ -12,12 +12,12 @@ function Home() {
     <div className="App">
       <Styled.Wrapper>
         <Navbar />
-        <HomeContainer>
+        <Container type='home-container'>
           <HeroSection />
           <AboutSection />
           <ProjectSection />
           <EmaiLSection />
-        </HomeContainer>
+        </Container>
         <Footer />
       </Styled.Wrapper>
     </div>
