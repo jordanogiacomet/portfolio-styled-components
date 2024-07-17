@@ -4,7 +4,7 @@ export const Container = styled.button`
   background: linear-gradient(to bottom right, #1E90FF, #4169E1, #00008B);
   color: white;
   font-weight: 500;
-  padding: 0.625rem 1.25rem;
+  padding: 1rem 1.25rem;
   border-radius: 10rem;
   width: 100%;
   transition: scale 0.2s ease-in-out;
