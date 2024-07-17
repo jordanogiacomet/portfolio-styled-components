@@ -5,13 +5,13 @@ import { OverlayItem } from '../OverlayItem';
 import { NavLink } from '../NavLink';
 
 
-export const MenuOverlay = ({ links }) => {
+export const MenuOverlay = ({ links, onClick }) => {
   return (
     <Overlay type='menu-overlay'>
       <OverlayMenu>
         {links.map((link, index) => (
           <OverlayItem key={index}>
-            <NavLink href={link.path}>{link.title}</NavLink>
+            <NavLink href={link.path} onClick={onClick}>{link.title}</NavLink>
           </OverlayItem>
         ))}
       </OverlayMenu>
@@ -26,4 +26,5 @@ MenuOverlay.propTypes = {
       path: P.string.isRequired,
     })
   ).isRequired,
+  onClick: P.func.isRequired,
 };

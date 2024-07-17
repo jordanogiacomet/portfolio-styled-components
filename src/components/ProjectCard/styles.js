@@ -27,7 +27,7 @@ export const Heading = styled.h2`
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;;
-  top: 50%;
+  top: 45%;
   width: 100%;
   line-break: auto;
   font-size: 2.5rem;

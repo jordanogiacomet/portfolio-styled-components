@@ -15,6 +15,11 @@ exports[`<Link /> should match snapshot 1`] = `
   opacity: 0;
 }
 
+.c0.mail-icons {
+  opacity: 1!important;
+  visibility: visible!important;
+}
+
 .c0:hover {
   border-color: white;
 }

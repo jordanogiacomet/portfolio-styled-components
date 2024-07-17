@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonWrapper } from '.';
-import { Button } from '../Button';
+import { HeroButton } from '../HeroButton';
 import { InnerButton } from '../InnerButton';
 
 export default {
@@ -10,7 +10,7 @@ export default {
 
 export const Default = () => (
   <ButtonWrapper>
-    <Button type="hireMe">Hire Me</Button>
-    <Button type="downloadCV"><InnerButton>Download CV</InnerButton></Button>
+    <HeroButton type="hireMe">Hire Me</HeroButton>
+    <HeroButton type="downloadCV"><InnerButton>Download CV</InnerButton></HeroButton>
   </ButtonWrapper>
 );

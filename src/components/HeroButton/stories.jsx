@@ -1,9 +1,9 @@
-import { Button } from '.';
+import { HeroButton } from '.';
 import { InnerButton } from '../InnerButton';
 
 export default {
   title: 'Button',
-  component: Button,
+  component: HeroButton,
   args: {
     children: 'Hire me',
     type: 'hireMe',
@@ -24,12 +24,12 @@ export default {
 const Template = (args) => {
   if (args.type === 'downloadCV') {
     return (
-      <Button {...args}>
+      <HeroButton {...args}>
         <InnerButton type="downloadCV">{args.children}</InnerButton>
-      </Button>
+      </HeroButton>
     );
   }
-  return <Button {...args} />;
+  return <HeroButton {...args} />;
 };
 
 export const HireMe = Template.bind({});

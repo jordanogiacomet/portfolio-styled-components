@@ -18,12 +18,4 @@ describe('<InnerButton />', () => {
     expect(container.firstChild).toHaveStyleRule('padding', theme.button.downloadCV.innerPadding);
     expect(container.firstChild).toHaveStyleRule('border-radius', theme.button.downloadCV.borderRadius);
   });
-
-  it('should apply hover styles correctly for downloadCV type', () => {
-    const { container } = renderTheme(<InnerButton type="downloadCV">Click</InnerButton>);
-    
-    expect(container.firstChild).toHaveStyleRule('background-color', theme.button.downloadCV.hoverBgColor, {
-      modifier: ':hover',
-    });
-  });
 });

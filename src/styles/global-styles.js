@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   html{
     font-size: 62.5%;
+    scroll-behavior: smooth !important;
   }
   body {
     font-size: 1.6rem;
@@ -18,7 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif !important;
   }
 
-  button {
+  button, input, textarea {
     font-family: 'Montserrat', sans-serif;
+    &::placeholder{
+      font-family: 'Montserrat', sans-serif;
+    }
   }
 `;

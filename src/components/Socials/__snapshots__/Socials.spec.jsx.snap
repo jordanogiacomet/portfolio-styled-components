@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Socials /> should match snapshot 1`] = `
+.c0 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: right;
+}
+
+@media (max-width: 1024px) {
+  .c0 {
+    justify-content: left;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      Social Link 1
+    </div>
+    <div>
+      Social Link 2
+    </div>
+  </div>
+</div>
+`;

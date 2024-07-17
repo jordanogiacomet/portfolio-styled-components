@@ -28,6 +28,9 @@ const navLinks = [
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleLinkClick = () => {
+    setNavbarOpen(false);
+  };
   return (
     <Nav>
       <Container type='nav-container'>
@@ -47,13 +50,13 @@ export const Navbar = () => {
           <ul>
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path}>{link.title}</NavLink>
+                <NavLink href={link.path} onClick={handleLinkClick}>{link.title}</NavLink>
               </li>
             ))}
           </ul>
        </Menu>
       </Container>
-      {navbarOpen && <MenuOverlay links={navLinks}/>}
+      {navbarOpen && <MenuOverlay links={navLinks} onClick={handleLinkClick}/>}
     </Nav>
   );
 };

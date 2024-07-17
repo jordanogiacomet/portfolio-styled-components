@@ -1,6 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
-
 import { Col } from '../HeroContainer/styles';
 import { AnimatedText } from '../AnimatedText';
 import { Title } from '../Title';
@@ -13,6 +11,18 @@ import { ButtonWrapper } from '../ButtonWrapper';
 import { Section } from '../Section';
 
 export const HeroSection = () => {
+  const handleDownload = () => {
+    const fileUrl = './files/curriculo'; // Substitua pelo caminho real do seu CV
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = 'Curriculo.pdf'; // Nome do arquivo que será baixado
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+  const handleLinkOpen = () => {
+    window.open('https://www.linkedin.com/in/jordano-giacomet-tomazoni-aba346184/', '_blank');
+  };
   return (
     <Section type='hero-section'>
       <Col span={7}>
@@ -24,10 +34,10 @@ export const HeroSection = () => {
         </Title>
         <TextComponent $colorDark={false}>Hello! Im a technology enthusiast with a deep love for programming. I believe in the power of technology to transform ideas into reality and improve our world. Every challenge I face in the world of coding is a chance to not only develop innovative solutions, but also to develop as a professional and individual.</TextComponent>
         <ButtonWrapper>
-          <HeroButton type="hireMe">
+          <HeroButton type='hireMe' onClick={() => handleLinkOpen()}>
             Hire Me
           </HeroButton>
-          <HeroButton type="downloadCV">
+          <HeroButton type="downloadCV" onClick={() => handleDownload()}>
             <InnerButton>
               Download CV
             </InnerButton>
