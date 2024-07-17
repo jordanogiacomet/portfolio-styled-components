@@ -1,20 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  margin-bottom: 100px;
-  @media(max-width: 640px) {
-    margin-bottom: 30px;
-  }
-
-  @media ${({ theme }) => theme.media.lg} {
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-    justify-content: space-between;
-    gap: 5rem;
-  }
-`;
 
 export const Col = styled.div`
   grid-column: span 1;

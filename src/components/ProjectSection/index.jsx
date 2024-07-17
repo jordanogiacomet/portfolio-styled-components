@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import * as Styled from './styles';
 import { Heading } from '../Heading';
 import { TagContainer } from '../TagContainer';
 import ProjectTag from '../ProjectTag';
 import { CardContainer } from '../CardContainer';
 import { ProjectCard } from '../ProjectCard';
 import { GradientText } from '../GradientText';
+import { Section } from '../Section';
 
 
 const projectsData = [
@@ -75,21 +75,21 @@ export const ProjectSection = () => {
     project.tag.includes(tag)
   );
   return (
-    <Styled.Container>
-       <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-          <Heading as='h2' size='medium' colorDark={false}>Projects</Heading>
-      </GradientText>
-      <TagContainer>
-        <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
-        <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
-        <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
-      </TagContainer>
-      <CardContainer>
-      {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
-        ))}
-      </CardContainer>
-    </Styled.Container>
+       <Section type='projects-section'>
+        <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
+            <Heading as='h2' size='medium' colorDark={false}>Projects</Heading>
+        </GradientText>
+        <TagContainer>
+          <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
+          <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
+          <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
+        </TagContainer>
+        <CardContainer>
+        {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
+          ))}
+        </CardContainer>
+      </Section>
   );
 };
 

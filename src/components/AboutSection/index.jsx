@@ -1,6 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import * as Styled from './styles';
+/* eslint-disable react/no-unescaped-entities */
 import { AboutImageWrapper } from '../AboutImageWrapper';
 import { TextContainer } from '../TextContainer';
 import { Heading } from '../Heading';
@@ -12,6 +11,8 @@ import { TabContent } from '../TabContent';
 import { List } from '../List';
 import { StyledImage } from '../StyledImage/styles';
 import { GradientText } from '../GradientText';
+import { Section } from '../Section';
+import { ImageWrapper } from '../ImageWrapper';
 
 
 
@@ -64,10 +65,10 @@ export const AboutSection = () => {
   };
   
   return (
-    <Styled.Container>
-      <AboutImageWrapper>
+    <Section type='about-section'>
+      <ImageWrapper type='about-wrapper'>
         <StyledImage src='/images/casual-image.webp' alt='About image'/>
-      </AboutImageWrapper>
+      </ImageWrapper>
       <TextContainer type="about">
         <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
           <Heading as='h2' size='medium' colorDark={false}>About Me</Heading>
@@ -83,7 +84,7 @@ export const AboutSection = () => {
         </TabContainerButton>
         <TabContent>{TAB_DATA.find((t) => t.id === tab).content}</TabContent>
       </TextContainer>
-    </Styled.Container>
+    </Section>
   );
 };
 

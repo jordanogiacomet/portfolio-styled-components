@@ -12,12 +12,13 @@ import { Label } from '../Label';
 import { Input } from '../Input';
 import { TextArea } from '../TextArea';
 import { EmailButton } from '../EmailButton';
+import { Section } from '../Section';
 
 
 
 export const EmaiLSection = () => {
   return (
-    <Styled.Container>
+    <Section type='email-section'>
         <Styled.Col span={4} className='form-element'>
           <Form>
             <Styled.FormDiv>
@@ -54,7 +55,7 @@ export const EmaiLSection = () => {
             <Link href='/' className='mail-icons'><img src={LinkedinIcon}/></Link>
           </Socials>
         </Styled.Col>
-    </Styled.Container>
+      </Section>
   );
 };
 
