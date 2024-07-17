@@ -12,4 +12,5 @@ export const ImageWrapper = ({ children, type }) => {
 ImageWrapper.propTypes = {
   children: P.node.isRequired,
   type: P.node.isRequired,
+ 
 };

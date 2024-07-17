@@ -31,7 +31,7 @@ export const EmaiLSection = () => {
     };
 
     try {
-      const response = await fetch('/api/send', {
+      const response = await fetch('http://localhost:3001/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

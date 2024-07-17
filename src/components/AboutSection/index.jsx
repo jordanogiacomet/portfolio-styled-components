@@ -69,7 +69,7 @@ export const AboutSection = () => {
   return (
     <div id='about'>
       <Section type='about-section'>
-        <ImageWrapper type='about-wrapper'>
+        <ImageWrapper type='about-wrapper' className='image-content'>
           <StyledImage src='/images/casual-image.webp' alt='About image'/>
         </ImageWrapper>
         <Container type='text-container-about'>
@@ -83,7 +83,7 @@ export const AboutSection = () => {
           <Container type='tab-container'>
             <AboutButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</AboutButton>
             <AboutButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</AboutButton>
-            <AboutButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</AboutButton>
+            {/*<AboutButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</AboutButton>*/}
           </Container>
           <TabContent>{TAB_DATA.find((t) => t.id === tab).content}</TabContent>
         </Container>

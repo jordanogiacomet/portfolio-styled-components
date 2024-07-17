@@ -15,4 +15,5 @@ export const Container = styled.section`
   @media (min-width: 1280px) {
     gap: 50px;
   };
+  
 `;
