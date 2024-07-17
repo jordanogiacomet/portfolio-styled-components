@@ -4,7 +4,7 @@ import * as Styled from './styles';
 import { ImageContainer } from '../ImageContainer';
 import { Link } from '../Link'; // Certifique-se de que está importando corretamente
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline';
-import { ProjectOverlay } from '../ProjectOverlay';
+import { Overlay } from '../Overlay';
 
 export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -15,14 +15,14 @@ export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <ImageContainer imgUrl={imgUrl}>
-        <ProjectOverlay className={isHovered ? 'show' : ''}>
+        <Overlay type='project-overlay' className={isHovered ? 'show' : ''}>
           <Link href={gitUrl}>
             <CodeBracketIcon className="icon" />
           </Link>
           <Link href={previewUrl}>
             <EyeIcon className="icon" />
           </Link>
-        </ProjectOverlay>
+        </Overlay>
         <Styled.Heading className={isHovered ? 'hide' : 'show'}>
           {title}
         </Styled.Heading>

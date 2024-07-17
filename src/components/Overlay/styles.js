@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+
+const menuOverlayStyles = css`
   position: fixed;
   top: 0;
   left: 0;
@@ -15,5 +16,47 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     display: none;
+  };
+`;
+
+const projectOverlayStyles = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 24, 24, 0.8);
+  z-index: 1;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  };
+
+  &:hover a {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  };
+`;
+
+const getOverlayStyles = (type) => {
+  switch (type) {
+    case 'menu-overlay':
+      return menuOverlayStyles
+    case 'project-overlay':
+      return projectOverlayStyles
+    default:
+      break;
   }
+};
+
+export const Container = styled.div`
+   ${({ type }) => css`
+    ${getOverlayStyles(type)}
+  `};
 `;

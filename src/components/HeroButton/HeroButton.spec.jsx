@@ -3,7 +3,7 @@ import { Button } from '.';
 import { screen } from '@testing-library/react';
 import { theme } from '../../styles/theme';
 
-describe('<Button />', () => {
+describe('<HeroButton />', () => {
   it('should render button with children', () => {
     renderTheme(<Button>Click</Button>);
     const button = screen.getByText('Click');

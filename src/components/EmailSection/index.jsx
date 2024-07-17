@@ -13,6 +13,7 @@ import { Input } from '../Input';
 import { TextArea } from '../TextArea';
 import { EmailButton } from '../EmailButton';
 import { Section } from '../Section';
+import { Container } from '../Container';
 
 
 
@@ -21,21 +22,21 @@ export const EmaiLSection = () => {
     <Section type='email-section'>
         <Styled.Col span={4} className='form-element'>
           <Form>
-            <Styled.FormDiv>
+            <Container type='form-container'>
                 <Label htmlFor='email'>Your email</Label>
                 <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
-            </Styled.FormDiv>
-            <Styled.FormDiv>
+            </Container>
+            <Container type='form-container'>
                 <Label htmlFor='subject'>Your subject</Label>
                 <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
-            </Styled.FormDiv>
-            <Styled.FormDiv>
+            </Container>
+            <Container type='form-container'>
                 <Label htmlFor='message'>Your message</Label>
                 <TextArea name='message' id='message' placeholder='Lets talk about...'/>
-            </Styled.FormDiv>
-            <Styled.FormDiv>
-            <EmailButton type="submit">Send Message</EmailButton>
-          </Styled.FormDiv>
+            </Container>
+            <Container type='form-container'>
+                <EmailButton type="submit">Send Message</EmailButton>
+            </Container>
           </Form>
         </Styled.Col>
         <Styled.Col span={8} className='text-element'>

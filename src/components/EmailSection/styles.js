@@ -45,6 +45,3 @@ export const Col = styled.div`
   };
 `;
 
-export const FormDiv = styled.div`
-  margin-bottom: 2rem;
-`;

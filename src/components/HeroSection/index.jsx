@@ -6,7 +6,7 @@ import { AnimatedText } from '../AnimatedText';
 import { Title } from '../Title';
 import { TextComponent } from '../TextComponent';
 import { GradientText } from '../GradientText';
-import { Button } from '../Button';
+import { HeroButton } from '../HeroButton';
 import { InnerButton } from '../InnerButton';
 import { ImageWrapper } from '../ImageWrapper';
 import { ButtonWrapper } from '../ButtonWrapper';
@@ -24,14 +24,14 @@ export const HeroSection = () => {
         </Title>
         <TextComponent $colorDark={false}>Hello! Im a technology enthusiast with a deep love for programming. I believe in the power of technology to transform ideas into reality and improve our world. Every challenge I face in the world of coding is a chance to not only develop innovative solutions, but also to develop as a professional and individual.</TextComponent>
         <ButtonWrapper>
-          <Button type="hireMe">
+          <HeroButton type="hireMe">
             Hire Me
-          </Button>
-          <Button type="downloadCV">
+          </HeroButton>
+          <HeroButton type="downloadCV">
             <InnerButton>
               Download CV
             </InnerButton>
-          </Button>
+          </HeroButton>
         </ButtonWrapper>
       </Col>
       <Col span={5} className="self-center mt-4">

@@ -7,7 +7,7 @@ import { NavLink } from '../NavLink';
 
 export const MenuOverlay = ({ links }) => {
   return (
-    <Overlay>
+    <Overlay type='menu-overlay'>
       <OverlayMenu>
         {links.map((link, index) => (
           <OverlayItem key={index}>

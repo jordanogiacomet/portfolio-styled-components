@@ -1,9 +1,9 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Overlay = ({ children }) => {
+export const Overlay = ({ children, type, className }) => {
   return (
-    <Styled.Container>
+    <Styled.Container type={type} className={className}>
       {children}
     </Styled.Container>
   );
@@ -11,4 +11,6 @@ export const Overlay = ({ children }) => {
 
 Overlay.propTypes = {
   children: P.node.isRequired,
+  type: P.string.isRequired,
+  className: P.string,
 };
