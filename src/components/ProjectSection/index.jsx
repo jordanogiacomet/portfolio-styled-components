@@ -74,21 +74,23 @@ export const ProjectSection = () => {
     project.tag.includes(tag)
   );
   return (
-       <Section type='projects-section'>
-        <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-            <Heading as='h2' size='medium' colorDark={false}>Projects</Heading>
-        </GradientText>
-        <Container type='tag-container'>
-          <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
-          <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
-          <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
-        </Container>
-        <Container type='card-container'>
-          {filteredProjects.map((project) => (
-              <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
-            ))}
-        </Container>
-      </Section>
+       <div id='projects'>
+          <Section type='projects-section'>
+            <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
+                <Heading as='h2' size='medium' colorDark={false}>Projects</Heading>
+            </GradientText>
+            <Container type='tag-container'>
+              <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
+              <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
+              <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
+            </Container>
+            <Container type='card-container'>
+              {filteredProjects.map((project) => (
+                  <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
+                ))}
+            </Container>
+          </Section>
+       </div>
   );
 };
 

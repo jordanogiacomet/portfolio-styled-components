@@ -50,49 +50,51 @@ export const EmaiLSection = () => {
   };
 
   return (
-    <Section type='email-section'>
-      <Styled.Col span={4} className='form-element'>
-        {emailSubmitted ? (
-          <TextComponent>Email sent successfully!</TextComponent>
-        ) : (
-          <Form onSubmit={handleSubmit}>
-            <Container type='form-container'>
-              <Label htmlFor='email'>Your email</Label>
-              <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
-            </Container>
-            <Container type='form-container'>
-              <Label htmlFor='subject'>Your subject</Label>
-              <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
-            </Container>
-            <Container type='form-container'>
-              <Label htmlFor='message'>Your message</Label>
-              <TextArea name='message' id='message' placeholder='Lets talk about...'/>
-            </Container>
-            <Container type='form-container'>
-              <EmailButton type="submit">Send Message</EmailButton>
-            </Container>
-            {formError && <TextComponent type='error'>{formError}</TextComponent>}
-          </Form>
-        )}
-      </Styled.Col>
-      <Styled.Col span={8} className='text-element'>
-        <Heading as='h5' size='medium'>
-          <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-            Let's connect
-          </GradientText>
-        </Heading>
-        <TextComponent>
-          {" "}
-          I'm currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
-        </TextComponent>
-        <Socials>
-          <Link href='/' className='mail-icons'><img src={GithubIcon}/></Link>
-          <Link href='/' className='mail-icons'><img src={LinkedinIcon}/></Link>
-        </Socials>
-      </Styled.Col>
-    </Section>
+    <div id='contact'>
+      <Section type='email-section'>
+        <Styled.Col span={4} className='form-element'>
+          {emailSubmitted ? (
+            <TextComponent>Email sent successfully!</TextComponent>
+          ) : (
+            <Form onSubmit={handleSubmit}>
+              <Container type='form-container'>
+                <Label htmlFor='email'>Your email</Label>
+                <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
+              </Container>
+              <Container type='form-container'>
+                <Label htmlFor='subject'>Your subject</Label>
+                <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
+              </Container>
+              <Container type='form-container'>
+                <Label htmlFor='message'>Your message</Label>
+                <TextArea name='message' id='message' placeholder='Lets talk about...'/>
+              </Container>
+              <Container type='form-container'>
+                <EmailButton type="submit">Send Message</EmailButton>
+              </Container>
+              {formError && <TextComponent type='error'>{formError}</TextComponent>}
+            </Form>
+          )}
+        </Styled.Col>
+        <Styled.Col span={8} className='text-element'>
+          <Heading as='h5' size='medium'>
+            <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
+              Let's connect
+            </GradientText>
+          </Heading>
+          <TextComponent>
+            {" "}
+            I'm currently looking for new opportunities, my inbox is always
+            open. Whether you have a question or just want to say hi, I&apos;ll
+            try my best to get back to you!
+          </TextComponent>
+          <Socials>
+            <Link href='/' className='mail-icons'><img src={GithubIcon}/></Link>
+            <Link href='/' className='mail-icons'><img src={LinkedinIcon}/></Link>
+          </Socials>
+        </Styled.Col>
+      </Section>
+    </div>
   );
 };
 
