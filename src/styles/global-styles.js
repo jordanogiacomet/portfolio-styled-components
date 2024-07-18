@@ -25,4 +25,11 @@ export const GlobalStyles = createGlobalStyle`
       font-family: 'Montserrat', sans-serif;
     }
   }
+
+  h2, h3, h4, h5, h6{
+    @media(max-width: 400px) {
+      font-size: 2.3rem !important;
+    }
+  }
 `;
+
