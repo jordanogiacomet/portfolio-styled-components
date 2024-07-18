@@ -9,7 +9,7 @@ export const Container = styled.a`
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: border-color 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: border-color 0.3s;
   visibility: hidden;
   opacity: 0;
 
@@ -30,6 +30,6 @@ export const Container = styled.a`
     height: 2.5rem;
     width: 2.5rem;
     color: #adb7be;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
   }
 `;

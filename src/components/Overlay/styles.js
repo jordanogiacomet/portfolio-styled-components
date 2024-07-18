@@ -32,15 +32,10 @@ const projectOverlayStyles = css`
   background: rgba(24, 24, 24, 0.8);
   z-index: 1;
 
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  };
-
   &:hover a {
+    transition: opacity 0.3s, visibility 0.3s;
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   };
 `;
 
