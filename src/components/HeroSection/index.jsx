@@ -12,10 +12,10 @@ import { Section } from '../Section';
 
 export const HeroSection = () => {
   const handleDownload = () => {
-    const fileUrl = './files/curriculo'; // Substitua pelo caminho real do seu CV
+    const fileUrl = './files/curriculo.pdf'; 
     const a = document.createElement('a');
     a.href = fileUrl;
-    a.download = 'Curriculo.pdf'; // Nome do arquivo que será baixado
+    a.download = 'Curriculo.pdf'; 
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
