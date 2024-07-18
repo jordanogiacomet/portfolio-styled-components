@@ -87,8 +87,8 @@ export const EmaiLSection = () => {
             Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.
           </TextComponent>
           <Socials>
-            <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img src={GithubIcon}/></Link>
-            <Link href='https://www.linkedin.com/in/jordano-giacomet-tomazoni-aba346184/' className='mail-icons'><img src={LinkedinIcon}/></Link>
+            <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img src={GithubIcon} alt='Github icon'/></Link>
+            <Link href='https://www.linkedin.com/in/jordano-giacomet-tomazoni-aba346184/' className='mail-icons'><img src={LinkedinIcon} alt='Linkedin icon'/></Link>
           </Socials>
         </Styled.Col>
       </Section>
