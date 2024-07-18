@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import P from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as Styled from './styles';
 import { ImageContainer } from '../ImageContainer';
 import { Link } from '../Link'; 
@@ -9,6 +9,19 @@ import { Overlay } from '../Overlay';
 
 export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleTouch = () => {
+      setIsVisible(false);
+    };
+
+    window.addEventListener('touchstart', handleTouch);
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouch);
+    };
+  }, []);
 
   return (
     <Styled.Container
@@ -21,7 +34,7 @@ export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
             <CodeBracketIcon className="icon" />
           </Link>
         </Overlay>
-        <Styled.Heading className={isHovered ? 'hide' : 'show'}>
+        <Styled.Heading className={isHovered ? 'hide' : 'show'} isVisible={isVisible}>
           {title}
         </Styled.Heading>
       </ImageContainer>
