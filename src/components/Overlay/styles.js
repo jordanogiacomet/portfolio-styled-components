@@ -31,12 +31,19 @@ const projectOverlayStyles = css`
   height: 100%;
   background: rgba(24, 24, 24, 0.8);
   z-index: 1;
-
-  &:hover a {
+  @media(max-width: 768px) {
+    > a {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  @media(min-width: 768px){
+    &:hover a {
     transition: opacity 0.3s, visibility 0.3s;
     visibility: visible;
     opacity: 1;
   };
+  }
 `;
 
 const getOverlayStyles = (type) => {

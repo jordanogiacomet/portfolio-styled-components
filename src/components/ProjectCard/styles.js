@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 300px; // Defina a largura fixa para todos os cards
@@ -11,8 +11,10 @@ export const Container = styled.div`
   justify-content: space-between;
   position: relative;
   transition: transform 0.2s ease-in-out;
-  &:hover {
+  @media(min-width: 768px){
+    &:hover {
     transform: scale(1.05);
+  }
   }
   @media(max-width: 768px){
     width: 100%;
@@ -31,17 +33,10 @@ export const Heading = styled.h2`
   width: 100%;
   line-break: auto;
   font-size: 2.5rem;
-  ${({ isVisible }) =>
-    isVisible
-      ? css`
-          opacity: 1;
-        `
-      : css`
-          opacity: 0;
-    `}
-  
+ 
   @media(max-width: 768px){
     width: 100%;
+    top: 75%;
   }
   @media(max-width: 640px){
     font-size: 1.8rem;

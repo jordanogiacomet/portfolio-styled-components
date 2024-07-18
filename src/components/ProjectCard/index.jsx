@@ -9,19 +9,6 @@ import { Overlay } from '../Overlay';
 
 export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleTouch = () => {
-      setIsVisible(false);
-    };
-
-    window.addEventListener('touchstart', handleTouch);
-
-    return () => {
-      window.removeEventListener('touchstart', handleTouch);
-    };
-  }, []);
 
   return (
     <Styled.Container
@@ -34,7 +21,7 @@ export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
             <CodeBracketIcon className="icon" />
           </Link>
         </Overlay>
-        <Styled.Heading className={isHovered ? 'hide' : 'show'} isVisible={isVisible}>
+        <Styled.Heading className={isHovered ? 'hide' : 'show'}>
           {title}
         </Styled.Heading>
       </ImageContainer>
