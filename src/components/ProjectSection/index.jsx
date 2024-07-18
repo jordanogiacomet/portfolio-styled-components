@@ -14,7 +14,7 @@ const projectsData = [
     description: "Project 1 description",
     image: "/images/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/jordanogiacomet/portfolio-styled-components",
     previewUrl: "/",
   },
   {
@@ -23,7 +23,7 @@ const projectsData = [
     description: "Project 2 description",
     image: "/images/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/jordanogiacomet/ERPMeioAmbiente",
     previewUrl: "/",
   },
   {
@@ -31,8 +31,8 @@ const projectsData = [
     title: "Agenda de Contatos",
     description: "Project 3 description",
     image: "/images/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["All", "Desktop"],
+    gitUrl: "https://github.com/jordanogiacomet/Agenda-de-Contatos",
     previewUrl: "/",
   },
   {
@@ -40,8 +40,8 @@ const projectsData = [
     title: "Aluraflix API",
     description: "Project 4 description",
     image: "/images/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/jordanogiacomet/AluraFlixAPI",
     previewUrl: "/",
   },
 ];
@@ -56,23 +56,23 @@ export const ProjectSection = () => {
     project.tag.includes(tag)
   );
   return (
-       <div id='projects'>
-          <Section type='projects-section'>
-            <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-                <Heading as='h2' size='medium' colorDark={false}>Projects</Heading>
-            </GradientText>
-            <Container type='tag-container'>
-              <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
-              <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
-              <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
-            </Container>
-            <Container type='card-container'>
-              {filteredProjects.map((project) => (
-                  <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
-                ))}
-            </Container>
-          </Section>
-       </div>
+    <div id='projects'>
+      <Section type='projects-section'>
+        <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
+          <Heading as='h2' size='medium' colorDark={false}>Projetos</Heading>
+        </GradientText>
+        <Container type='tag-container'>
+          <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
+          <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
+          <ProjectTag onClick={handleTagChange} name="Desktop" isSelected={tag === "Desktop"} />
+        </Container>
+        <Container type='card-container'>
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} imgUrl={project.image} title={project.title} description={project.description} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />
+          ))}
+        </Container>
+      </Section>
+    </div>
   );
 };
 

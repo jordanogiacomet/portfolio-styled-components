@@ -17,8 +17,8 @@ import { Container } from '../Container';
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: "hard-skills",
+    id: "hard-skills",
     content: (
       <List>
         <li>Node.js</li>
@@ -42,22 +42,28 @@ const TAB_DATA = [
       </List>
     ),
   },
- /* { 
-    title: "Certifications",
-    id: "certifications",
+  {
+    title: "soft-skills",
+    id: "soft-skills",
     content: (
       <List>
-        <li>Programa de Talentos: Algoritmos; - Javascript; - PL/SQL, Java e Python</li>
-        <li>Formação Java e Orientação a Objeto</li>
-        <li>Formação - Criação de Games</li>
+        <li>Comunicação eficaz</li>
+        <li>Trabalho em equipe</li>
+        <li>Resolução de problemas</li>
+        <li>Adaptabilidade</li>
+        <li>Gestão de tempo</li>
+        <li>Pensamento crítico</li>
+        <li>Inovação e criatividade</li>
+        <li>Liderança</li>
+        <li>Empatia e inteligência emocional</li>
+        <li>Ética profissional</li>
       </List>
     ),
   },
- */
 ];
 
 export const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("hard-skills");
   const [isPending, startTransition] = useTransition();
   
   const handleTabChange = (id) => {
@@ -74,16 +80,15 @@ export const AboutSection = () => {
         </ImageWrapper>
         <Container type='text-container-about'>
           <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-            <Heading as='h2' size='medium' colorDark={false}>About Me</Heading>
+            <Heading as='h2' size='medium' colorDark={false}>Sobre mim</Heading>
           </GradientText>
           <TextComponent type="about">
-          I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
-          I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
+          Sou desenvolvedor full stack com uma paixão por criar aplicações web interativas e responsivas. Tenho experiência com JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, Next.js, Laravel e Git. Sou um aprendiz rápido e estou sempre buscando expandir meu conhecimento e habilidades. Destaco-me por minha comunicação eficaz, trabalho em equipe, resolução de problemas, adaptabilidade, gestão de tempo, pensamento crítico, inovação e criatividade, liderança, empatia e inteligência emocional, além de uma forte ética profissional.
           </TextComponent>
           <Container type='tab-container'>
-            <AboutButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</AboutButton>
-            <AboutButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</AboutButton>
-            {/*<AboutButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</AboutButton>*/}
+            <AboutButton selectTab={() => handleTabChange("hard-skills")} active={tab === "hard-skills"}>Hard Skills</AboutButton>
+            <AboutButton selectTab={() => handleTabChange("soft-skills")} active={tab === "soft-skills"}>Soft Skills</AboutButton>
+            <AboutButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Educação</AboutButton>
           </Container>
           <TabContent>{TAB_DATA.find((t) => t.id === tab).content}</TabContent>
         </Container>

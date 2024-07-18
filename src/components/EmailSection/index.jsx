@@ -54,23 +54,23 @@ export const EmaiLSection = () => {
       <Section type='email-section'>
         <Styled.Col span={4} className='form-element'>
           {emailSubmitted ? (
-            <TextComponent>Email sent successfully!</TextComponent>
+            <TextComponent>Email enviado com sucesso!</TextComponent>
           ) : (
             <Form onSubmit={handleSubmit}>
               <Container type='form-container'>
-                <Label htmlFor='email'>Your email</Label>
+                <Label htmlFor='email'>Seu email</Label>
                 <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
               </Container>
               <Container type='form-container'>
-                <Label htmlFor='subject'>Your subject</Label>
+                <Label htmlFor='subject'>Assunto</Label>
                 <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
               </Container>
               <Container type='form-container'>
-                <Label htmlFor='message'>Your message</Label>
+                <Label htmlFor='message'>Sua mensagem</Label>
                 <TextArea name='message' id='message' placeholder='Lets talk about...'/>
               </Container>
               <Container type='form-container'>
-                <EmailButton type="submit">Send Message</EmailButton>
+                <EmailButton type="submit">Enviar mensagem</EmailButton>
               </Container>
               {formError && <TextComponent type='error'>{formError}</TextComponent>}
             </Form>
@@ -84,13 +84,11 @@ export const EmaiLSection = () => {
           </Heading>
           <TextComponent>
             {" "}
-            I'm currently looking for new opportunities, my inbox is always
-            open. Whether you have a question or just want to say hi, I&apos;ll
-            try my best to get back to you!
+            Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.
           </TextComponent>
           <Socials>
-            <Link href='/' className='mail-icons'><img src={GithubIcon}/></Link>
-            <Link href='/' className='mail-icons'><img src={LinkedinIcon}/></Link>
+            <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img src={GithubIcon}/></Link>
+            <Link href='https://www.linkedin.com/in/jordano-giacomet-tomazoni-aba346184/' className='mail-icons'><img src={LinkedinIcon}/></Link>
           </Socials>
         </Styled.Col>
       </Section>

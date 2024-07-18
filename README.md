@@ -1,4 +1,3 @@
-
 # Portfolio Website React
 ![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)
 
@@ -65,6 +64,25 @@ Inicie o servidor
 
 O servidor de desenvolvimento será iniciado e a aplicação estará disponível em `http://localhost:3000`.
 
+## Rodando com Docker
+
+Certifique-se de que o Docker está instalado e rodando no seu sistema.
+
+### Passos
+
+- Execute o seguinte comando para construir a imagem Docker:
+
+```bash
+  docker-compose build
+```
+
+- Execute o seguinte comando para iniciar o contêiner:
+
+```bash
+  docker-compose build
+```
+
+A aplicação React agora deve estar rodando em um contêiner Docker e acessível em `http://localhost:3000`.
 ## Storybook
 Para visualizar a documentação dos componentes com o Storybook, execute:
 
@@ -85,5 +103,19 @@ Para rodar os testes, rode o seguinte comando
 
 ## Apêndice
 
-Coloque qualquer informação adicional aqui
+A aplicação React depende do serviço de email acessível em: https://github.com/jordanogiacomet/email-api
+
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Roadmap
+
+- Melhorar o suporte de navegadores
+- Minificar o Javascript
+- Adicionar mudança de idioma
+- Implementar a funcionalidade de mudar entre modo claro e modo escuro
+- Implementar um CMS no lado do servidor
 

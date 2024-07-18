@@ -32,10 +32,10 @@ export const HeroSection = () => {
           </GradientText>
           <AnimatedText />
         </Title>
-        <TextComponent $colorDark={false}>Hello! Im a technology enthusiast with a deep love for programming. I believe in the power of technology to transform ideas into reality and improve our world. Every challenge I face in the world of coding is a chance to not only develop innovative solutions, but also to develop as a professional and individual.</TextComponent>
+        <TextComponent $colorDark={false}>Meu nome é Jordano. Estou sempre em busca de aprimorar minhas capacidades e compartilhar minhas qualidades e conhecimentos, com um foco constante na inovação. Tenho uma paixão profunda por tecnologia e programação, e adoro o desafio de resolver problemas, pois é isso que me faz crescer como profissional. </TextComponent>
         <ButtonWrapper>
           <HeroButton type='hireMe' onClick={() => handleLinkOpen()}>
-            Hire Me
+            Me contrate
           </HeroButton>
           <HeroButton type="downloadCV" onClick={() => handleDownload()}>
             <InnerButton>

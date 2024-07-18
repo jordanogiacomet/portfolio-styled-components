@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import P from 'prop-types';
 import { useState } from 'react';
 import * as Styled from './styles';
 import { ImageContainer } from '../ImageContainer';
-import { Link } from '../Link'; // Certifique-se de que está importando corretamente
+import { Link } from '../Link'; 
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline';
 import { Overlay } from '../Overlay';
 
@@ -18,9 +19,6 @@ export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
         <Overlay type='project-overlay' className={isHovered ? 'show' : ''}>
           <Link href={gitUrl}>
             <CodeBracketIcon className="icon" />
-          </Link>
-          <Link href={previewUrl}>
-            <EyeIcon className="icon" />
           </Link>
         </Overlay>
         <Styled.Heading className={isHovered ? 'hide' : 'show'}>
