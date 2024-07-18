@@ -12,10 +12,10 @@ import { Section } from '../Section';
 
 export const HeroSection = () => {
   const handleDownload = () => {
-    const fileUrl = './files/curriculo.pdf'; 
+    const fileUrl = 'https://email-api-six.vercel.app/download-cv'; // URL do endpoint de download
     const a = document.createElement('a');
     a.href = fileUrl;
-    a.download = 'Curriculo.pdf'; 
+    a.download = 'Curriculo.pdf'; // Nome do arquivo que será baixado
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
