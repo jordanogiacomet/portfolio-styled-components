@@ -41,7 +41,7 @@ export const EmaiLSection = () => {
       });
   
       if (!response.ok) {
-        throw new Error('Failed to send email');
+        throw new Error('Falha ao enviar email');
       }
   
       setEmailSubmitted(true);
