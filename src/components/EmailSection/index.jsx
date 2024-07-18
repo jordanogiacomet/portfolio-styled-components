@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react';
 import * as Styled from './styles';
@@ -31,7 +32,7 @@ export const EmaiLSection = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('https://email-k1tj53kc5-jordanogiacomets-projects.vercel.app/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +55,7 @@ export const EmaiLSection = () => {
       <Section type='email-section'>
         <Styled.Col span={4} className='form-element'>
           {emailSubmitted ? (
-            <TextComponent>Email enviado com sucesso!</TextComponent>
+            <TextComponent type='default'>Email enviado com sucesso!</TextComponent>
           ) : (
             <Form onSubmit={handleSubmit}>
               <Container type='form-container'>
@@ -72,7 +73,7 @@ export const EmaiLSection = () => {
               <Container type='form-container'>
                 <EmailButton type="submit">Enviar mensagem</EmailButton>
               </Container>
-              {formError && <TextComponent type='error'>{formError}</TextComponent>}
+              {formError && <TextComponent type='default'>{formError}</TextComponent>}
             </Form>
           )}
         </Styled.Col>
@@ -82,7 +83,7 @@ export const EmaiLSection = () => {
               Let's connect
             </GradientText>
           </Heading>
-          <TextComponent>
+          <TextComponent type='default'>
             {" "}
             Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.
           </TextComponent>
