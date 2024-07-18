@@ -43,8 +43,7 @@ export const Heading = styled.h2`
   }
   @media(min-width: 768px) {
     bottom: 1rem;
-  }
-  &.hide {
+    &.hide {
     opacity: 0;
     visibility: hidden;
   }
@@ -52,5 +51,6 @@ export const Heading = styled.h2`
   &.show {
     opacity: 1;
     visibility: visible;
+  }
   }
 `;
