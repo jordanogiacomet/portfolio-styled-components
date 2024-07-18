@@ -1,9 +1,9 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Form = ({ children }) => {
+export const Form = ({ children, onSubmit }) => {
   return (
-    <Styled.Container>
+    <Styled.Container onSubmit={onSubmit}>
       {children}
     </Styled.Container>
   );
@@ -11,4 +11,5 @@ export const Form = ({ children }) => {
 
 Form.propTypes = {
   children: P.node.isRequired,
+  onSubmit: P.func.isRequired,
 };

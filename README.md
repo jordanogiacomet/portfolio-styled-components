@@ -1,70 +1,89 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio Website React
+![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)
 
-## Available Scripts
+Este é um projeto de portfólio pessoal construído usando React e styled-components. O projeto exibe diferentes seções, como Sobre Mim, Projetos e Contato. Inclui recursos como temas dinâmicos, design responsivo e manuseio de formulários com integração de e-mail. O portfólio também incorpora padrões de design e testes para garantir um código mantível e robusto.
 
-In the project directory, you can run:
 
-### `npm start`
+## Stack utilizada
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js v18.17.0
+- React v18.3.1
+- Styled-components v6.1.11
+- Nodemailer v6.9.0
+- Express v4.17.1
+- Storybook v8.0.9
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Serviço de E-mail: Integração com um serviço de e-mail para envio de notificações e comunicação com os usuários.
+- Serviço de WhatsApp: Integração com a API do WhatsApp para envio de mensagens e notificações.
+ 
 
-### `npm run build`
+## Padrões de Projetos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Componentização: Cada parte da interface é dividida em componentes reutilizáveis.
+- Styled Components: Utilização de Object Lookup Table para organizar o CSS, facilitando a manutenção e a escalabilidade do código.
+- Testes Unitários: Testes são escritos para garantir que cada componente funcione corretamente
+## Variáveis de Ambiente
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`REACT_APP_WHATSAPP_PHONE_NUMBER`
 
-### `npm run eject`
+`REACT_APP_ACCOUNT_NAME`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`REACT_APP_CHAT_MESSAGE`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Rodando localmente
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone o projeto
 
-## Learn More
+```bash
+  https://github.com/jordanogiacomet/portfolio-styled-components
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Entre no diretório do projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  cd portfolio-styled-components
+```
 
-### Code Splitting
+Instale as dependências
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  npm install
+```
 
-### Analyzing the Bundle Size
+Inicie o servidor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  npm start
+```
 
-### Making a Progressive Web App
+O servidor de desenvolvimento será iniciado e a aplicação estará disponível em `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Storybook
+Para visualizar a documentação dos componentes com o Storybook, execute:
 
-### Advanced Configuration
+```bash
+  npm run storybook
+```
+O servidor de desenvolvimento será iniciado e a aplicação estará disponível em `http://localhost:6006`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Rodando os testes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Para rodar os testes, rode o seguinte comando
 
-### `npm run build` fails to minify
+```bash
+  npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Apêndice
+
+Coloque qualquer informação adicional aqui
+
