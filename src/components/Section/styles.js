@@ -4,6 +4,11 @@ const sectionStyles = {
   'hero-section': css`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    @media(max-width: 400px) {
+       > div > h1 {
+        font-size: 2.1rem !important;
+       }
+    }
 
     @media ${({ theme }) => theme.media.sm} {
       grid-template-columns: repeat(12, 1fr);
