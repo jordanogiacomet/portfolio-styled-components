@@ -24,13 +24,13 @@ export const EmaiLSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormError(null);
-
+  
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-
+  
     try {
       const response = await fetch('https://email-api-six.vercel.app/send-email', {
         method: 'POST',
@@ -39,11 +39,11 @@ export const EmaiLSection = () => {
         },
         body: JSON.stringify(data),
       });
-
+  
       if (!response.ok) {
         throw new Error('Failed to send email');
       }
-
+  
       setEmailSubmitted(true);
     } catch (error) {
       setFormError(error.message);
