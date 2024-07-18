@@ -32,7 +32,7 @@ export const EmaiLSection = () => {
     };
 
     try {
-      const response = await fetch('https://email-k1tj53kc5-jordanogiacomets-projects.vercel.app/send-email', {
+      const response = await fetch('https://email-api-six.vercel.app/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
