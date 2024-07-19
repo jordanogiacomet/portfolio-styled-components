@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import * as Styled from './styles';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
-import Avatar from './hero_avatar.png';
+import Avatar from './hero_avatar.webp';
 import ScrollToTopButton from '../ScrollTopButton';
 import { useEffect } from 'react';
 
@@ -26,10 +26,6 @@ export const ContactSection = () => {
     }
 
   }, []);
-
-
-  
-
   return (
     <Styled.Container>
       <ScrollToTopButton />
