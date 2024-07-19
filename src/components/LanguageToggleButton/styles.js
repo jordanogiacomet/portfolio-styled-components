@@ -10,6 +10,9 @@ export const Container = styled.button`
   font-size: 1.2rem;
   position: absolute;
   right: 2.5rem;
+  @media(max-width: 768px) {
+    bottom: 20px;
+  }
   cursor: pointer;
   transition: 0.2s;
   &:hover{
