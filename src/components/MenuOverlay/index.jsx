@@ -3,6 +3,7 @@ import { OverlayMenu } from '../OverlayMenu';
 import { Overlay } from '../Overlay';
 import { OverlayItem } from '../OverlayItem';
 import { NavLink } from '../NavLink';
+import { LanguageToggleButton } from '../LanguageToggleButton';
 
 
 export const MenuOverlay = ({ links, onClick }) => {
@@ -14,6 +15,7 @@ export const MenuOverlay = ({ links, onClick }) => {
             <NavLink href={link.path} onClick={onClick}>{link.title}</NavLink>
           </OverlayItem>
         ))}
+        <LanguageToggleButton />
       </OverlayMenu>
     </Overlay>
   );
