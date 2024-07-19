@@ -37,11 +37,11 @@ export const Navbar = () => {
         <LogoLink text="LOGO" link="/"/>
         <MobileMenu>
           {!navbarOpen ? (
-            <MenuButton onClick={() => setNavbarOpen(true)}>
+            <MenuButton onClick={() => setNavbarOpen(true)} aria-label="Abrir menu">
               <Bars3Icon className="h-5 w-5"/>
             </MenuButton>
           ) : (
-            <MenuButton onClick={() => setNavbarOpen(false)}>
+            <MenuButton onClick={() => setNavbarOpen(false)} aria-label="Fechar menu">
               <XMarkIcon className="h-5 w-5" />
           </MenuButton>
           )}

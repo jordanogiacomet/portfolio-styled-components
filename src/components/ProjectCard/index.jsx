@@ -17,8 +17,8 @@ export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
     >
       <ImageContainer imgUrl={imgUrl}>
         <Overlay type='project-overlay' className={isHovered ? 'show' : ''}>
-          <Link href={gitUrl}>
-            <CodeBracketIcon className="icon" />
+          <Link href={gitUrl} ariaLabel='Abrir no github'>
+            <CodeBracketIcon className="icon" loading="lazy" />
           </Link>
         </Overlay>
         <Styled.Heading className={isHovered ? 'hide' : 'show'}>

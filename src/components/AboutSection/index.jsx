@@ -76,7 +76,7 @@ export const AboutSection = () => {
     <div id='about'>
       <Section type='about-section'>
         <ImageWrapper type='about-wrapper' className='image-content'>
-          <StyledImage src='/images/casual-image.webp' alt='About image'/>
+          <StyledImage src='/images/casual-image.webp' alt='About image' loading="lazy"/>
         </ImageWrapper>
         <Container type='text-container-about'>
           <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>

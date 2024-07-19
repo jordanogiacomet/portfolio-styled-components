@@ -34,10 +34,10 @@ export const HeroSection = () => {
         </Title>
         <TextComponent $colorDark={false}>Meu nome é Jordano. Estou sempre em busca de aprimorar minhas capacidades e compartilhar minhas qualidades e conhecimentos, com um foco constante na inovação. Tenho uma paixão profunda por tecnologia e programação, e adoro o desafio de resolver problemas, pois é isso que me faz crescer como profissional. </TextComponent>
         <ButtonWrapper>
-          <HeroButton type='hireMe' onClick={() => handleLinkOpen()}>
+          <HeroButton type='hireMe' onClick={() => handleLinkOpen()} aria-label="Me contrate">
             Me contrate
           </HeroButton>
-          <HeroButton type="downloadCV" onClick={() => handleDownload()}>
+          <HeroButton type="downloadCV" onClick={() => handleDownload()} aria-label="Download CV">
             <InnerButton>
               Download CV
             </InnerButton>
@@ -47,7 +47,7 @@ export const HeroSection = () => {
       <Col span={5} className="self-center mt-4">
         <ImageWrapper type='hero-wrapper'>
           <img
-            src="/images/hero_avatar.png"
+            src="/images/hero_avatar.webp"
             alt="hero image"
           />
         </ImageWrapper>

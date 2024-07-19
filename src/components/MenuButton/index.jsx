@@ -1,9 +1,9 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const MenuButton = ({ children, onClick  }) => {
+export const MenuButton = ({ children, onClick, ...props }) => {
   return (
-    <Styled.Container onClick={onClick}>
+    <Styled.Container onClick={onClick} {...props}>
       {children}
     </Styled.Container>
   );
