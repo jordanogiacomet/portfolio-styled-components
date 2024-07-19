@@ -6,11 +6,11 @@ const ColorModeContext = createContext();
 export const ColorModeProvider = ({children}) => {
   const [colorMode, setColorMode] = useState(() => {
     const savedColorMode = localStorage.getItem('colorMode');
-    return savedColorMode ? JSON.parse(savedColorMode) : 'light';
+    return savedColorMode ? JSON.parse(savedColorMode) : 'dark';
   });
 
   const toggleColorMode = () => {
-    setColorMode((prevColorMode) => (prevColorMode === 'light' ? 'dark' : 'light'));
+    setColorMode((prevColorMode) => (prevColorMode === 'dark' ? 'light' : 'dark'));
   };
 
   useEffect(() => {
