@@ -4,8 +4,11 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import Avatar from './hero_avatar.webp';
 import ScrollToTopButton from '../ScrollTopButton';
 import { useEffect } from 'react';
+import { useColorMode } from '../../contexts/ColorModeContext';
+
 
 export const ContactSection = () => {
+  const { colorMode } = useColorMode();
   const phoneNumber = process.env.REACT_APP_WHATSAPP_PHONE_NUMBER;
   const accountName = process.env.REACT_APP_ACCOUNT_NAME;
   const chatMessage = process.env.REACT_APP_CHAT_MESSAGE;
@@ -34,7 +37,7 @@ export const ContactSection = () => {
         phoneNumber={phoneNumber} 
         chatMessage={chatMessage} 
         allowClickAway={true}
-        darkMode={true}
+        darkMode={colorMode === 'light' ? false : true}
         avatar={Avatar}
       />
     </Styled.Container>

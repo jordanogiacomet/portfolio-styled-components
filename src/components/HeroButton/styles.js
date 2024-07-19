@@ -14,11 +14,11 @@ const getButtonStyles = ({ theme, type }) => {
     justify-content: center;
     min-width: 150px; /* Ajuste a largura mínima conforme necessário */
     transition: scale ease-in-out 0.2s;
+    border: transparent;
     &:hover {
       transition: scale ease-in-out 0.2s;
       scale: calc(1.03);
     };
-
     @media (${theme.media.lteMedium}) {
       width: 100%; /* Largura 100% em telas menores */
     }

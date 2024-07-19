@@ -3,19 +3,19 @@ import { OverlayMenu } from '../OverlayMenu';
 import { Overlay } from '../Overlay';
 import { OverlayItem } from '../OverlayItem';
 import { NavLink } from '../NavLink';
-import { LanguageToggleButton } from '../LanguageToggleButton';
+import { useColorMode } from '../../contexts/ColorModeContext';
 
 
 export const MenuOverlay = ({ links, onClick }) => {
+  const { colorMode } = useColorMode();
   return (
-    <Overlay type='menu-overlay'>
+    <Overlay type='menu-overlay' className={colorMode}>
       <OverlayMenu>
         {links.map((link, index) => (
           <OverlayItem key={index}>
             <NavLink href={link.path} onClick={onClick}>{link.title}</NavLink>
           </OverlayItem>
         ))}
-        <LanguageToggleButton />
       </OverlayMenu>
     </Overlay>
   );

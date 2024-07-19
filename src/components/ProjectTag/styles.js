@@ -8,6 +8,10 @@ export const Container = styled.div`
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  &.light{
+  border: 2px solid ${props => (props.isSelected ? '#4169E1' : '#000000')};
+  color: ${props => (props.isSelected ? '#4169E1' : '#000000')};
+  }
 
   &:hover {
     border-color: #4169E1;

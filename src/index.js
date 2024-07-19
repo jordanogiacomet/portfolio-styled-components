@@ -5,17 +5,20 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import { GlobalStyles } from './styles/global-styles';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ColorModeProvider } from './contexts/ColorModeContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ColorModeProvider>
     <ThemeProvider theme={theme}>
       <LanguageProvider>
         <Home />
         <GlobalStyles />
       </LanguageProvider>
     </ThemeProvider>
+    </ColorModeProvider>
   </React.StrictMode>
 );
 

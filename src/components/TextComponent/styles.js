@@ -17,9 +17,9 @@ const textStyles = {
 };
 
 export const Container = styled.p`
-  ${({ theme, $colorDark, type }) => css`
+  ${({ theme, colorDark, type }) => css`
     font-size: ${theme.font.sizes.base};
-    color: ${$colorDark ? theme.colors.primaryColor : theme.colors.white};
+    color: ${colorDark ? theme.colors.primaryColor : theme.colors.white};
     ${textStyles[type] || textStyles.default}
     
     @media ${theme.media.sm} {

@@ -9,7 +9,7 @@ export const Container = styled.input`
   width: 100%;
   padding: 1.5rem; /* p-2.5 */
   display: block;
-
+  
   &:focus {
     outline: none;
     border-color: #1E90FF;

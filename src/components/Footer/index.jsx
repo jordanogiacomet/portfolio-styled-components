@@ -1,15 +1,20 @@
 import * as Styled from './styles';
 import { LogoLink } from '../LogoLink';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useColorMode } from '../../contexts/ColorModeContext';
+import { LanguageToggleButton } from '../LanguageToggleButton';
+import ColorModeToggleButton from '../ColorModeToggleButton';
 
 
 export const Footer = () => {
-  const { language } = useLanguage();
+  const { colorMode } = useColorMode();
   return (
-    <Styled.Container>
+    <Styled.Container className={colorMode}>
       <Styled.Wrapper>
           <LogoLink link='/' text='LOGO' />
-        <Styled.Text>{language == 'en' ? 'Todos os direitos reservados.' : 'All rights reserved.'}</Styled.Text>
+          <div>
+            <LanguageToggleButton />
+            <ColorModeToggleButton />
+          </div>
       </Styled.Wrapper>
     </Styled.Container>
   );

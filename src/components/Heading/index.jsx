@@ -1,16 +1,17 @@
 import P from 'prop-types';
 import * as Styled from './styles';
+import { useColorMode } from '../../contexts/ColorModeContext';
 
 export const Heading = ({ 
   children,
-  colorDark = true,
   as = 'h1',
   size = 'huge',
   uppercase = false, 
   zIndex = '2',
 }) => {
+  const { colorMode } = useColorMode();
   return (
-    <Styled.Title as={as} $colorDark={colorDark} $size={size} $uppercase={uppercase} $zIndex={zIndex}>
+    <Styled.Title as={as} colorDark={colorMode === 'light' ? false : true} $size={size} $uppercase={uppercase} $zIndex={zIndex}>
       {children}
     </Styled.Title>
   );
@@ -18,7 +19,6 @@ export const Heading = ({
 
 Heading.propTypes = {
   children: P.node.isRequired,
-  colorDark: P.bool,
   zIndex: P.string,
   as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   size: P.oneOf(['small', 'medium', 'big', 'huge']),

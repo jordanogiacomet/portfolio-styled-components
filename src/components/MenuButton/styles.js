@@ -9,6 +9,10 @@ export const Container = styled.button`
   background: none;
   color: #b0b0b0;
   cursor: pointer;
+  &.light{
+    color: white;
+    border: 1px solid white;
+  }
   &:hover {
     color: white;
     border-color: white;

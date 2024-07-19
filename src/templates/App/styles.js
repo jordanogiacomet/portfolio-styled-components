@@ -4,5 +4,4 @@ export const Wrapper = styled.main`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background: ${({ theme }) => theme.colors.innerBgColor};
 `;

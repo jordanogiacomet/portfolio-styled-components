@@ -1,9 +1,9 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Nav = ({ children }) => {
+export const Nav = ({ children, className }) => {
   return (
-    <Styled.Container>
+    <Styled.Container className={className}>
       {children}
     </Styled.Container>
   );
@@ -11,4 +11,5 @@ export const Nav = ({ children }) => {
 
 Nav.propTypes = {
   children: P.node.isRequired,
+  className: P.string
 };

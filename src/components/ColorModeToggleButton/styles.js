@@ -7,9 +7,15 @@ export const Container = styled.button`
   border: 2px solid #ADB7BE;
   border-radius: 9999px;
   color: #ADB7BE;
-  font-size: 1.2rem;
-  right: 2.5rem;
-  margin-right: 2rem;
+  font-size: 1.2rem; 
+  right: 10rem;
+  cursor: pointer;
+  z-index: 199999;
+  transition: 0.2s;
+  &:hover{
+    color: #4169E1;
+    border-color: #4169E1;
+  }
   @media(max-width: 768px) {
     bottom: 20px;
   }
@@ -21,10 +27,6 @@ export const Container = styled.button`
       border-color: #CCCCCC;
     }
   }
-  cursor: pointer;
-  transition: 0.2s;
-  &:hover{
-    color: #4169E1;
-    border-color: #4169E1;
-  }
+
 `;
+

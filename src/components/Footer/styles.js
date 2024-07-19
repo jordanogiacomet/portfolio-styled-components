@@ -8,21 +8,24 @@ export const Container = styled.footer`
   color: white;
   width: 100%;
   background-color: #18191E;
+  &.light{
+    background-color: #1E3A8A;
+  }
 `;
+
 
 export const Wrapper = styled.div`
   padding: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media(max-width: 640px){
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const Logo = styled.span`
   font-size: 1.5rem;
   font-weight: bold;
-`;
-
-export const Text = styled.p`
-  color: #9CA2A9;
-  font-size: 1.5rem;
 `;

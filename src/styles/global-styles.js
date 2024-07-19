@@ -14,6 +14,22 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif !important;
   }
+  /* src/App.css */
+body.light {
+  --background-color: #D4D9DE;
+  --text-color: black;
+}
+
+body.dark {
+  --background-color: black;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
 
   h1, h2, h3, h4, h5, h6{
     font-family: 'Montserrat', sans-serif !important;
@@ -32,4 +48,6 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 `;
+
+
 

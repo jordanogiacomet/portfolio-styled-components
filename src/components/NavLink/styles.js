@@ -10,6 +10,14 @@ export const Container = styled.a`
   border-radius: 0.375rem;  /* rounded */
   text-decoration: none;
   transition: ease-in-out 0.3s;
+  
+  &.light{
+    color: white;
+    &:hover{
+      color: #CCCCCC;
+    }
+  }
+  
   &:hover{
     color: #4169E1;
   }

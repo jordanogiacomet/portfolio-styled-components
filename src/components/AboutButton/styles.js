@@ -8,6 +8,17 @@ export const Container = styled.button`
   margin-right: 12px;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  &.light{
+    color: black;
+    ${({ active }) =>
+    active &&
+    css`
+      color: #1E90FF;
+      &::after{
+        width: 100%;
+      }
+    `}
+  }
   &:hover {
     color: #1E90FF;
   }

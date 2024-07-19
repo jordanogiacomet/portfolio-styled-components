@@ -12,6 +12,8 @@ import { Container } from '../Container';
 import { LanguageToggleButton } from '../LanguageToggleButton';
 import * as Styled from './styles';
 import { useLanguage } from '../../contexts/LanguageContext';
+import ColorModeToggleButton from '../ColorModeToggleButton';
+import { useColorMode } from '../../contexts/ColorModeContext';
 
 const navLinksPt = [
   {
@@ -46,26 +48,27 @@ const navLinksEn = [
 
 export const Navbar = () => {
   const { language } = useLanguage();
+  const { colorMode } = useColorMode();
   const [navbarOpen, setNavbarOpen] = useState(false);
   const handleLinkClick = () => {
     setNavbarOpen(false);
   };
 
-  const navLinks = language ==='en' ? navLinksPt : navLinksEn;
+  const navLinks = language === 'en' ? navLinksPt : navLinksEn;
 
   return (
-    <Nav>
+    <Nav className={colorMode}>
       <Container type='nav-container'>
         <LogoLink text="LOGO" link="/"/>
         <MobileMenu>
           {!navbarOpen ? (
             <MenuButton onClick={() => setNavbarOpen(true)} aria-label="Abrir menu">
-              <Bars3Icon className="h-5 w-5"/>
+              <Bars3Icon className="h-5 w-5" />
             </MenuButton>
           ) : (
             <MenuButton onClick={() => setNavbarOpen(false)} aria-label="Fechar menu">
               <XMarkIcon className="h-5 w-5" />
-          </MenuButton>
+            </MenuButton>
           )}
         </MobileMenu>
         <Menu open={navbarOpen}>
@@ -76,16 +79,13 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
-       </Menu>
+        </Menu>
       </Container>
-      {navbarOpen && <MenuOverlay links={navLinks} onClick={handleLinkClick}/>}
-     <Styled.ButtonDiv>
-      <LanguageToggleButton />
-     </Styled.ButtonDiv>  
+      {navbarOpen && <MenuOverlay links={navLinks} onClick={handleLinkClick} />}
     </Nav>
   );
 };
 
 Navbar.propTypes = {
- 
+
 };

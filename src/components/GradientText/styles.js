@@ -1,3 +1,4 @@
+// src/components/GradientText/styles.js
 import styled, { css } from 'styled-components';
 
 const defaultGradient = css`

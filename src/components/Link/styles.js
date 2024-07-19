@@ -16,7 +16,17 @@ export const Container = styled.a`
   &.mail-icons {
     opacity: 1 !important;
     visibility: visible !important;
+    &.light{
+    color: white;
+    background: white;
   }
+  
+  &.dark{
+    color: white;
+    background: white;
+    }
+  }
+
 
   &:hover {
     border-color: white;

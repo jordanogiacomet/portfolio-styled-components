@@ -1,6 +1,21 @@
+import { useEffect } from 'react';
+import { useColorMode } from '../../contexts/ColorModeContext';
 import * as Styled from './styles';
 
 export const AnimatedText = () => {
+  const { colorMode } = useColorMode();
+
+  useEffect(() => {
+    const animatedTextElement = document.querySelector('.animated-text');
+    if (colorMode === 'light') {
+      animatedTextElement.classList.add('light');
+      animatedTextElement.classList.remove('dark');
+    } else {
+      animatedTextElement.classList.add('dark');
+      animatedTextElement.classList.remove('light');
+    }
+  }, [colorMode]);
+
   return (
     <Styled.Container
       className="animated-text"
@@ -17,6 +32,4 @@ export const AnimatedText = () => {
   );
 };
 
-AnimatedText.propTypes = {
-
-};
+AnimatedText.propTypes = {};

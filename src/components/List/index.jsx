@@ -1,9 +1,11 @@
 import P from 'prop-types';
 import * as Styled from './styles';
+import { useColorMode } from '../../contexts/ColorModeContext';
 
 export const List = ({ children }) => {
+  const { colorMode } = useColorMode();
   return (
-    <Styled.Container>
+    <Styled.Container className={colorMode}>
       {children}
     </Styled.Container>
   );

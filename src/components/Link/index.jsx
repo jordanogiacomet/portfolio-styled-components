@@ -1,9 +1,16 @@
 import P from 'prop-types';
 import * as Styled from './styles';
+import { useColorMode } from '../../contexts/ColorModeContext';
 
-export const Link = ({ href, children, className, target='_blank', ariaLabel }) => {
+export const Link = ({ href, children, className, target = '_blank', ariaLabel }) => {
+  const { colorMode } = useColorMode();
   return (
-    <Styled.Container href={href} className={className} target={target} aria-label={ariaLabel}>
+    <Styled.Container 
+      href={href} 
+      className={`${className} ${colorMode}`} 
+      target={target} 
+      aria-label={ariaLabel}
+    >
       {children}
     </Styled.Container>
   );

@@ -31,8 +31,8 @@ const zIndex = ($zIndex) => css`
 `
 
 export const Title = styled.h1`
-  ${({ theme, $colorDark, $size, $uppercase, $zIndex }) => css`
-    color: ${$colorDark ? theme.colors.primaryColor : theme.colors.white};
+  ${({ theme, colorDark, $size, $uppercase, $zIndex }) => css`
+    color: ${colorDark ? theme.colors.textColor : theme.colors.white};
     ${titleSize[$size](theme)};
     ${titleCase($uppercase)};
     ${zIndex($zIndex)};

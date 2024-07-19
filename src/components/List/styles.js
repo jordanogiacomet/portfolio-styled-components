@@ -9,4 +9,9 @@ export const Container = styled.ul`
     @media (max-width: 640px) {
       font-size: 1.5rem;
     }
+    &.light {
+      > li {
+        color: black;
+      }
+    }
 `;

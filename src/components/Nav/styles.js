@@ -8,6 +8,8 @@ export const Container = styled.nav`
   z-index: 10;
   background: #121212; 
   opacity: 1; 
-
+  &.light{
+    background-color: #1E3A8A;
+  }
 `;
 

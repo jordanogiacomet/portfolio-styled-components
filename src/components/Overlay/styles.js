@@ -13,6 +13,9 @@ const menuOverlayStyles = css`
   justify-content: center;
   align-items: center;
   height: 30%;
+  &.light{
+    background: rgba(30, 58, 138, 0.9);
+  }
 
   @media (min-width: 768px) {
     display: none;
