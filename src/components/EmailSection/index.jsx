@@ -16,10 +16,12 @@ import { TextArea } from '../TextArea';
 import { EmailButton } from '../EmailButton';
 import { Section } from '../Section';
 import { Container } from '../Container';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export const EmaiLSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [formError, setFormError] = useState(null);
+  const { language } = useLanguage();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,23 +57,23 @@ export const EmaiLSection = () => {
       <Section type='email-section'>
         <Styled.Col span={4} className='form-element'>
           {emailSubmitted ? (
-            <TextComponent type='default'>Email enviado com sucesso!</TextComponent>
+            <TextComponent type='default'>{language === 'en' ? 'Email enviado com sucesso!' : 'Email successfully sent!'}</TextComponent>
           ) : (
             <Form onSubmit={handleSubmit}>
               <Container type='form-container'>
-                <Label htmlFor='email'>Seu email</Label>
+                <Label htmlFor='email'>{language === 'en' ? 'Seu email' : 'Your email'}</Label>
                 <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
               </Container>
               <Container type='form-container'>
-                <Label htmlFor='subject'>Assunto</Label>
+                <Label htmlFor='subject'>{language === 'en' ? 'Assunto' : 'Subject'}</Label>
                 <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
               </Container>
               <Container type='form-container'>
-                <Label htmlFor='message'>Sua mensagem</Label>
+                <Label htmlFor='message'>{language === 'en' ? 'Sua mensagem' : 'Your message'}</Label>
                 <TextArea name='message' id='message' placeholder='Lets talk about...'/>
               </Container>
               <Container type='form-container'>
-                <EmailButton type="submit">Enviar mensagem</EmailButton>
+                <EmailButton type="submit">{language === 'en' ? 'Enviar mensagem' : 'Send message'}</EmailButton>
               </Container>
               {formError && <TextComponent type='default'>{formError}</TextComponent>}
             </Form>
@@ -80,12 +82,12 @@ export const EmaiLSection = () => {
         <Styled.Col span={8} className='text-element'>
           <Heading as='h5' size='medium'>
             <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-              Let's connect
+              {language === 'en' ? 'Vamos nos conectar' : "Let's connect"}
             </GradientText>
           </Heading>
           <TextComponent type='default'>
             {" "}
-            Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.
+            {language == 'en' ? 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.' : 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.'}
           </TextComponent>
           <Socials>
             <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img loading="lazy" src={GithubIcon} alt='Github icon'/></Link>

@@ -9,9 +9,11 @@ import { MenuButton } from '../MenuButton';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { MenuOverlay } from '../MenuOverlay';
 import { Container } from '../Container';
+import { LanguageToggleButton } from '../LanguageToggleButton';
+import * as Styled from './styles';
+import { useLanguage } from '../../contexts/LanguageContext';
 
-
-const navLinks = [
+const navLinksPt = [
   {
     title: "Sobre",
     path: "#about",
@@ -26,11 +28,31 @@ const navLinks = [
   },
 ]
 
+const navLinksEn = [
+  {
+    title: "About",
+    path: "#about",
+  },
+  {
+    title: "Projects",
+    path: "#projects",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
+  },
+]
+
+
 export const Navbar = () => {
+  const { language } = useLanguage();
   const [navbarOpen, setNavbarOpen] = useState(false);
   const handleLinkClick = () => {
     setNavbarOpen(false);
   };
+
+  const navLinks = language ==='en' ? navLinksPt : navLinksEn;
+
   return (
     <Nav>
       <Container type='nav-container'>
@@ -57,6 +79,9 @@ export const Navbar = () => {
        </Menu>
       </Container>
       {navbarOpen && <MenuOverlay links={navLinks} onClick={handleLinkClick}/>}
+     <Styled.ButtonDiv>
+      <LanguageToggleButton />
+     </Styled.ButtonDiv>  
     </Nav>
   );
 };

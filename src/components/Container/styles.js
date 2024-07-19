@@ -9,7 +9,7 @@ const containerStyles = {
   `,
   'home-container': css`
     width: 100%;
-    margin-top: 8rem;
+    margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem 3rem;

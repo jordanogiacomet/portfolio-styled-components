@@ -4,14 +4,17 @@ import Home from './templates/App';
 import { ThemeProvider } from 'styled-components'; 
 import { theme } from './styles/theme';
 import { GlobalStyles } from './styles/global-styles';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Home />
-      <GlobalStyles />
+      <LanguageProvider>
+        <Home />
+        <GlobalStyles />
+      </LanguageProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

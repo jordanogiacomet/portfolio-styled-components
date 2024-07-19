@@ -5,6 +5,7 @@ import { ProjectCard } from '../ProjectCard';
 import { GradientText } from '../GradientText';
 import { Section } from '../Section';
 import { Container } from '../Container';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 
 const projectsData = [
@@ -48,6 +49,7 @@ const projectsData = [
 
 
 export const ProjectSection = () => {
+  const { language } = useLanguage();
   const [tag, setTag] = useState("All");
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -59,12 +61,12 @@ export const ProjectSection = () => {
     <div id='projects'>
       <Section type='projects-section'>
         <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-          <Heading as='h2' size='medium' colorDark={false}>Projetos</Heading>
+          <Heading as='h2' size='medium' colorDark={false}>{language === 'en' ? 'Projetos' : 'Projects'}</Heading>
         </GradientText>
         <Container type='tag-container'>
-          <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
-          <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
-          <ProjectTag onClick={handleTagChange} name="Desktop" isSelected={tag === "Desktop"} />
+          <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"}>{language === 'en' ? 'Todos' : 'All'}</ProjectTag>
+          <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"}>Web</ProjectTag>
+          <ProjectTag onClick={handleTagChange} name="Desktop" isSelected={tag === "Desktop"}>Desktop</ProjectTag>
         </Container>
         <Container type='card-container'>
           {filteredProjects.map((project) => (
