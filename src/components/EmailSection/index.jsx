@@ -17,22 +17,25 @@ import { EmailButton } from '../EmailButton';
 import { Section } from '../Section';
 import { Container } from '../Container';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { Spinner } from '../Spinner'; // Import do Spinner
 
 export const EmaiLSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [formError, setFormError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const { language } = useLanguage();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormError(null);
-  
+    setLoading(true);
+
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-  
+
     try {
       const response = await fetch('https://email-api-six.vercel.app/send-email', {
         method: 'POST',
@@ -41,14 +44,16 @@ export const EmaiLSection = () => {
         },
         body: JSON.stringify(data),
       });
-  
+
       if (!response.ok) {
         throw new Error('Falha ao enviar email');
       }
-  
+
       setEmailSubmitted(true);
+      setLoading(false);
     } catch (error) {
       setFormError(error.message);
+      setLoading(false);
     }
   };
 
@@ -57,7 +62,9 @@ export const EmaiLSection = () => {
       <Section type='email-section'>
         <Styled.Col span={4} className='form-element'>
           {emailSubmitted ? (
-            <TextComponent type='default'>{language === 'en' ? 'Email enviado com sucesso!' : 'Email successfully sent!'}</TextComponent>
+            <TextComponent type='default'>
+              {language === 'en' ? 'Email enviado com sucesso!' : 'Email successfully sent!'} ✔️
+            </TextComponent>
           ) : (
             <Form onSubmit={handleSubmit}>
               <Container type='form-container'>
@@ -73,7 +80,9 @@ export const EmaiLSection = () => {
                 <TextArea name='message' id='message' placeholder='Lets talk about...'/>
               </Container>
               <Container type='form-container'>
-                <EmailButton type="submit">{language === 'en' ? 'Enviar mensagem' : 'Send message'}</EmailButton>
+                <EmailButton type="submit" disabled={loading}>
+                  {loading ? <Spinner /> : (language === 'en' ? 'Enviar mensagem' : 'Send message')}
+                </EmailButton>
               </Container>
               {formError && <TextComponent type='default'>{formError}</TextComponent>}
             </Form>
@@ -87,7 +96,7 @@ export const EmaiLSection = () => {
           </Heading>
           <TextComponent type='default'>
             {" "}
-            {language == 'en' ? 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.' : 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.'}
+            {language === 'en' ? 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.' : 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.'}
           </TextComponent>
           <Socials>
             <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img loading="lazy" src={GithubIcon} alt='Github icon'/></Link>

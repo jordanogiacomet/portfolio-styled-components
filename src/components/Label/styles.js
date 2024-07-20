@@ -1,12 +1,16 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const Container = styled.label`
-  color: white;
+  ${({color}) => css`
+    color: ${color};
+    &.light{
+    color: ${color};
+  }
+  `}
+  
   display: block;
   margin-bottom: 1rem;
   font-size: 1.5rem; /* text-sm */
-  font-weight: 500; /* font-medium */
-  &.light{
-    color: black;
-  }
+  font-weight: 600; /* font-medium */
+
 `;
