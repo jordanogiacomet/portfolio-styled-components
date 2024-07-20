@@ -1,16 +1,18 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const Container = styled.button`
-  background: linear-gradient(to bottom right, #1E90FF, #4169E1, #00008B);
+  ${({ from, via, to }) => css`
+    background: linear-gradient(to bottom right, ${from}, ${via}, ${to});
+  `};
+  border: transparent;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   padding: 1rem 1.25rem;
   border-radius: 10rem;
   width: 100%;
   transition: scale 0.2s ease-in-out;
-
+  cursor: pointer;
   &:hover {
-    background-color: #4169E1;
     transition: scale ease-in-out 0.2s;
     scale: calc(1.02);
   }
@@ -18,6 +20,6 @@ export const Container = styled.button`
   &:focus {
     outline: none;
     
-    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.5); /* Optional: change focus outline */
+    /* Optional: change focus outline */
   }
 `;

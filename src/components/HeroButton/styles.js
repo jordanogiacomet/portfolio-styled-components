@@ -6,7 +6,7 @@ const getButtonStyles = ({ theme, type }) => {
     padding: ${buttonType.padding};
     border-radius: ${buttonType.borderRadius};
     color: ${buttonType.textColor};
-    background: ${buttonType.background};
+    
     font-weight: bold;
     cursor: pointer; 
     display: inline-flex;
@@ -27,4 +27,7 @@ const getButtonStyles = ({ theme, type }) => {
 
 export const Container = styled.button`
   ${getButtonStyles};
+  ${({ from, via, to}) => css`
+    background:linear-gradient(to bottom right, ${from}, ${via}, ${to});
+  `}
 `; 

@@ -6,18 +6,21 @@ import { theme } from './styles/theme';
 import { GlobalStyles } from './styles/global-styles';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { ColorModeProvider } from './contexts/ColorModeContext';
+import { ColorProvider } from './contexts/ColorCustomizationContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ColorModeProvider>
-    <ThemeProvider theme={theme}>
-      <LanguageProvider>
-        <Home />
-        <GlobalStyles />
-      </LanguageProvider>
-    </ThemeProvider>
+      <ColorProvider>
+      <ThemeProvider theme={theme}>
+        <LanguageProvider>
+          <Home />
+          <GlobalStyles />
+        </LanguageProvider>
+      </ThemeProvider>
+      </ColorProvider>
     </ColorModeProvider>
   </React.StrictMode>
 );

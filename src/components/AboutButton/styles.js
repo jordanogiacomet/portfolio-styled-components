@@ -1,32 +1,40 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.button`
+  ${({primaryColor}) => css`
+    color: ${primaryColor};
+  `}
   background: transparent;
   position: relative;
   border: none;
-  color: #ADB7BE;
+  
   margin-right: 12px;
   cursor: pointer;
   padding: 0.5rem 1rem;
   &.light{
     color: black;
-    ${({ active }) =>
+    ${({ active, color }) =>
     active &&
     css`
-      color: #1E90FF;
+      color: ${color};
       &::after{
         width: 100%;
       }
     `}
   }
   &:hover {
-    color: #1E90FF;
+    ${({ color }) => css`
+    color: ${color};
+    `
+  }
   }
   &::after {
     content: '';
+    ${({ from, via, to }) => css`
+      background: linear-gradient(to right, ${from}, ${via}, ${to});
+    `}
     display: block;
     height: 2px;
-    background: linear-gradient(to right, #1E90FF, #4169E1, #00008B);
     transition: width 0.3s ease-in-out;
     width: 0;
     position: absolute;
@@ -42,10 +50,10 @@ export const Container = styled.button`
   @media (max-width: 640px) {
     font-size: 1.6rem;
   }
-  ${({ active }) =>
+  ${({ active, color }) =>
     active &&
     css`
-      color: #1E90FF;
+      color: ${color};
       &::after{
         width: 100%;
       }

@@ -6,6 +6,7 @@ import { ImageContainer } from '../ImageContainer';
 import { Link } from '../Link'; 
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline';
 import { Overlay } from '../Overlay';
+import { GradientText } from '../GradientText';
 
 export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,7 +23,7 @@ export const ProjectCard = ({ imgUrl, title, gitUrl, previewUrl }) => {
           </Link>
         </Overlay>
         <Styled.Heading className={isHovered ? 'hide' : 'show'}>
-          {title}
+         <GradientText>{title}</GradientText> 
         </Styled.Heading>
       </ImageContainer>
     </Styled.Container>

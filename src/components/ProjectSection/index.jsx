@@ -60,7 +60,7 @@ export const ProjectSection = () => {
   return (
     <div id='projects'>
       <Section type='projects-section'>
-        <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
+        <GradientText>
           <Heading as='h2' size='medium' colorDark={false}>{language === 'en' ? 'Projetos' : 'Projects'}</Heading>
         </GradientText>
         <Container type='tag-container'>

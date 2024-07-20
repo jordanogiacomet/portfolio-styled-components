@@ -1,14 +1,19 @@
 import P from 'prop-types';
 import * as Styled from './styles';
-import { useColorMode } from '../../contexts/ColorModeContext';
+import { useColorCustomization } from '../../contexts/ColorCustomizationContext';
 
 export const GradientText = ({ children }) => {
-  const { colorMode } = useColorMode();
+
+  const { gradientColors } = useColorCustomization();
+  
+  
+
+
   return (
     <Styled.Container 
-      from={colorMode === 'light' ? '#4169E1' : '#1E90FF'} 
-      via={colorMode === 'light' ? '#2B6DE1' : '#4169E1'} 
-      to={colorMode === 'light' ? '#00008B' : '#00008B'}>
+      from={gradientColors.from} 
+      via={gradientColors.via} 
+      to={gradientColors.to}>
       {children}
     </Styled.Container>
   );

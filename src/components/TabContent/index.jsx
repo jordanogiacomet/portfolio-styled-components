@@ -1,9 +1,11 @@
 import P from 'prop-types';
 import * as Styled from './styles';
+import { useColorCustomization } from '../../contexts/ColorCustomizationContext';
 
 export const TabContent = ({ children }) => {
+  const { primaryColor } = useColorCustomization();
   return (
-    <Styled.Container>
+    <Styled.Container color={primaryColor}>
       {children}
     </Styled.Container>
   );

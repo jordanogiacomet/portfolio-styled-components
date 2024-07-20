@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { ArrowUpIcon } from '@heroicons/react/24/outline';
+import { useColorCustomization } from '../../contexts/ColorCustomizationContext';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { gradientColors } = useColorCustomization();
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
@@ -22,7 +24,7 @@ const ScrollToTopButton = () => {
     });
   };
   return (
-    <StyledButton onClick={scrollToTop} isVisible={isVisible}>
+    <StyledButton via={gradientColors.via} to={gradientColors.to} onClick={scrollToTop} isVisible={isVisible}>
       <ArrowUpIcon />
     </StyledButton>
   );
@@ -34,7 +36,14 @@ const StyledButton = styled.button`
   left: 4rem;
   width: 40px;
   height: 40px;
-  background-color: #4169E1;
+  ${({ via, to }) => css`
+    background-color: ${via};
+    &:hover {
+    transition: ease-in-out 0.3s;
+    background-color: ${to};
+  }
+  `}
+  
   color: white;
   border: none;
   border-radius: 50%;
@@ -47,10 +56,7 @@ const StyledButton = styled.button`
   @media(max-width: 768px){
     display: none;
   }
-  &:hover {
-    transition: ease-in-out 0.3s;
-    background-color: #00008B;
-  }
+
 `;
 
 export default ScrollToTopButton;

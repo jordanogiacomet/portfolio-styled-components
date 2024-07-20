@@ -15,15 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif !important;
   }
   /* src/App.css */
-body.light {
-  --background-color: #D4D9DE;
-  --text-color: black;
-}
 
-body.dark {
-  --background-color: black;
-  --text-color: white;
-}
 
 body {
   background-color: var(--background-color);

@@ -1,11 +1,10 @@
 import P from 'prop-types';
 import * as Styled from './styles';
-import { useColorMode } from '../../contexts/ColorModeContext';
-
+import { useColorCustomization } from '../../contexts/ColorCustomizationContext';
 export const TextComponent = ({ children, type = 'default' }) => {
-  const { colorMode } = useColorMode();
+  const { primaryColor } = useColorCustomization();
   return (
-    <Styled.Container colorDark={colorMode === 'light' ? true : false} type={type}>
+    <Styled.Container type={type} color={primaryColor}>
       {children}
     </Styled.Container>
   );
