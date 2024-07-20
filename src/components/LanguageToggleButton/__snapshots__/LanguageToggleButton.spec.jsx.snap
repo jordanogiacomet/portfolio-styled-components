@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LanguageToggleButton /> should match snapshot 1`] = `
+.c0 {
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid #ADB7BE;
+  border-radius: 9999px;
+  color: #ADB7BE;
+  font-size: 1.2rem;
+  right: 2.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.c0.light {
+  color: white;
+  border-color: white;
+}
+
+.c0.light:hover {
+  color: #CCCCCC;
+  border-color: #CCCCCC;
+}
+
+.c0:hover {
+  color: #4169E1;
+  border-color: #4169E1;
+}
+
+@media (max-width: 768px) {
+  .c0 {
+    bottom: 20px;
+  }
+}
+
+<div>
+  <button
+    aria-label="Switch language"
+    class="c0 dark"
+  >
+    PT-BR
+  </button>
+</div>
+`;

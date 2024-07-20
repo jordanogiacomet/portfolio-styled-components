@@ -5,9 +5,9 @@ export const Container = styled(TypeAnimation)`
   display: inline-block;
   
   &.light{
-    color: black !important;
+    color: black;
   }
   &.dark{
-    color: white !important;
+    color: white;
   }
 `;

@@ -17,9 +17,9 @@ import { EmailButton } from '../EmailButton';
 import { Section } from '../Section';
 import { Container } from '../Container';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { Spinner } from '../Spinner'; // Import do Spinner
+import { Spinner } from '../Spinner'; 
 
-export const EmaiLSection = () => {
+export const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [formError, setFormError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -95,7 +95,6 @@ export const EmaiLSection = () => {
             </GradientText>
           </Heading>
           <TextComponent type='default'>
-            {" "}
             {language === 'en' ? 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.' : 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.'}
           </TextComponent>
           <Socials>
@@ -108,4 +107,4 @@ export const EmaiLSection = () => {
   );
 };
 
-EmaiLSection.propTypes = {};
+EmailSection.propTypes = {};

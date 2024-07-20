@@ -1,11 +1,11 @@
-// src/components/ColorModeToggleButton.js
 import React from 'react';
 import { useColorMode } from '../../contexts/ColorModeContext';
 import * as Styled from './styles'
 import P from 'prop-types';
 
-const ColorModeToggleButton = () => {
+export const ColorModeToggleButton = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  
   const handleClick = () => {
     toggleColorMode();
     scrollToTop();
@@ -19,10 +19,9 @@ const ColorModeToggleButton = () => {
   };
 
   return (
-    <Styled.Container onClick={handleClick} className={colorMode}>
+    <Styled.Container onClick={handleClick} className={colorMode} aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}>
       {colorMode === 'light' ? 'LIGHT' : 'DARK'}
     </Styled.Container>
-    
   );
 };
 
@@ -30,5 +29,3 @@ ColorModeToggleButton.propTypes = {
   className: P.string
 };
 
-export default ColorModeToggleButton;
- 

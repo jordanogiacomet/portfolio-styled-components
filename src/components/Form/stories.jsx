@@ -19,30 +19,15 @@ const Template = (args) => <Form {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  onSubmit: () => alert('Form submitted'),
   children: (
     <>
       <Label htmlFor="email">Your email</Label>
-      <Input
-        name="email"
-        type="email"
-        id="email"
-        required
-        placeholder="user@example.com"
-      />
+      <Input name="email" type="email" id="email" required placeholder="user@example.com" />
       <Label htmlFor="subject">Your subject</Label>
-      <Input
-        name="subject"
-        type="text"
-        id="subject"
-        required
-        placeholder="Just saying hi"
-      />
+      <Input name="subject" type="text" id="subject" required placeholder="Just saying hi" />
       <Label htmlFor="message">Your message</Label>
-      <TextArea
-        name="message"
-        id="message"
-        placeholder="Let's talk about..."
-      />
+      <TextArea name="message" id="message" placeholder="Let's talk about..." />
       <EmailButton type="submit">Send Message</EmailButton>
     </>
   ),

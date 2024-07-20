@@ -2,7 +2,7 @@ import { HeroButton } from '.';
 import { InnerButton } from '../InnerButton';
 
 export default {
-  title: 'Button',
+  title: 'HeroButton',
   component: HeroButton,
   args: {
     children: 'Hire me',

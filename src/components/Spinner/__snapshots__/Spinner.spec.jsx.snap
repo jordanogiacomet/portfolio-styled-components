@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> should match snapshot 1`] = `
+.c0 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: cilQsd 1s ease-in-out infinite;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;

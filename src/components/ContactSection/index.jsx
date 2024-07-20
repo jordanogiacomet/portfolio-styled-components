@@ -6,7 +6,6 @@ import ScrollToTopButton from '../ScrollTopButton';
 import { useEffect } from 'react';
 import { useColorMode } from '../../contexts/ColorModeContext';
 
-
 export const ContactSection = () => {
   const { colorMode } = useColorMode();
   const phoneNumber = process.env.REACT_APP_WHATSAPP_PHONE_NUMBER;
@@ -14,8 +13,7 @@ export const ContactSection = () => {
   const chatMessage = process.env.REACT_APP_CHAT_MESSAGE;
 
   useEffect(() => {
-    // Substitua pelo seletor correto do botão
-    const whatsappButton = document.querySelector('.floating-whatsapp-button');
+    const whatsappButton = document.querySelector('.styles-module_whatsappButton__tVits');
     if (whatsappButton) {
       whatsappButton.setAttribute('aria-hidden', 'false');
     }
@@ -24,11 +22,11 @@ export const ContactSection = () => {
       whatsappChat.setAttribute('aria-hidden', 'false');
     }
     const sendButton = document.querySelector('.styles-module_buttonSend__kXjja');
-    if (whatsappChat) {
+    if (sendButton) {
       sendButton.setAttribute('aria-label', 'Enviar mensagem');
     }
-
   }, []);
+
   return (
     <Styled.Container>
       <ScrollToTopButton />
@@ -37,7 +35,7 @@ export const ContactSection = () => {
         phoneNumber={phoneNumber} 
         chatMessage={chatMessage} 
         allowClickAway={true}
-        darkMode={colorMode === 'light' ? false : true}
+        darkMode={colorMode === 'dark'}
         avatar={Avatar}
       />
     </Styled.Container>

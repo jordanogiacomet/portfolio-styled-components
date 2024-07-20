@@ -9,16 +9,16 @@ describe('<LogoLink />', () => {
 
     expect(heading.firstChild).toHaveAttribute('href', '#target');
   });
+
   it('should render image logo', () => {
     renderTheme(<LogoLink link="#target" text="Hello World" srcImg="/images/hero-image.png"/>);
     const heading = screen.getByRole('heading', { name: 'Hello World' });
 
     expect(heading.firstChild.firstChild).toHaveAttribute('src', '/images/hero-image.png');
   });
+
   it('should match snapshot', () => {
     const { container } = renderTheme(<LogoLink link="#target" text="Hello World" srcImg="/images/hero-image.png"/>);
-
     expect(container.firstChild).toMatchSnapshot();
   });
 });
-

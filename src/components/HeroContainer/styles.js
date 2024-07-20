@@ -15,19 +15,19 @@ export const Col = styled.div`
   grid-column: span 1;
   @media ${({ theme }) => theme.media.sm} {
     grid-column: ${({ span }) => `span ${span}`};
-  };
+  }
 
   &.self-center {
     place-self: center;
-  };
+  }
 
   &.text-center {
     text-align: center;
-  };
+  }
 
   @media ${({ theme }) => theme.media.sm} {
     text-align: left;
-  };
+  }
 
   &.mt-4 {
     margin-top: 5rem;
@@ -35,5 +35,5 @@ export const Col = styled.div`
     @media ${({ theme }) => theme.media.lg} {
       margin-top: 0;
     }
-  };
+  }
 `;

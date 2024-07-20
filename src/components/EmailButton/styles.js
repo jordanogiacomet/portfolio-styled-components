@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.button`
   ${({ from, via, to }) => css`
@@ -12,10 +12,12 @@ export const Container = styled.button`
   width: 100%;
   transition: scale 0.2s ease-in-out;
   cursor: pointer;
+
   &:disabled {
     cursor: not-allowed;
     opacity: 0.6;
   }
+
   &:hover {
     transition: scale ease-in-out 0.2s;
     scale: calc(1.02);
@@ -23,7 +25,5 @@ export const Container = styled.button`
 
   &:focus {
     outline: none;
-    
-    /* Optional: change focus outline */
   }
 `;

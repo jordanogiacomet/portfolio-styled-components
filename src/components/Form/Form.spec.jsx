@@ -5,12 +5,12 @@ import { renderTheme } from '../../styles/render-theme';
 
 describe('<Form />', () => {
   it('should match snapshot', () => {
-    const { container } = renderTheme(<Form>Form content</Form>);
+    const { container } = renderTheme(<Form onSubmit={() => {}}>Form content</Form>);
     expect(container).toMatchSnapshot();
   });
 
   it('should render Form with children', () => {
-    renderTheme(<Form>Form content</Form>);
+    renderTheme(<Form onSubmit={() => {}}>Form content</Form>);
     expect(screen.getByText('Form content')).toBeInTheDocument();
   });
 });

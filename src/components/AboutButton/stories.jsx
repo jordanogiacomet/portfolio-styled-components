@@ -1,9 +1,8 @@
 import React from 'react';
-import { AboutButton } from '.';
-
+import { AboutButton } from './AboutButton';
 
 export default {
-  title: 'AboutButton',
+  title: 'Components/AboutButton',
   component: AboutButton,
   argTypes: {
     active: { control: 'boolean' },
@@ -23,5 +22,12 @@ export const Default = Template.bind({});
 Default.args = {
   children: 'Button Text',
   active: false,
+  selectTab: () => alert('Button clicked'),
+};
+
+export const Active = Template.bind({});
+Active.args = {
+  children: 'Active Button',
+  active: true,
   selectTab: () => alert('Button clicked'),
 };

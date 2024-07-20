@@ -17,16 +17,14 @@ export const Container = styled.a`
     opacity: 1 !important;
     visibility: visible !important;
     &.light{
-    color: white;
-    background: white;
-  }
-  
-  &.dark{
-    color: white;
-    background: white;
+      color: white;
+      background: white;
+    }
+    &.dark{
+      color: white;
+      background: white;
     }
   }
-
 
   &:hover {
     border-color: white;

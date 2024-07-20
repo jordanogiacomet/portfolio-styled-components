@@ -16,5 +16,5 @@ export const HeroButton = ({ children, type = "default", ...props }) => {
 HeroButton.propTypes = {
   children: P.node.isRequired,
   type: P.string,
-  onClick: P.func.isRequired,
+  onClick: P.func,
 };

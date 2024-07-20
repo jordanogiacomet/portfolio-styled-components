@@ -12,21 +12,24 @@ export const Container = styled.button`
   cursor: pointer;
   z-index: 199999;
   transition: 0.2s;
-  &:hover{
+  
+  &:hover {
     color: #4169E1;
     border-color: #4169E1;
   }
-  @media(max-width: 768px) {
+  
+  @media (max-width: 768px) {
     bottom: 20px;
   }
-  &.light{
+
+  &.light {
     color: white;
     border-color: white;
-    &:hover{
+
+    &:hover {
       color: #CCCCCC;
       border-color: #CCCCCC;
     }
   }
-
 `;
 

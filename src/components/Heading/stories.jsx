@@ -5,13 +5,11 @@ export default {
   component: Heading,
   args: {
     children: 'O texto está escuro',
-    colorDark: true,
     size: 'huge',
     uppercase: false,
   },
   argTypes: {
     children: { type: 'string' },
-    colorDark: { control: 'boolean' },
     size: {
       control: {
         type: 'select',
@@ -37,6 +35,5 @@ Light.parameters = {
 };
 
 Dark.args = {
-  colorDark: false,
   children: 'O texto está claro',
 };

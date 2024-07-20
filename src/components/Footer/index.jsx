@@ -2,7 +2,7 @@ import * as Styled from './styles';
 import { LogoLink } from '../LogoLink';
 import { useColorMode } from '../../contexts/ColorModeContext';
 import { LanguageToggleButton } from '../LanguageToggleButton';
-import ColorModeToggleButton from '../ColorModeToggleButton';
+import { ColorModeToggleButton } from '../ColorModeToggleButton';
 
 
 export const Footer = () => {

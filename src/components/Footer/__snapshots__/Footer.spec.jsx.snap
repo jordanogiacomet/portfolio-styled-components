@@ -11,16 +11,15 @@ exports[`<Footer /> should match snapshot 1`] = `
   background-color: #18191E;
 }
 
+.c0.light {
+  background-color: #1E3A8A;
+}
+
 .c1 {
   padding: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.c4 {
-  color: #9CA2A9;
-  font-size: 1.5rem;
 }
 
 .c3 {
@@ -41,9 +40,86 @@ exports[`<Footer /> should match snapshot 1`] = `
   z-index: 2;
 }
 
+.c4 {
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid #ADB7BE;
+  border-radius: 9999px;
+  color: #ADB7BE;
+  font-size: 1.2rem;
+  right: 2.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.c4.light {
+  color: white;
+  border-color: white;
+}
+
+.c4.light:hover {
+  color: #CCCCCC;
+  border-color: #CCCCCC;
+}
+
+.c4:hover {
+  color: #4169E1;
+  border-color: #4169E1;
+}
+
+.c5 {
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid #ADB7BE;
+  border-radius: 9999px;
+  color: #ADB7BE;
+  font-size: 1.2rem;
+  right: 10rem;
+  cursor: pointer;
+  z-index: 199999;
+  transition: 0.2s;
+}
+
+.c5:hover {
+  color: #4169E1;
+  border-color: #4169E1;
+}
+
+.c5.light {
+  color: white;
+  border-color: white;
+}
+
+.c5.light:hover {
+  color: #CCCCCC;
+  border-color: #CCCCCC;
+}
+
+@media (max-width: 640px) {
+  .c1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c4 {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c5 {
+    bottom: 20px;
+  }
+}
+
 <div>
   <footer
-    class="c0"
+    class="c0 dark"
   >
     <div
       class="c1"
@@ -60,11 +136,20 @@ exports[`<Footer /> should match snapshot 1`] = `
           </span>
         </a>
       </h1>
-      <p
-        class="c4"
-      >
-        All rights reserved.
-      </p>
+      <div>
+        <button
+          aria-label="Switch language"
+          class="c4 dark"
+        >
+          PT-BR
+        </button>
+        <button
+          aria-label="Switch to light mode"
+          class="c5 dark"
+        >
+          DARK
+        </button>
+      </div>
     </div>
   </footer>
 </div>

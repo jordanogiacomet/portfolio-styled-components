@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Col = styled.div`
   grid-column: span 1;
   @media ${({ theme }) => theme.media.sm} {
@@ -15,13 +14,13 @@ export const Col = styled.div`
     text-align: center;
   };
 
-  &.form-element{
+  &.form-element {
     @media(max-width: 1024px) {
       order: 2;
     };
   }
 
-  &.text-element{
+  &.text-element {
     text-align: right !important;
     margin-left: 30px;
     @media(max-width: 1024px) {
@@ -44,4 +43,3 @@ export const Col = styled.div`
     }
   };
 `;
-

@@ -11,6 +11,8 @@ export default {
 export const Default = () => (
   <ButtonWrapper>
     <HeroButton type="hireMe">Hire Me</HeroButton>
-    <HeroButton type="downloadCV"><InnerButton>Download CV</InnerButton></HeroButton>
+    <HeroButton type="downloadCV">
+      <InnerButton>Download CV</InnerButton>
+    </HeroButton>
   </ButtonWrapper>
 );

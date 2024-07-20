@@ -1,13 +1,13 @@
 import { AboutSection } from '../../components/AboutSection';
 import { ContactSection } from '../../components/ContactSection';
 import { Container } from '../../components/Container';
-import { EmaiLSection } from '../../components/EmailSection';
+import { EmailSection } from '../../components/EmailSection';
 import { Footer } from '../../components/Footer';
 import { HeroSection } from '../../components/HeroSection';
 import { Navbar } from '../../components/Navbar';
 import { ProjectSection } from '../../components/ProjectSection';
 import * as Styled from './styles';
-import { ColorCustomizationSection } from '../../components/ColorCostumizationSection';
+import { ColorCustomizationSection } from '../../components/ColorCustomizationSection';
 import { useColorCustomization } from '../../contexts/ColorCustomizationContext';
 
 function Home() {
@@ -20,7 +20,7 @@ function Home() {
           <HeroSection />
           <AboutSection />
           <ProjectSection />
-          <EmaiLSection />
+          <EmailSection />
           <ColorCustomizationSection />
           <ContactSection />
         </Container>

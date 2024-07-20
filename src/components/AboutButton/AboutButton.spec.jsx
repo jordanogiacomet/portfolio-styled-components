@@ -16,13 +16,13 @@ describe('<AboutButton />', () => {
   });
 
   it('should apply active styles when active', () => {
-    renderTheme(<AboutButton active={true} selectTab={() => {}}>Skills</AboutButton>);
-    expect(screen.getByText('Skills')).toHaveStyle('color: #1E90FF'); // Ajuste de acordo com os estilos ativos
+    renderTheme(<AboutButton active={true} selectTab={() => {}}>Hard Skills</AboutButton>);
+    expect(screen.getByText('Hard Skills')).toHaveStyle({ color: '#1E90FF' }); // Ajuste de acordo com os estilos ativos
   });
 
   it('should apply hover styles on mouse over', () => {
-    renderTheme(<AboutButton active={false} selectTab={() => {}}>Skills</AboutButton>);
-    fireEvent.mouseOver(screen.getByText('Skills'));
-    expect(screen.getByText('Skills')).toHaveStyle('color: #1E90FF'); // Ajuste de acordo com os estilos de hover
+    renderTheme(<AboutButton active={false} selectTab={() => {}}>Hard Skills</AboutButton>);
+    fireEvent.mouseOver(screen.getByText('Hard Skills'));
+    expect(screen.getByText('Skills')).toHaveStyle({ color: '#1E90FF' }); // Ajuste de acordo com os estilos de hover
   });
 });

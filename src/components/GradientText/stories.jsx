@@ -1,21 +1,24 @@
 import React from 'react';
 import { GradientText } from '.';
+import { ColorProvider } from '../../contexts/ColorCustomizationContext';
 
 export default {
   title: 'GradientText',
   component: GradientText,
-  args: {
-    children: 'Texto com gradiente',
-    from: '#a855f7', // Cor inicial padrão
-    via: '#ec4899',  // Cor intermediária padrão
-    to: '#f87171',   // Cor final padrão
-  },
-  argTypes: {
-    children: { control: 'text' },
-    from: { control: 'color' },
-    via: { control: 'color' },
-    to: { control: 'color' },
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
   },
 };
 
-export const Default = (args) => <GradientText {...args} />;
+const Template = (args) => (
+  <ColorProvider>
+    <GradientText {...args} />
+  </ColorProvider>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Texto com gradiente',
+};

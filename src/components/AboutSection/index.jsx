@@ -148,7 +148,7 @@ export const AboutSection = () => {
             ))}
           </Container>
           <TabContent>
-            {tabData.find((t) => t.id === tab)?.content}
+            {tabData.find((t) => t.id === tab).content}
           </TabContent>
         </Container>
       </Section>
