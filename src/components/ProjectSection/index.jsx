@@ -53,6 +53,7 @@ export const ProjectSection = () => {
   const [tag, setTag] = useState("All");
   const [displayedProjects, setDisplayedProjects] = useState(projectsData.filter((project) => project.tag.includes("All")));
   const [isTransitioning, setIsTransitioning] = useState(false);
+  
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -66,7 +67,7 @@ export const ProjectSection = () => {
   };
 
   return (
-    <AnimatedSection x={30} y={0}>
+    <AnimatedSection x={0} y={30}>
       <div id='projects'>
         <Section type='projects-section'>
           <GradientText>
