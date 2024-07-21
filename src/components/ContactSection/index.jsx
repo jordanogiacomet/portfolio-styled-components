@@ -6,7 +6,7 @@ import ScrollToTopButton from '../ScrollTopButton';
 import { useEffect } from 'react';
 import { useColorMode } from '../../contexts/ColorModeContext';
 
-export const ContactSection = () => {
+const ContactSection = () => {
   const { colorMode } = useColorMode();
   const phoneNumber = process.env.REACT_APP_WHATSAPP_PHONE_NUMBER;
   const accountName = process.env.REACT_APP_ACCOUNT_NAME;
@@ -43,3 +43,5 @@ export const ContactSection = () => {
 };
 
 ContactSection.propTypes = {};
+
+export default ContactSection;

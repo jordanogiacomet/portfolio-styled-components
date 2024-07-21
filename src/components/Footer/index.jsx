@@ -5,7 +5,7 @@ import { LanguageToggleButton } from '../LanguageToggleButton';
 import { ColorModeToggleButton } from '../ColorModeToggleButton';
 
 
-export const Footer = () => {
+const Footer = () => {
   const { colorMode } = useColorMode();
   return (
     <Styled.Container className={colorMode}>
@@ -23,3 +23,5 @@ export const Footer = () => {
 Footer.propTypes = {
   
 };
+
+export default Footer;

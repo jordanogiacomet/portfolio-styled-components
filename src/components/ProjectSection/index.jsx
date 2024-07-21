@@ -48,7 +48,7 @@ const projectsData = [
   },
 ];
 
-export const ProjectSection = () => {
+const ProjectSection = () => {
   const { language } = useLanguage();
   const [tag, setTag] = useState("All");
   const [displayedProjects, setDisplayedProjects] = useState(projectsData.filter((project) => project.tag.includes("All")));
@@ -117,3 +117,5 @@ export const ProjectSection = () => {
 ProjectSection.propTypes = {
   // Defina os propTypes aqui, se necessário
 };
+
+export default ProjectSection;

@@ -18,7 +18,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { Spinner } from '../Spinner'; 
 import { AnimatedSection } from '../AnimatedSection';
 
-export const EmailSection = () => {
+const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [formError, setFormError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -110,3 +110,5 @@ export const EmailSection = () => {
 };
 
 EmailSection.propTypes = {};
+
+export default EmailSection;

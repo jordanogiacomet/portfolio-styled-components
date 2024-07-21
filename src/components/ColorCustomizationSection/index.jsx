@@ -6,7 +6,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { ColorPicker } from '../ColorPicker';
 import { AnimatedSection } from '../AnimatedSection';
 
-export const ColorCustomizationSection = () => {
+const ColorCustomizationSection = () => {
   const { language } = useLanguage();
   
   return (
@@ -20,3 +20,5 @@ export const ColorCustomizationSection = () => {
 };
 
 ColorCustomizationSection.propTypes = {};
+
+export default ColorCustomizationSection;
