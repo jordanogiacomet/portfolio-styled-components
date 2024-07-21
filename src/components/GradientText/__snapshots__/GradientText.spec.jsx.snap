@@ -2,7 +2,7 @@
 
 exports[`<GradientText /> should match snapshot 1`] = `
 .c0 {
-  background: linear-gradient(to right, #a855f7, #ec4899);
+  background: linear-gradient(to right, #1E90FF, #4169E1, #00008B);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -10,6 +10,9 @@ exports[`<GradientText /> should match snapshot 1`] = `
 <div>
   <span
     class="c0"
+    from="#1E90FF"
+    to="#00008B"
+    via="#4169E1"
   >
     texto
   </span>

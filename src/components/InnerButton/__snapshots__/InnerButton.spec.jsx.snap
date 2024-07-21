@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InnerButton /> should match snapshot 1`] = `
+.c0 {
+  display: block;
+  background-color: #121212;
+  border-radius: 9999px;
+  padding: 1rem 3rem;
+}
+
+@media ((max-width: 768px)) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<div>
+  <span
+    class="c0"
+    type="downloadCV"
+  >
+    Content
+  </span>
+</div>
+`;

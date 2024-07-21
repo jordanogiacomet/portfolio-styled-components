@@ -2,16 +2,21 @@
 
 exports[`<Label /> should match snapshot 1`] = `
 .c0 {
-  color: white;
+  color: #FFFFFF;
   display: block;
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.c0.light {
+  color: #FFFFFF;
 }
 
 <div>
   <label
-    class="c0"
+    class="c0 dark"
+    color="#FFFFFF"
     for="email"
   >
     Your email

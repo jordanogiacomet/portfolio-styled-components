@@ -2,10 +2,18 @@ import { renderTheme } from '../../styles/render-theme';
 import { Heading } from '.';
 import { screen } from '@testing-library/react';
 import { theme } from '../../styles/theme';
+import { ColorProvider } from '../../contexts/ColorCustomizationContext'; // Certifique-se de que o ColorProvider está importado
+import { ColorModeProvider } from '../../contexts/ColorModeContext'; // Certifique-se de que o ColorModeProvider está importado
 
 describe('<Heading />', () => {
   it('should render with default values', () => {
-    renderTheme(<Heading>texto</Heading>);
+    renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading>texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
@@ -16,7 +24,13 @@ describe('<Heading />', () => {
   });
 
   it('should render with white color', () => {
-    renderTheme(<Heading colorDark={false}>texto</Heading>);
+    renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading colorDark={false}>texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
@@ -25,7 +39,13 @@ describe('<Heading />', () => {
   });
 
   it('should render correct heading size small', () => {
-    renderTheme(<Heading size="small">texto</Heading>);
+    renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading size="small">texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
@@ -34,7 +54,13 @@ describe('<Heading />', () => {
   });
 
   it('should render correct heading size medium', () => {
-    renderTheme(<Heading size="medium">texto</Heading>);
+    renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading size="medium">texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
@@ -43,7 +69,13 @@ describe('<Heading />', () => {
   });
 
   it('should render correct heading size big', () => {
-    renderTheme(<Heading size="big">texto</Heading>);
+    renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading size="big">texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
@@ -52,7 +84,13 @@ describe('<Heading />', () => {
   });
 
   it('should render correct heading size huge', () => {
-    renderTheme(<Heading size="huge">texto</Heading>);
+    renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading size="huge">texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
@@ -61,7 +99,13 @@ describe('<Heading />', () => {
   });
 
   it('should render with uppercase letters', () => {
-    renderTheme(<Heading uppercase={true}>texto</Heading>);
+    renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading uppercase={true}>texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
@@ -70,7 +114,13 @@ describe('<Heading />', () => {
   });
 
   it('should render correct heading element', () => {
-    const { container } = renderTheme(<Heading as='h6'>texto</Heading>);
+    const { container } = renderTheme(
+      <ColorModeProvider>
+        <ColorProvider>
+          <Heading as='h6'>texto</Heading>
+        </ColorProvider>
+      </ColorModeProvider>
+    );
     const h6 = container.querySelector('h6');
 
     expect(h6.tagName.toLowerCase()).toBe('h6');

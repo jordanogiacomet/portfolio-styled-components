@@ -7,10 +7,10 @@ describe('<HeroSection />', () => {
     renderTheme(<HeroSection />);
     
     expect(screen.getByText("Hello, I'm")).toBeInTheDocument();
-    expect(screen.getByText('Hire Me')).toBeInTheDocument();
+    expect(screen.getByText('Me Contrate')).toBeInTheDocument();
     expect(screen.getByText('Download CV')).toBeInTheDocument();
     expect(screen.getByAltText('hero image')).toBeInTheDocument();
-    expect(screen.getByText(/always looking to improve my capabilities/i)).toBeInTheDocument();
+    expect(screen.getByText(/sempre em busca de aprimorar minhas capacidades/i)).toBeInTheDocument();
   });
 
   it('should match snapshot', () => {

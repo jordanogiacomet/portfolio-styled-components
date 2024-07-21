@@ -13,7 +13,7 @@ describe('<LanguageToggleButton />', () => {
         </LanguageProvider>
       </ColorModeProvider>
     );
-    expect(screen.getByText('EN-US')).toBeInTheDocument();
+    expect(screen.getByText('PT-BR')).toBeInTheDocument();
   });
 
   it('should toggle language on click', () => {
@@ -24,9 +24,9 @@ describe('<LanguageToggleButton />', () => {
         </LanguageProvider>
       </ColorModeProvider>
     );
-    const button = screen.getByText('EN-US');
+    const button = screen.getByText('PT-BR');
     fireEvent.click(button);
-    expect(screen.getByText('PT-BR')).toBeInTheDocument();
+    expect(screen.getByText('EN-US')).toBeInTheDocument();
   });
 
   it('should have the correct aria-label', () => {

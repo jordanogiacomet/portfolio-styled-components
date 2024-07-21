@@ -34,7 +34,7 @@ exports[`<ImageWrapper /> should match snapshot 1`] = `
   >
     <img
       alt="hero image"
-      src="/images/hero-image.png"
+      src="/images/hero-image.webp"
     />
   </div>
 </div>

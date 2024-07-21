@@ -10,7 +10,7 @@ exports[`<Link /> should match snapshot 1`] = `
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: border-color 0.3s ease-in-out,visibility 0.2s ease-in-out,opacity 0.2s ease-in-out;
+  transition: border-color 0.3s;
   visibility: hidden;
   opacity: 0;
 }
@@ -18,6 +18,16 @@ exports[`<Link /> should match snapshot 1`] = `
 .c0.mail-icons {
   opacity: 1!important;
   visibility: visible!important;
+}
+
+.c0.mail-icons.light {
+  color: white;
+  background: white;
+}
+
+.c0.mail-icons.dark {
+  color: white;
+  background: white;
 }
 
 .c0:hover {
@@ -32,13 +42,14 @@ exports[`<Link /> should match snapshot 1`] = `
   height: 2.5rem;
   width: 2.5rem;
   color: #adb7be;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s;
 }
 
 <div>
   <a
-    class="c0"
+    class="c0 undefined dark"
     href="/test"
+    target="_blank"
   >
     Content
   </a>

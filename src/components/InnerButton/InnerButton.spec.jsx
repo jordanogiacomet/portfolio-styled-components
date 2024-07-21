@@ -18,4 +18,10 @@ describe('<InnerButton />', () => {
     expect(container.firstChild).toHaveStyleRule('padding', theme.button.downloadCV.innerPadding);
     expect(container.firstChild).toHaveStyleRule('border-radius', theme.button.downloadCV.borderRadius);
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(
+      <InnerButton imgUrl="/test.jpg">Content</InnerButton>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

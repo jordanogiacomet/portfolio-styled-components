@@ -32,4 +32,8 @@ describe('<HeroButton />', () => {
     renderTheme(<HeroButton aria-label="accessible button">Accessible</HeroButton>);
     expect(screen.getByLabelText('accessible button')).toBeInTheDocument();
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<HeroButton>Me Contrate</HeroButton>);
+    expect(container).toMatchSnapshot();
+  });
 });

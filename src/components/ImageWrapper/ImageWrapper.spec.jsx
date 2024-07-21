@@ -7,7 +7,7 @@ describe('<ImageWrapper />', () => {
   it('should render ImageWrapper with children', () => {
     renderTheme(
       <ImageWrapper type="hero-wrapper">
-        <img src="/images/hero-image.png" alt="hero image" />
+        <img src="/images/hero-image.webp" alt="hero image" />
       </ImageWrapper>
     );
 
@@ -61,7 +61,7 @@ describe('<ImageWrapper />', () => {
   it('should match snapshot', () => {
     const { container } = renderTheme(
       <ImageWrapper type="hero-wrapper">
-        <img src="/images/hero-image.png" alt="hero image" />
+        <img src="/images/hero-image.webp" alt="hero image" />
       </ImageWrapper>
     );
 
