@@ -2,6 +2,7 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../src/styles/global-styles';
 import { theme } from '../src/styles/theme';
+
 const preview = {
   parameters: {
     controls: {
@@ -11,28 +12,33 @@ const preview = {
       },
     },
     backgrounds: {
-      default: 'light',
+      default: 'dark',
       values: [
         {
           name: 'light',
-          value: theme.colors.white,
+          value: '#FFFFFF',
         },
         {
           name: 'dark',
-          value: theme.colors.primaryColor,
+          value: '#000000',
         },
-      ]
+      ],
     },
   },
 };
 
 export const decorators = [
-  (Story) => (
-    <ThemeProvider theme={theme}>
-        <Story />
+  (Story, context) => {
+    const backgroundColor = context.globals.backgrounds?.value;
+    const colorMode = backgroundColor === '#FFFFFF' ? 'light' : 'dark';
+
+    return (
+      <ThemeProvider theme={{ ...theme, colorMode }}>
         <GlobalStyles />
-    </ThemeProvider>
-  )
+        <Story />
+      </ThemeProvider>
+    );
+  },
 ];
 
 export default preview;

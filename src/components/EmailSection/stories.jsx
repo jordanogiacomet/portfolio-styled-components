@@ -1,9 +1,9 @@
 import React from 'react';
-import { EmaiLSection } from '.';
+import { EmailSection } from '.';
 
 export default {
   title: 'EmaiLSection',
-  component: EmaiLSection,
+  component: EmailSection,
   parameters: {
     backgrounds: {
       default: 'dark',
@@ -11,7 +11,7 @@ export default {
   },
 };
 
-const Template = (args) => <EmaiLSection {...args} />;
+const Template = (args) => <EmailSection {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

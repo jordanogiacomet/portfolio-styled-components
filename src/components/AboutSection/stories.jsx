@@ -9,19 +9,33 @@ export default {
   title: 'AboutSection',
   component: AboutSection,
   decorators: [
-    (Story) => (
-      <ColorModeProvider>
-        <ColorProvider>
-          <LanguageProvider>
-            <Story />
-          </LanguageProvider>
-        </ColorProvider>
-      </ColorModeProvider>
-    ),
+    (Story) => {
+      const initialMode = '#000000';
+
+      return (
+        <ColorModeProvider initialMode={initialMode}>
+          <ColorProvider>
+            <LanguageProvider>
+              <Story />
+            </LanguageProvider>
+          </ColorProvider>
+        </ColorModeProvider>
+      );
+    },
   ],
   parameters: {
     backgrounds: {
       default: 'dark',
+      values: [
+        {
+          name: 'light',
+          value: '#FFFFFF',
+        },
+        {
+          name: 'dark',
+          value: '#000000',
+        },
+      ],
     },
   },
 };

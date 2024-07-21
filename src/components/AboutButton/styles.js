@@ -1,3 +1,4 @@
+// src/components/AboutButton/styles.js
 import styled, { css } from 'styled-components';
 
 export const Container = styled.button`
