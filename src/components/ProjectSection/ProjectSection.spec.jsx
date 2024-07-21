@@ -9,7 +9,7 @@ describe('<ProjectSection />', () => {
 
   it('should render ProjectSection with correct elements', () => {
     const { getByText } = renderTheme(<ProjectSection />);
-    expect(getByText('Projects')).toBeInTheDocument();
+    expect(getByText('Projetos')).toBeInTheDocument();
     expect(getByText('React Portfolio Website')).toBeInTheDocument();
   });
 });

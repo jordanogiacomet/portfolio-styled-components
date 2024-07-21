@@ -2,13 +2,18 @@
 
 exports[`<ProjectTag /> should match snapshot 1`] = `
 .c0 {
-  background: transparent;
   border: 2px solid #ADB7BE;
   color: #ADB7BE;
+  background: transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.c0.light {
+  border: 2px solid #000000;
+  color: #000000;
 }
 
 .c0:hover {
@@ -18,7 +23,8 @@ exports[`<ProjectTag /> should match snapshot 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="c0 dark"
+    color="#4169E1"
   >
     Test
   </div>

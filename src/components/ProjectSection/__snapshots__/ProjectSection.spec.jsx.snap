@@ -9,13 +9,18 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 }
 
 .c4 {
-  background: transparent;
   border: 2px solid #4169E1;
   color: #4169E1;
+  background: transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.c4.light {
+  border: 2px solid #4169E1;
+  color: #4169E1;
 }
 
 .c4:hover {
@@ -24,13 +29,18 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 }
 
 .c5 {
-  background: transparent;
   border: 2px solid #ADB7BE;
   color: #ADB7BE;
+  background: transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.c5.light {
+  border: 2px solid #000000;
+  color: #000000;
 }
 
 .c5:hover {
@@ -48,41 +58,27 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  transition: transform 0.3s ease-in-out;
-}
-
-.c7:hover {
-  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
 }
 
 .c11 {
   position: absolute;
   z-index: 2;
-  transition: opacity 0.3s ease-in-out,visibility 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out,visibility 0.2s ease-in-out;
   color: white;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
-  top: 50%;
+  top: 45%;
   width: 100%;
   line-break: auto;
   font-size: 2.5rem;
 }
 
-.c11.hide {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.c11.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 .c8 {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  background: url(/images/1.png) no-repeat center center/cover;
+  background: url(/images/1.webp) no-repeat center center/cover;
   position: relative;
   height: 100%;
 }
@@ -90,7 +86,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 .c12 {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  background: url(/images/2.png) no-repeat center center/cover;
+  background: url(/images/2.webp) no-repeat center center/cover;
   position: relative;
   height: 100%;
 }
@@ -98,7 +94,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 .c13 {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  background: url(/images/3.png) no-repeat center center/cover;
+  background: url(/images/3.webp) no-repeat center center/cover;
   position: relative;
   height: 100%;
 }
@@ -106,23 +102,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 .c14 {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  background: url(/images/4.png) no-repeat center center/cover;
-  position: relative;
-  height: 100%;
-}
-
-.c15 {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  background: url(/images/5.png) no-repeat center center/cover;
-  position: relative;
-  height: 100%;
-}
-
-.c16 {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  background: url(/images/6.png) no-repeat center center/cover;
+  background: url(/images/4.webp) no-repeat center center/cover;
   position: relative;
   height: 100%;
 }
@@ -136,7 +116,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: border-color 0.3s ease-in-out,visibility 0.2s ease-in-out,opacity 0.2s ease-in-out;
+  transition: border-color 0.3s;
   visibility: hidden;
   opacity: 0;
 }
@@ -144,6 +124,16 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 .c10.mail-icons {
   opacity: 1!important;
   visibility: visible!important;
+}
+
+.c10.mail-icons.light {
+  color: white;
+  background: white;
+}
+
+.c10.mail-icons.dark {
+  color: white;
+  background: white;
 }
 
 .c10:hover {
@@ -158,7 +148,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   height: 2.5rem;
   width: 2.5rem;
   color: #adb7be;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s;
 }
 
 .c9 {
@@ -173,17 +163,6 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   height: 100%;
   background: rgba(24, 24, 24, 0.8);
   z-index: 1;
-}
-
-.c9.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.c9:hover a {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out,visibility 0.2s ease-in-out;
 }
 
 .c1 {
@@ -215,6 +194,12 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
   gap: 5rem;
 }
 
+@media (min-width: 768px) {
+  .c7:hover {
+    transform: scale(1.05);
+  }
+}
+
 @media (max-width: 768px) {
   .c7 {
     width: 100%;
@@ -224,6 +209,7 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 @media (max-width: 768px) {
   .c11 {
     width: 100%;
+    top: 75%;
   }
 }
 
@@ -236,6 +222,31 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 @media (min-width: 768px) {
   .c11 {
     bottom: 1rem;
+  }
+
+  .c11.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .c11.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .c9 >a {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .c9:hover a {
+    transition: opacity 0.3s,visibility 0.3s;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -252,443 +263,254 @@ exports[`<ProjectSection /> should match snapshot 1`] = `
 }
 
 <div>
-  <section
-    class="c0"
-    type="projects-section"
+  <div
+    id="projects"
   >
-    <span
-      class="c1"
-      from="#1E90FF"
-      to="#00008B"
-      via="#4169E1"
+    <section
+      class="c0"
+      type="projects-section"
     >
-      <h2
-        class="c2"
+      <span
+        class="c1"
+        from="#1E90FF"
+        to="#00008B"
+        via="#4169E1"
       >
-        Projects
-      </h2>
-    </span>
-    <div
-      class="c3"
-      type="tag-container"
-    >
+        <h2
+          class="c2"
+        >
+          Projetos
+        </h2>
+      </span>
       <div
-        class="c4"
-      >
-        All
-      </div>
-      <div
-        class="c5"
-      >
-        Web
-      </div>
-      <div
-        class="c5"
-      >
-        Mobile
-      </div>
-    </div>
-    <div
-      class="c6"
-      type="card-container"
-    >
-      <div
-        class="c7"
+        class="c3"
+        type="tag-container"
       >
         <div
-          class="c8"
-          imgurl="/images/1.png"
+          class="c4 dark"
+          color="#4169E1"
         >
-          <div
-            class="c9"
-            type="project-overlay"
-          >
-            <a
-              class="c10"
-              href="/"
-            >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <a
-              class="c10"
-              href="/"
-            >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <h2
-            class="c11 show"
-          >
-            React Portfolio Website
-          </h2>
+          Todos
+        </div>
+        <div
+          class="c5 dark"
+          color="#4169E1"
+        >
+          Web
+        </div>
+        <div
+          class="c5 dark"
+          color="#4169E1"
+        >
+          Desktop
         </div>
       </div>
       <div
-        class="c7"
+        class="c6"
+        type="card-container"
       >
         <div
-          class="c12"
-          imgurl="/images/2.png"
+          class="c7"
         >
           <div
-            class="c9"
-            type="project-overlay"
+            class="c8"
+            imgurl="/images/1.webp"
           >
-            <a
-              class="c10"
-              href="/"
+            <div
+              class="c9"
+              type="project-overlay"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                aria-label="Abrir no github"
+                class="c10 undefined dark"
+                href="https://github.com/jordanogiacomet/portfolio-styled-components"
+                target="_blank"
               >
-                <path
-                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <a
-              class="c10"
-              href="/"
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  data-slot="icon"
+                  fill="none"
+                  loading="lazy"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+            <h2
+              class="c11 show"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="c1"
+                from="#1E90FF"
+                to="#00008B"
+                via="#4169E1"
               >
-                <path
-                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
+                React Portfolio Website
+              </span>
+            </h2>
           </div>
-          <h2
-            class="c11 show"
-          >
-            Potography Portfolio Website
-          </h2>
         </div>
-      </div>
-      <div
-        class="c7"
-      >
         <div
-          class="c13"
-          imgurl="/images/3.png"
+          class="c7"
         >
           <div
-            class="c9"
-            type="project-overlay"
+            class="c12"
+            imgurl="/images/2.webp"
           >
-            <a
-              class="c10"
-              href="/"
+            <div
+              class="c9"
+              type="project-overlay"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                aria-label="Abrir no github"
+                class="c10 undefined dark"
+                href="https://github.com/jordanogiacomet/ERPMeioAmbiente"
+                target="_blank"
               >
-                <path
-                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <a
-              class="c10"
-              href="/"
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  data-slot="icon"
+                  fill="none"
+                  loading="lazy"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+            <h2
+              class="c11 show"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="c1"
+                from="#1E90FF"
+                to="#00008B"
+                via="#4169E1"
               >
-                <path
-                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
+                ERP Meio Ambiente API
+              </span>
+            </h2>
           </div>
-          <h2
-            class="c11 show"
-          >
-            E-commerce Application
-          </h2>
         </div>
-      </div>
-      <div
-        class="c7"
-      >
         <div
-          class="c14"
-          imgurl="/images/4.png"
+          class="c7"
         >
           <div
-            class="c9"
-            type="project-overlay"
+            class="c13"
+            imgurl="/images/3.webp"
           >
-            <a
-              class="c10"
-              href="/"
+            <div
+              class="c9"
+              type="project-overlay"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                aria-label="Abrir no github"
+                class="c10 undefined dark"
+                href="https://github.com/jordanogiacomet/Agenda-de-Contatos"
+                target="_blank"
               >
-                <path
-                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <a
-              class="c10"
-              href="/"
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  data-slot="icon"
+                  fill="none"
+                  loading="lazy"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+            <h2
+              class="c11 show"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="c1"
+                from="#1E90FF"
+                to="#00008B"
+                via="#4169E1"
               >
-                <path
-                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
+                Agenda de Contatos
+              </span>
+            </h2>
           </div>
-          <h2
-            class="c11 show"
-          >
-            Food Ordering Application
-          </h2>
         </div>
-      </div>
-      <div
-        class="c7"
-      >
         <div
-          class="c15"
-          imgurl="/images/5.png"
+          class="c7"
         >
           <div
-            class="c9"
-            type="project-overlay"
+            class="c14"
+            imgurl="/images/4.webp"
           >
-            <a
-              class="c10"
-              href="/"
+            <div
+              class="c9"
+              type="project-overlay"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                aria-label="Abrir no github"
+                class="c10 undefined dark"
+                href="https://github.com/jordanogiacomet/AluraFlixAPI"
+                target="_blank"
               >
-                <path
-                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <a
-              class="c10"
-              href="/"
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  data-slot="icon"
+                  fill="none"
+                  loading="lazy"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+            <h2
+              class="c11 show"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="c1"
+                from="#1E90FF"
+                to="#00008B"
+                via="#4169E1"
               >
-                <path
-                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
+                Aluraflix API
+              </span>
+            </h2>
           </div>
-          <h2
-            class="c11 show"
-          >
-            React Firebase Template
-          </h2>
         </div>
       </div>
-      <div
-        class="c7"
-      >
-        <div
-          class="c16"
-          imgurl="/images/6.png"
-        >
-          <div
-            class="c9"
-            type="project-overlay"
-          >
-            <a
-              class="c10"
-              href="/"
-            >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <a
-              class="c10"
-              href="/"
-            >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                data-slot="icon"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <h2
-            class="c11 show"
-          >
-            Full-stack Roadmap
-          </h2>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 `;

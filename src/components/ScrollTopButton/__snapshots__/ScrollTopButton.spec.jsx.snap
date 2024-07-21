@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScrollTopButton /> should match snapshot 1`] = `
+.c0 {
+  position: fixed;
+  bottom: 10rem;
+  left: 4rem;
+  width: 40px;
+  height: 40px;
+  background-color: #4169E1;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  z-index: 99999999;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s,visibility 0.3s,background-color 0.3s;
+}
+
+.c0:hover {
+  transition: ease-in-out 0.3s;
+  background-color: #00008B;
+}
+
+@media (max-width: 768px) {
+  .c0 {
+    display: none;
+  }
+}
+
+<div>
+  <button
+    class="c0"
+    to="#00008B"
+    via="#4169E1"
+  >
+    <svg
+      aria-hidden="true"
+      data-slot="icon"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;

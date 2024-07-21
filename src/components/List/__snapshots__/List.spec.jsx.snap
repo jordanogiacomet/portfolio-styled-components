@@ -10,6 +10,10 @@ exports[`<List /> should match snapshot 1`] = `
   margin-top: 8px;
 }
 
+.c0.light >li {
+  color: black;
+}
+
 @media (max-width: 640px) {
   .c0 {
     font-size: 1.5rem;
@@ -18,7 +22,7 @@ exports[`<List /> should match snapshot 1`] = `
 
 <div>
   <ul
-    class="c0"
+    class="c0 dark"
   >
     <li>
       text

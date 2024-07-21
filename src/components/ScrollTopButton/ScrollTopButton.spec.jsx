@@ -2,7 +2,7 @@ import { renderTheme } from '../../styles/render-theme';
 import ScrollToTopButton from '.';
 import { screen, fireEvent } from '@testing-library/react';
 
-describe('<ScrollToTopButton />', () => {
+describe('<ScrollTopButton />', () => {
   it('should match snapshot', () => {
     const { container } = renderTheme(<ScrollToTopButton />);
     expect(container).toMatchSnapshot();

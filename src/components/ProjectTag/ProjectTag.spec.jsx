@@ -1,4 +1,3 @@
-// ProjectTag.spec.jsx
 import { renderTheme } from '../../styles/render-theme';
 import ProjectTag from '.';
 

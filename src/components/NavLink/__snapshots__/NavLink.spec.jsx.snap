@@ -13,6 +13,14 @@ exports[`<NavLink /> should match snapshot 1`] = `
   transition: ease-in-out 0.3s;
 }
 
+.c0.light {
+  color: white;
+}
+
+.c0.light:hover {
+  color: #CCCCCC;
+}
+
 .c0:hover {
   color: #4169E1;
 }
@@ -37,7 +45,7 @@ exports[`<NavLink /> should match snapshot 1`] = `
 
 <div>
   <a
-    class="c0"
+    class="c0 dark"
     href="http://localhost"
     target="_self"
   >
