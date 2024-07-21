@@ -46,7 +46,7 @@ const navLinksEn = [
 ]
 
 
-export const Navbar = () => {
+const Navbar = () => {
   const { language } = useLanguage();
   const { colorMode } = useColorMode();
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -89,3 +89,5 @@ export const Navbar = () => {
 Navbar.propTypes = {
 
 };
+
+export default Navbar;
