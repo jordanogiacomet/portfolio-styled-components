@@ -2,8 +2,8 @@
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { LanguageProvider } from '../contexts/LanguageContext';
-import { ColorModeProvider } from '../contexts/ColorModeContext'; // ajuste o caminho conforme necessário
-import { ColorCustomizationProvider } from '../contexts/ColorCustomizationContext'; // ajuste o caminho conforme necessário
+import { ColorModeProvider } from '../contexts/ColorModeContext'; 
+import { ColorProvider } from '../contexts/ColorCustomizationContext'; 
 import { theme } from './theme';
 import { GlobalStyles } from './global-styles';
 import { act } from 'react';
@@ -15,10 +15,10 @@ export const renderTheme = (children) => {
       <ThemeProvider theme={theme}>
         <LanguageProvider>
           <ColorModeProvider>
-            <ColorCustomizationProvider>
+            <ColorProvider>
               <GlobalStyles />
               {children}
-            </ColorCustomizationProvider>
+            </ColorProvider>
           </ColorModeProvider>
         </LanguageProvider>
       </ThemeProvider>

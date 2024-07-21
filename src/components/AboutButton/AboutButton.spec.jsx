@@ -4,14 +4,14 @@ import { AboutButton } from '.';
 
 describe('<AboutButton />', () => {
   it('should render with children', () => {
-    renderTheme(<AboutButton active={false} selectTab={() => {}}>Skills</AboutButton>);
-    expect(screen.getByText('Skills')).toBeInTheDocument();
+    renderTheme(<AboutButton active={false} selectTab={() => {}}>Hard Skills</AboutButton>);
+    expect(screen.getByText('Hard Skills')).toBeInTheDocument();
   });
 
   it('should call selectTab on click', () => {
     const handleClick = jest.fn();
-    renderTheme(<AboutButton active={false} selectTab={handleClick}>Skills</AboutButton>);
-    fireEvent.click(screen.getByText('Skills'));
+    renderTheme(<AboutButton active={false} selectTab={handleClick}>Hard Skills</AboutButton>);
+    fireEvent.click(screen.getByText('Hard Skills'));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
@@ -23,6 +23,6 @@ describe('<AboutButton />', () => {
   it('should apply hover styles on mouse over', () => {
     renderTheme(<AboutButton active={false} selectTab={() => {}}>Hard Skills</AboutButton>);
     fireEvent.mouseOver(screen.getByText('Hard Skills'));
-    expect(screen.getByText('Skills')).toHaveStyle({ color: '#1E90FF' }); // Ajuste de acordo com os estilos de hover
+    expect(screen.getByText('Hard Skills')).toHaveStyle({ color: '#1E90FF' }); // Ajuste de acordo com os estilos de hover
   });
 });

@@ -3,7 +3,7 @@
 exports[`<TextComponent /> should match snapshot 1`] = `
 .c0 {
   font-size: 1.5rem;
-  color: #ADB7BE;
+  color: #FFFFFF;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -23,6 +23,7 @@ exports[`<TextComponent /> should match snapshot 1`] = `
 <div>
   <p
     class="c0"
+    color="#FFFFFF"
     type="default"
   >
     texto
