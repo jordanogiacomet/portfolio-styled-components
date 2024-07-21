@@ -8,4 +8,8 @@ describe('<ColorCustomizationSection />', () => {
     const heading = screen.getByRole('heading', { name: /customize/i });
     expect(heading).toBeInTheDocument();
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<ColorCustomizationSection />);
+    expect(container).toMatchSnapshot();
+  });
 });

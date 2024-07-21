@@ -22,4 +22,12 @@ describe('<ColorModeToggleButton />', () => {
     fireEvent.click(screen.getByText('DARK'));
     expect(screen.getByText('LIGHT')).toBeInTheDocument();
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(
+      <ColorModeProvider>
+        <ColorModeToggleButton />
+      </ColorModeProvider>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

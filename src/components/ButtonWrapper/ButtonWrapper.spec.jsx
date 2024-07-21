@@ -12,4 +12,8 @@ describe('<ButtonWrapper />', () => {
     const element = screen.getByText('test');
     expect(element).toBeInTheDocument();
   });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<ButtonWrapper>Children</ButtonWrapper>);
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ColorModeToggleButton /> should match snapshot 1`] = `
+.c0 {
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid #ADB7BE;
+  border-radius: 9999px;
+  color: #ADB7BE;
+  font-size: 1.2rem;
+  right: 10rem;
+  cursor: pointer;
+  z-index: 199999;
+  transition: 0.2s;
+}
+
+.c0:hover {
+  color: #4169E1;
+  border-color: #4169E1;
+}
+
+.c0.light {
+  color: white;
+  border-color: white;
+}
+
+.c0.light:hover {
+  color: #CCCCCC;
+  border-color: #CCCCCC;
+}
+
+@media (max-width: 768px) {
+  .c0 {
+    bottom: 20px;
+  }
+}
+
+<div>
+  <button
+    aria-label="Switch to dark mode"
+    class="c0 light"
+  >
+    LIGHT
+  </button>
+</div>
+`;
