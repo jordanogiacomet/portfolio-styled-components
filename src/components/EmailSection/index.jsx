@@ -16,6 +16,7 @@ import { Section } from '../Section';
 import { Container } from '../Container';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Spinner } from '../Spinner'; 
+import { AnimatedSection } from '../AnimatedSection';
 
 export const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -56,52 +57,55 @@ export const EmailSection = () => {
   };
 
   return (
-    <div id='contact'>
-      <Section type='email-section'>
-        <Styled.Col span={4} className='form-element'>
-          {emailSubmitted ? (
+    <AnimatedSection x={0} y={30}>
+      <div id='contact'>
+        <Section type='email-section'>
+          <Styled.Col span={4} className='form-element'>
+            {emailSubmitted ? (
+              <TextComponent type='default'>
+                {language === 'en' ? 'Email enviado com sucesso!' : 'Email successfully sent!'} ✔️
+              </TextComponent>
+            ) : (
+              <Form onSubmit={handleSubmit}>
+                <Container type='form-container'>
+                  <Label htmlFor='email'>{language === 'pt' ? 'Your email' : 'Seu email'}</Label>
+                  <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
+                </Container>
+                <Container type='form-container'>
+                  <Label htmlFor='subject'>{language === 'pt' ? 'Subject' : 'Assunto'}</Label>
+                  <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
+                </Container>
+                <Container type='form-container'>
+                  <Label htmlFor='message'>{language === 'pt' ? 'Your message' : 'Sua mensagem'}</Label>
+                  <TextArea name='message' id='message' placeholder='Lets talk about...'/>
+                </Container>
+                <Container type='form-container'>
+                  <EmailButton type="submit" disabled={loading}>
+                    {loading ? <Spinner data-testid="spinner" /> : (language === 'en' ? 'Send message' : 'Enviar mensagem')}
+                  </EmailButton>
+                </Container>
+                {formError && <TextComponent type='default'>{formError}</TextComponent>}
+              </Form>
+            )}
+          </Styled.Col>
+          <Styled.Col span={8} className='text-element'>
+            <Heading as='h5' size='medium'>
+              <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
+                {language === 'en' ? "Vamos nos conectar" : "Let's Connect"}
+              </GradientText>
+            </Heading>
             <TextComponent type='default'>
-              {language === 'en' ? 'Email enviado com sucesso!' : 'Email successfully sent!'} ✔️
+              {language === 'en' ? 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.' : 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.'}
             </TextComponent>
-          ) : (
-            <Form onSubmit={handleSubmit}>
-              <Container type='form-container'>
-                <Label htmlFor='email'>{language === 'pt' ? 'Your email' : 'Seu email'}</Label>
-                <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
-              </Container>
-              <Container type='form-container'>
-                <Label htmlFor='subject'>{language === 'pt' ? 'Subject' : 'Assunto'}</Label>
-                <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
-              </Container>
-              <Container type='form-container'>
-                <Label htmlFor='message'>{language === 'pt' ? 'Your message' : 'Sua mensagem'}</Label>
-                <TextArea name='message' id='message' placeholder='Lets talk about...'/>
-              </Container>
-              <Container type='form-container'>
-                <EmailButton type="submit" disabled={loading}>
-                  {loading ? <Spinner data-testid="spinner" /> : (language === 'en' ? 'Send message' : 'Enviar mensagem')}
-                </EmailButton>
-              </Container>
-              {formError && <TextComponent type='default'>{formError}</TextComponent>}
-            </Form>
-          )}
-        </Styled.Col>
-        <Styled.Col span={8} className='text-element'>
-          <Heading as='h5' size='medium'>
-            <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-              {language === 'en' ? "Vamos nos conectar" : "Let's Connect"}
-            </GradientText>
-          </Heading>
-          <TextComponent type='default'>
-            {language === 'en' ? 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.' : 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.'}
-          </TextComponent>
-          <Socials>
-            <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img loading="lazy" src={GithubIcon} alt='Github icon'/></Link>
-            <Link href='https://www.linkedin.com/in/jordano-giacomet-tomazoni-aba346184/' className='mail-icons'><img loading="lazy" src={LinkedinIcon} alt='Linkedin icon'/></Link>
-          </Socials>
-        </Styled.Col>
-      </Section>
-    </div>
+            <Socials>
+              <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img loading="lazy" src={GithubIcon} alt='Github icon'/></Link>
+              <Link href='https://www.linkedin.com/in/jordano-giacomet-tomazoni-aba346184/' className='mail-icons'><img loading="lazy" src={LinkedinIcon} alt='Linkedin icon'/></Link>
+            </Socials>
+          </Styled.Col>
+        </Section>
+      </div>
+    </AnimatedSection>
+    
   );
 };
 
