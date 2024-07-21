@@ -66,15 +66,15 @@ export const EmailSection = () => {
           ) : (
             <Form onSubmit={handleSubmit}>
               <Container type='form-container'>
-                <Label htmlFor='email'>{language === 'en' ? 'Your email' : 'Seu email'}</Label>
+                <Label htmlFor='email'>{language === 'pt' ? 'Your email' : 'Seu email'}</Label>
                 <Input name='email' type='email' id='email' required placeholder='user@example.com'/>
               </Container>
               <Container type='form-container'>
-                <Label htmlFor='subject'>{language === 'en' ? 'Subject' : 'Assunto'}</Label>
+                <Label htmlFor='subject'>{language === 'pt' ? 'Subject' : 'Assunto'}</Label>
                 <Input name='subject' type='text' id='subject' required placeholder='Just saying hi'/>
               </Container>
               <Container type='form-container'>
-                <Label htmlFor='message'>{language === 'en' ? 'Your message' : 'Sua mensagem'}</Label>
+                <Label htmlFor='message'>{language === 'pt' ? 'Your message' : 'Sua mensagem'}</Label>
                 <TextArea name='message' id='message' placeholder='Lets talk about...'/>
               </Container>
               <Container type='form-container'>
@@ -89,11 +89,11 @@ export const EmailSection = () => {
         <Styled.Col span={8} className='text-element'>
           <Heading as='h5' size='medium'>
             <GradientText from='#1E90FF' via='#4169E1' to='#00008B'>
-              {language === 'en' ? "Let's connect" : 'Vamos nos conectar'}
+              {language === 'en' ? "Vamos nos conectar" : "Let's Connect"}
             </GradientText>
           </Heading>
           <TextComponent type='default'>
-            {language === 'en' ? 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.' : 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.'}
+            {language === 'en' ? 'Atualmente, estou procurando novas oportunidades. Sinta-se à vontade para entrar em contato comigo e responderei o mais rápido possível.' : 'I am currently looking for new opportunities. Please feel free to contact me and I will respond as quickly as possible.'}
           </TextComponent>
           <Socials>
             <Link href='https://github.com/jordanogiacomet' className='mail-icons'><img loading="lazy" src={GithubIcon} alt='Github icon'/></Link>
