@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AboutSection /> should match snapshot 1`] = `
+.c5 {
+  color: #ADB7BE;
+  font-size: 3.2rem;
+  text-transform: none;
+  z-index: 2;
+}
+
+.c6 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.c8 {
+  background: transparent;
+  position: relative;
+  border: none;
+  margin-right: 12px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+  color: #1E90FF;
+}
+
+.c8.light {
+  color: black;
+  color: #1E90FF;
+}
+
+.c8.light::after {
+  width: 100%;
+}
+
+.c8:hover {
+  color: #1E90FF;
+}
+
+.c8::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+  background: linear-gradient(to right, #1E90FF, #4169E1, #00008B);
+}
+
+.c8:hover::after {
+  width: 100%;
+}
+
+.c8::after {
+  width: 100%;
+}
+
+.c9 {
+  background: transparent;
+  position: relative;
+  border: none;
+  margin-right: 12px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+}
+
+.c9.light {
+  color: black;
+}
+
+.c9:hover {
+  color: #1E90FF;
+}
+
+.c9::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+  background: linear-gradient(to right, #1E90FF, #4169E1, #00008B);
+}
+
+.c9:hover::after {
+  width: 100%;
+}
+
+.c10 {
+  margin-top: 8px;
+  color: #FFFFFF;
+}
+
+.c11 {
+  list-style-type: disc;
+  padding-left: 0.5rem;
+}
+
+.c11 >li {
+  margin-top: 8px;
+}
+
+.c11.light >li {
+  color: black;
+}
+
+.c2 {
+  width: 100%;
+  height: auto;
+}
+
+.c4 {
+  background: linear-gradient(to right, #1E90FF, #4169E1, #00008B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c0 {
+  color: white;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.c1 {
+  margin-top: 4px;
+  order: 2;
+}
+
+.c1 >img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.c3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  height: auto;
+}
+
+.c7 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+}
+
+@media (min-width: 640px) {
+  .c6 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c6 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .c8 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .c8 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .c9 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .c9 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .c11 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .c0 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .c0 {
+    gap: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .c1 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .c3 {
+    margin-top: 0;
+  }
+}
+
+<div>
+  <div
+    id="about"
+  >
+    <section
+      class="c0"
+      type="about-section"
+    >
+      <div
+        class="c1"
+        type="about-wrapper"
+      >
+        <img
+          alt="About image"
+          class="c2"
+          loading="lazy"
+          src="/images/casual-image.webp"
+        />
+      </div>
+      <div
+        class="c3"
+        type="text-container-about"
+      >
+        <span
+          class="c4"
+          from="#1E90FF"
+          to="#00008B"
+          via="#4169E1"
+        >
+          <h2
+            class="c5"
+          >
+            Sobre mim
+          </h2>
+        </span>
+        <p
+          class="c6"
+          color="#FFFFFF"
+          type="about"
+        >
+          Sou desenvolvedor full stack com uma paixão por criar aplicações web interativas e responsivas. Tenho experiência com JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, Next.js, Laravel e Git. Sou um aprendiz rápido e estou sempre buscando expandir meu conhecimento e habilidades. Destaco-me por minha comunicação eficaz, trabalho em equipe, resolução de problemas, adaptabilidade, gestão de tempo, pensamento crítico, inovação e criatividade, liderança, empatia e inteligência emocional, além de uma forte ética profissional.
+        </p>
+        <div
+          class="c7"
+          type="tab-container"
+        >
+          <button
+            class="c8 dark"
+            color="#1E90FF"
+            from="#1E90FF"
+            primarycolor="#FFFFFF"
+            to="#00008B"
+            via="#4169E1"
+          >
+            Hard Skills
+          </button>
+          <button
+            class="c9 dark"
+            color="#1E90FF"
+            from="#1E90FF"
+            primarycolor="#FFFFFF"
+            to="#00008B"
+            via="#4169E1"
+          >
+            Soft Skills
+          </button>
+          <button
+            class="c9 dark"
+            color="#1E90FF"
+            from="#1E90FF"
+            primarycolor="#FFFFFF"
+            to="#00008B"
+            via="#4169E1"
+          >
+            Educação
+          </button>
+        </div>
+        <div
+          class="c10"
+          color="#FFFFFF"
+        >
+          <ul
+            class="c11 dark"
+          >
+            <li>
+              Node.js
+            </li>
+            <li>
+              Express
+            </li>
+            <li>
+              MySQL
+            </li>
+            <li>
+              Sequelize
+            </li>
+            <li>
+              JavaScript
+            </li>
+            <li>
+              Next.js
+            </li>
+            <li>
+              Laravel
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

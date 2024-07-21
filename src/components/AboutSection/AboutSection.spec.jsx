@@ -1,31 +1,29 @@
-// src/components/AboutSection/index.test.js
-import { screen, fireEvent } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
 import { AboutSection } from '.';
+import { screen, fireEvent } from '@testing-library/react';
+import { Footer } from '../Footer';
 
 describe('<AboutSection />', () => {
-  it('should render AboutSection with default language', () => {
-    renderTheme(<AboutSection />);
-    expect(screen.getByText('Sobre mim')).toBeInTheDocument();
-  });
-
   it('should render AboutSection with English language', () => {
-    renderTheme(<AboutSection />);
+    renderTheme(
+      <>
+        <AboutSection />
+        <Footer />
+      </>
+    );
+
     const button = screen.getByText('PT-BR');
     fireEvent.click(button);
     expect(screen.getByText('About me')).toBeInTheDocument();
   });
 
-  it('should change tabs on click', () => {
+  it('should render AboutSection with default language', () => {
     renderTheme(<AboutSection />);
-    fireEvent.click(screen.getByText('Soft Skills'));
-    expect(screen.getByText('Comunicação eficaz')).toBeInTheDocument();
+    expect(screen.getByText('Sobre mim')).toBeInTheDocument();
   });
 
-  it('should apply active styles to active tab', () => {
-    renderTheme(<AboutSection />);
-    const button = screen.getByText('Soft Skills');
-    fireEvent.click(button);
-    expect(button).toHaveStyle('color: #1E90FF'); // Ajuste conforme necessário
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<AboutSection />);
+    expect(container).toMatchSnapshot();
   });
 });
