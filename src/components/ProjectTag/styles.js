@@ -8,6 +8,7 @@ export const Container = styled.div`
     &.light{
     border: 2px solid ${props => (props.isSelected ? `${color}` : '#000000')};
     color: ${props => (props.isSelected ? `${color}` : '#000000')};
+    font-weight: 500;
   }
   `}
   background: transparent;

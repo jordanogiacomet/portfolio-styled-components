@@ -46,6 +46,7 @@ const containerStyles = {
     display: flex;
     flex-direction: row;
     margin-top: 8px;
+    margin-bottom: 25px;
   `,
   'tag-container': css`
     display: flex;

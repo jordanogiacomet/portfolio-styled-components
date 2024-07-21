@@ -15,7 +15,7 @@ export const Container = styled.button`
 
   &.light {
     color: black;
-
+    font-weight: 500;
     ${({ active, color }) =>
       active &&
       css`

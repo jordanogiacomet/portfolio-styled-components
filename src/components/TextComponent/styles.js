@@ -4,10 +4,16 @@ const textStyles = {
   default: css`
     margin-bottom: 20px;
     margin-top: 20px;
+    &.light{
+      font-weight: 500;
+    }
   `,
   about: css`
     margin-bottom: 30px;
     margin-top: 30px;
+    &.light{
+      font-weight: 500;
+    }
   `,
   projects: css`
     margin-bottom: 10px;

@@ -132,12 +132,10 @@ export const AboutSection = () => {
   return (
    
       <div id='about'>
-        <ParallaxProvider>
-          <Section type='about-section'>
+        <Section type='about-section'>
             <ImageWrapper type='about-wrapper' className='image-content'>
               <StyledImage src='/images/casual-image.webp' alt='About image'/>
             </ImageWrapper>
-            <Parallax speed={-0.2}>
             <Container type='text-container-about'>
               <GradientText>
                 <Heading as='h2' size='medium' colorDark={false}>
@@ -180,9 +178,7 @@ export const AboutSection = () => {
                   </TabContent>
                 </AnimatedSection>
             </Container>
-            </Parallax>
           </Section>
-        </ParallaxProvider>
       </div>
     
   );

@@ -12,6 +12,7 @@ export const Container = styled.ul`
     &.light {
       > li {
         color: black;
+        font-weight: 500;
       }
     }
 `;
