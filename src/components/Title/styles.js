@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.h1`
-  color: ${({ theme }) => theme.colors.white}
+  color: ${({ theme }) => theme.colors.white};
   margin-bottom: 1rem;
   font-weight: 800;
 
