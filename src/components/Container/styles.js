@@ -13,6 +13,7 @@ const containerStyles = {
     margin-left: auto;
     margin-right: auto;
     padding: 1rem 3rem;
+    z-index: 1;
 
     @media ${({ theme }) => theme.media.sm} { 
       max-width: ${({ theme }) => theme.container.maxWidth.sm};

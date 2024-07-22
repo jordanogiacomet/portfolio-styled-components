@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Container } from '../../components/Container';
 import * as Styled from './styles';
 import { useColorCustomization } from '../../contexts/ColorCustomizationContext';
-
+import { ParallaxBackground } from '../../components/ParallaxBackground';
 
 // Lazy loading components
 const Navbar = lazy(() => import('../../components/Navbar'));
@@ -20,15 +20,16 @@ function Home() {
   return (
     <div className="App">
       <Styled.Wrapper color={secondaryColor}>
+        <ParallaxBackground />
         <Suspense fallback={<div>Loading Navbar...</div>}>
-            <Navbar />
-          </Suspense>
+          <Navbar />
+        </Suspense>
         <Container type='home-container'>
           <Suspense fallback={<div>Loading Hero Section...</div>}>
-            <HeroSection/>
+            <HeroSection />
           </Suspense>
           <Suspense fallback={<div>Loading About Section...</div>}>
-            <AboutSection/>
+            <AboutSection />
           </Suspense>
           <Suspense fallback={<div>Loading Projects...</div>}>
             <ProjectSection />
