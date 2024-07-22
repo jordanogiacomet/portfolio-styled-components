@@ -5,7 +5,7 @@ export const Container = styled.button`
     background: linear-gradient(to bottom right, ${from}, ${via}, ${to});
   `};
   border: transparent;
-  color: ${({ theme }) => theme.colors.white}
+  color: ${({ theme }) => theme.colors.white};
   font-weight: 600;
   padding: 1rem 1.25rem;
   border-radius: 10rem;

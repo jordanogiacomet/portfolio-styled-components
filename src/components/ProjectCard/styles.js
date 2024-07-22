@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 300px; // Defina a largura fixa para todos os cards
-  height: 300px; // Defina a altura fixa para todos os cards
-  background: #181818;
+  width: 300px; 
+  height: 300px; 
+  background: ${({ theme }) => theme.colors.heroWrapperBackground}
   border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
@@ -11,46 +11,46 @@ export const Container = styled.div`
   justify-content: space-between;
   position: relative;
   transition: transform 0.2s ease-in-out;
-  @media(min-width: 768px){
+  @media ${({ theme }) => theme.media.md} {
     &:hover {
     transform: scale(1.05);
-  }
-  }
-  @media(max-width: 768px){
+    };
+  };
+  @media ${({ theme }) => theme.mediaMax.md} {
     width: 300px;
-  }
+  };
 `;
 
 export const Heading = styled.h2`
   position: absolute;
   z-index: 2;
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;;
   top: 45%;
   width: 100%;
   line-break: auto;
-  font-size: 2.5rem;
+  font-size: ${({ theme }) => theme.font.sizes.medium};
  
-  @media(max-width: 768px){
+  @media ${({ theme }) => theme.mediaMax.md} {
     width: 100%;
     top: 75%;
-  }
-  @media(max-width: 640px){
-    font-size: 1.8rem;
-  }
-  @media(min-width: 768px) {
+  };
+  @media ${({ theme }) => theme.mediaMax.sm} {
+    font-size: ${({ theme }) => theme.font.sizes.lg};
+  };
+  @media ${({ theme }) => theme.media.md} {
     bottom: 1rem;
     &.hide {
     opacity: 0;
     visibility: hidden;
-  }
+    };
 
   &.show {
     opacity: 1;
     visibility: visible;
-  }
-  }
+    };
+  };
 `;

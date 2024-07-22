@@ -6,7 +6,7 @@ export const theme = {
     mediumGray: '#CCCCCC',
     textColor: '#ADB7BE',
     inputGray: '#9CA2A9',
-    menuButtonGray: '#B0B0B0',
+    menuButtonGray:'#B0B0B0',
     backgroundWhatsapp: '#25d366',
     heroWrapperBackground: '#181818',
     borderFooter: '#33353F',
@@ -35,7 +35,7 @@ export const theme = {
       small: '1.6rem',
       base: '1.6rem', // text-base
       lg: '1.8rem', // text-lg
-      xl: '2rem', // text-xl
+      xl: '2.1rem', // text-xl
       medium: '2.4rem',
       big: '3.2rem',
       xbig: '4rem',

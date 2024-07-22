@@ -7,10 +7,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
-  @media (min-width: 768px) {
+  @media ${({ theme }) => theme.media.md} {
     margin-top: 0;
-  }
-  @media(max-width: 1024px) {
+  };
+  @media ${({ theme }) => theme.mediaMax.lg} {
      margin-bottom: 100px;
     };
 `;

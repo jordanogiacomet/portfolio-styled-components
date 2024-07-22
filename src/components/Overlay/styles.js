@@ -17,7 +17,7 @@ const menuOverlayStyles = css`
     background: rgba(30, 58, 138, 0.9);
   }
 
-  @media (min-width: 768px) {
+  @media ${({ theme }) => theme.media.md} {
     display: none;
   };
 `;
@@ -34,19 +34,19 @@ const projectOverlayStyles = css`
   height: 100%;
   background: rgba(24, 24, 24, 0.8);
   z-index: 1;
-  @media(max-width: 768px) {
+  @media ${({ theme }) => theme.mediaMax.md} {
     > a {
       visibility: visible;
       opacity: 1;
     }
   }
-  @media(min-width: 768px){
+  @media ${({ theme }) => theme.media.md} {
     &:hover a {
     transition: opacity 0.3s, visibility 0.3s;
     visibility: visible;
     opacity: 1;
   };
-  }
+  };
 `;
 
 const getOverlayStyles = (type) => {

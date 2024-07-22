@@ -6,7 +6,7 @@ export const Container = styled.div`
   gap: 20px;
   justify-content: right;
 
-  @media(max-width: 1024px) {
+  @media ${({theme}) => theme.mediaMax.lg}  {
      justify-content: left;
     };
 `;

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.h1`
-  color: white;
+  color: ${({ theme }) => theme.colors.white}
   margin-bottom: 1rem;
   font-weight: 800;
 
-  font-size: 2.5rem; /* text-4xl */
+  font-size: ${({ theme }) => theme.font.sizes.medium};
   
   @media ${({ theme }) => theme.media.sm} {
-    font-size: 3rem; /* text-5xl */
+    font-size: ${({ theme }) => theme.font.sizes.big};
   };
 
   @media ${({ theme }) => theme.media.lg} {
-    font-size: 4rem; /* text-6xl */
+    font-size: ${({ theme }) => theme.font.sizes.xbig};
   };
 `;

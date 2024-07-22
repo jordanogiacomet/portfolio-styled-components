@@ -6,7 +6,7 @@ const sectionStyles = {
     grid-template-columns: repeat(1, 1fr);
     @media(max-width: 400px) {
        > div > h1 {
-        font-size: 2.1rem !important;
+        font-size: ${({ theme }) => theme.font.sizes.xl} !important;
        }
     }
 
@@ -17,18 +17,18 @@ const sectionStyles = {
     }
   `,
   'about-section': css`
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     padding: 50px 0px;
     display: flex;
     flex-direction: column;
-    @media (min-width: 768px) {
+    @media ${({theme}) => theme.media.md} {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 50px;
       align-items: center;
       margin-top: 80px;
     }
-    @media (min-width: 1280px) {
+    @media ${({theme}) => theme.media.xl} {
       gap: 50px;
     };
   `,
@@ -39,10 +39,10 @@ const sectionStyles = {
     display: flex;
     flex-direction: column;
     height: auto;
-    @media (min-width: 768px) {
+    @media ${({theme}) => theme.media.md}  {
       margin-top: 0;
     }
-    @media(max-width: 1024px) {
+    @media ${({theme}) => theme.media.lg}  {
        margin-bottom: 100px;
     };
   `,
