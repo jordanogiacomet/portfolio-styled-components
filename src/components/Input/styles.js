@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
 export const Container = styled.input`
-  background: #18191E;
-  border: 1px solid #33353F;
-  color: #9CA2A9;
-  font-size: 1.5rem;; /* text-sm */
+  background: ${({ theme }) => theme.colors.backgroundFooterDark};
+  border: 1px solid ${({ theme }) => theme.colors.borderFooter};
+  color: ${({ theme }) => theme.colors.inputGray};
+  font-size: ${({ theme }) => theme.font.sizes.small};
   border-radius: 0.5rem;
   width: 100%;
-  padding: 1.5rem; /* p-2.5 */
+  padding: 1.5rem; 
   display: block;
   
   &:focus {
     outline: none;
-    border-color: #1E90FF;
+    border-color: ${({ theme }) => theme.colors.gradientColors.dark.from};
   }
 
   &::placeholder {
-    color: #9CA2A9;
-    font-size: 1.5rem;
+    color: ${({ theme }) => theme.colors.inputGray};
+    font-size: ${({ theme }) => theme.font.sizes.small};
   }
 `;

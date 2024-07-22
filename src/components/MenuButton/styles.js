@@ -4,18 +4,18 @@ export const Container = styled.button`
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  border: 1px solid #b0b0b0;
+  border: 1px solid ${({ theme }) => theme.colors.menuButtonGray};
   border-radius: 0.375rem;
   background: none;
-  color: #b0b0b0;
+  color: ${({ theme }) => theme.colors.menuButtonGray};
   cursor: pointer;
   &.light{
-    color: white;
-    border: 1px solid white;
+    color: ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.white};
   }
   &:hover {
-    color: white;
-    border-color: white;
+    color: ${({ theme }) => theme.colors.white};
+    border-color: ${({ theme }) => theme.colors.white};
   }
 
   > svg {

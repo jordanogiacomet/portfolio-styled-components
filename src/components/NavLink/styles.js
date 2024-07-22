@@ -2,34 +2,34 @@ import styled from 'styled-components';
 
 export const Container = styled.a`
   display: block;
-  padding-top: 0.5rem;  /* py-2 */
-  padding-bottom: 0.5rem;  /* py-2 */
-  padding-left: 0.75rem;  /* pl-3 */
-  padding-right: 1rem;  /* pr-4 */
-  color: #ADB7BE;  /* text-[#ADB7BE] */
-  border-radius: 0.375rem;  /* rounded */
+  padding-top: 0.5rem;  
+  padding-bottom: 0.5rem; 
+  padding-left: 0.75rem;  
+  padding-right: 1rem;  
+  color: ${({ theme }) => theme.colors.textColor};  
+  border-radius: 0.375rem;  
   text-decoration: none;
   transition: ease-in-out 0.3s;
   
   &.light{
-    color: white;
+    color: ${({ theme }) => theme.colors.white}; 
     &:hover{
-      color: #CCCCCC;
-    }
-  }
+      color: ${({ theme }) => theme.colors.mediumGray};
+    };
+  };
   
   &:hover{
-    color: #4169E1;
-  }
-  @media (min-width: 768px) {
+    color: ${({ theme }) => theme.colors.gradientColors.dark.via}; 
+  };
+  @media (${({theme}) => theme.media.md}) { 
     margin-left: 15px;
-  }
+  };
 
-  @media (${({theme}) => theme.media.sm}) {  /* sm:text-xl */
-    font-size: 1.8rem;
-  }
+  @media (${({theme}) => theme.media.sm}) {  
+    font-size:  ${({theme}) => theme.font.sizes.lg}; 
+  };
 
-  @media (${({theme}) => theme.media.md}) {  /* md:p-0 */
+  @media (${({theme}) => theme.media.md}) { 
     padding: 0;
-  }
+  };
 `;

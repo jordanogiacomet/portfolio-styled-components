@@ -6,10 +6,10 @@ export const Container = styled.nav`
   left: 0;
   right: 0;
   z-index: 10;
-  background: #121212; 
+  background: ${({ theme }) => theme.colors.backgroundNavDark};
   opacity: 1; 
   &.light{
-    background-color: #1E3A8A;
+    background-color: ${({ theme }) => theme.colors.backgroundFooterLight};
   }
 `;
 

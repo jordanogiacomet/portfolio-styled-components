@@ -10,7 +10,7 @@ export const Container = styled.label`
   
   display: block;
   margin-bottom: 1rem;
-  font-size: 1.5rem; /* text-sm */
+  font-size: ${({ theme }) => theme.font.sizes.small};
   font-weight: 600; /* font-medium */
 
 `;

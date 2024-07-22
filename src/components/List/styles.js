@@ -5,14 +5,14 @@ export const Container = styled.ul`
     padding-left: 0.5rem;
     > li {
       margin-top: 8px;
-    }
-    @media (max-width: 640px) {
-      font-size: 1.5rem;
-    }
+    };
+    @media ${({ theme }) => theme.mediaMax.sm} {
+      font-size: ${({ theme }) => theme.font.sizes.small};
+    };
     &.light {
       > li {
-        color: black;
+        color: ${({ theme }) => theme.colors.primaryColor};
         font-weight: 500;
-      }
-    }
+      };
+    };
 `;

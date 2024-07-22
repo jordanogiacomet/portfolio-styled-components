@@ -11,13 +11,13 @@ const imageWrapperStyles = {
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
     }
-    @media (min-width: 768px) {
+    @media ${({ theme }) => theme.media.md} {
       margin-top: 0;
     }
   `,
   'hero-wrapper': css`
     border-radius: 9999px;
-    background-color: #181818;
+    background-color: ${({ theme }) => theme.colors.heroWrapperBackground};
     width: 250px;
     height: 250px;
     position: relative;

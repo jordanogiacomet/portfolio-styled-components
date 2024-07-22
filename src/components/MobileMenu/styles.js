@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: block;
     z-index: 10;
-    @media (min-width: 768px) {
+    @media ${({ theme }) => theme.media.md} {
       display: none;
-    }
+    };
 `;

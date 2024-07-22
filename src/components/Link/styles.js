@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.a`
   height: 3.5rem;
   width: 3.5rem;
-  border: 0.125rem solid #adb7be;
+  border: 0.125rem solid ${({ theme }) => theme.colors.textColor};
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -17,27 +17,27 @@ export const Container = styled.a`
     opacity: 1 !important;
     visibility: visible !important;
     &.light{
-      color: white;
-      background: white;
-    }
+      color: ${({ theme }) => theme.colors.white};
+      background: ${({ theme }) => theme.colors.white};
+    };
     &.dark{
-      color: white;
-      background: white;
-    }
-  }
+      color: ${({ theme }) => theme.colors.white};
+      background: ${({ theme }) => theme.colors.white};
+    };
+  };
 
   &:hover {
-    border-color: white;
+    border-color: ${({ theme }) => theme.colors.white};
 
     .icon {
-      color: white;
-    }
-  }
+      color: ${({ theme }) => theme.colors.white};
+    };
+  };
 
   .icon {
     height: 2.5rem;
     width: 2.5rem;
-    color: #adb7be;
+    color: ${({ theme }) => theme.colors.textColor};
     transition: color 0.3s;
-  }
+  };
 `;
