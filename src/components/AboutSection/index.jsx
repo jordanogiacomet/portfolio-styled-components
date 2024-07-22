@@ -130,57 +130,53 @@ const AboutSection = () => {
   const tabData = language === 'en' ? TAB_DATA_PT : TAB_DATA_EN;
 
   return (
-   
-      <div id='about'>
-        <Section type='about-section'>
-            <ImageWrapper type='about-wrapper' className='image-content'>
-              <StyledImage src='/images/casual-image.webp' alt='About image'/>
-            </ImageWrapper>
-            <Container type='text-container-about'>
-              <GradientText>
-                <Heading as='h2' size='medium' colorDark={false}>
-                  {language === 'en' ? 'Sobre mim' : 'About me'}
-                </Heading>
-              </GradientText>
-              <AnimatedSection x={30} y={0}>
-                <TextComponent type="about">
-                  {language === 'en'
-                    ? 'Sou desenvolvedor full stack com uma paixão por criar aplicações web interativas e responsivas. Tenho experiência com JavaScript, React, Redux, Node.js, Express, MySQL, Sequelize, HTML, CSS, Next.js, Laravel e Git. Sou um aprendiz rápido e estou sempre buscando expandir meu conhecimento e habilidades. Destaco-me por minha comunicação eficaz, trabalho em equipe, resolução de problemas, adaptabilidade, gestão de tempo, pensamento crítico, inovação e criatividade, liderança, empatia e inteligência emocional, além de uma forte ética profissional.'
-                    : 'I am a full stack developer with a passion for creating interactive and responsive web applications. I have experience with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, Next.js, Laravel and Git. I am a quick learner and am always looking to expand my knowledge and skills. I stand out for my effective communication, teamwork, problem solving, adaptability, time management, critical thinking, innovation and creativity, leadership, empathy and emotional intelligence, as well as a strong professional ethic.'}
-                </TextComponent>
-              </AnimatedSection>
-              <AnimatedSection x={30} y={0}>
-                <Container type='tab-container'>
-                  {tabData.map((tabItem) => (
-                    <AboutButton
-                      key={tabItem.id}
-                      selectTab={() => handleTabChange(tabItem.id)}
-                      active={tab === tabItem.id}
-                    >
-                      {tabItem.title}
-                    </AboutButton>
-                  ))}
-                </Container>
-                  <TabContent>
-                    <AnimatePresence initial={false} onExitComplete={handleExitComplete}>
-                      {!isTransitioning && (
-                        <motion.div
-                          key={tab}
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -20 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          {tabData.find((t) => t.id === tab).content}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </TabContent>
-                </AnimatedSection>
-            </Container>
-          </Section>
-      </div>
-    
+    <div id='about'>
+      <Section type='about-section'>
+        <ImageWrapper type='about-wrapper' className='image-content'>
+          <StyledImage src='/images/casual-image.webp' alt='About image'/>
+        </ImageWrapper>
+        <Container type='text-container-about'>
+          <GradientText>
+            <Heading as='h2' size='medium' colorDark={false}>
+              {language === 'en' ? 'Sobre mim' : 'About me'}
+            </Heading>
+          </GradientText>
+          <AnimatedSection x={30} y={0}>
+            <TextComponent type="about">
+              {language === 'en'
+                ? 'Sou desenvolvedor full stack com uma paixão por criar aplicações web interativas e responsivas. Tenho experiência com JavaScript, React, Redux, Node.js, Express, MySQL, Sequelize, HTML, CSS, Next.js, Laravel e Git. Sou um aprendiz rápido e estou sempre buscando expandir meu conhecimento e habilidades. Destaco-me por minha comunicação eficaz, trabalho em equipe, resolução de problemas, adaptabilidade, gestão de tempo, pensamento crítico, inovação e criatividade, liderança, empatia e inteligência emocional, além de uma forte ética profissional.'
+                : 'I am a full stack developer with a passion for creating interactive and responsive web applications. I have experience with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, Next.js, Laravel and Git. I am a quick learner and am always looking to expand my knowledge and skills. I stand out for my effective communication, teamwork, problem solving, adaptability, time management, critical thinking, innovation and creativity, leadership, empathy and emotional intelligence, as well as a strong professional ethic.'}
+            </TextComponent>
+          </AnimatedSection>
+          <Container type='tab-container'>
+            {tabData.map((tabItem) => (
+              <AboutButton
+                key={tabItem.id}
+                selectTab={() => handleTabChange(tabItem.id)}
+                active={tab === tabItem.id}
+              >
+                {tabItem.title}
+              </AboutButton>
+            ))}
+          </Container>
+          <TabContent>
+            <AnimatePresence initial={false} onExitComplete={handleExitComplete}>
+              {!isTransitioning && (
+                <motion.div
+                  key={tab}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {tabData.find((t) => t.id === tab).content}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </TabContent>
+        </Container>
+      </Section>
+    </div>
   );
 };
 

@@ -17,21 +17,21 @@ const sectionStyles = {
     }
   `,
   'about-section': css`
-    color: ${({ theme }) => theme.colors.white};
-    padding: 50px 0px;
-    display: flex;
-    flex-direction: column;
-    @media ${({theme}) => theme.media.md} {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-      margin-top: 80px;
-    }
-    @media ${({theme}) => theme.media.xl} {
-      gap: 50px;
-    };
-  `,
+  color: ${({ theme }) => theme.colors.white};
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  @media ${({theme}) => theme.media.md} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start; /* Altere para start para evitar centralização vertical */
+    margin-top: 80px;
+  }
+  @media ${({theme}) => theme.media.xl} {
+    gap: 50px;
+  };
+`,
   'projects-section': css`
     margin-top: 30px;
     margin-bottom: 240px;

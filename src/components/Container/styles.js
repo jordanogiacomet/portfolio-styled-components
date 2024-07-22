@@ -48,7 +48,7 @@ const containerStyles = {
     flex-direction: row;
     margin-top: 8px;
     margin-bottom: 25px;
-  `,
+`,
   'tag-container': css`
     display: flex;
     justify-content: center;
@@ -56,17 +56,16 @@ const containerStyles = {
     padding: 5rem;
   `,
   'text-container-about': css`
-    margin-top: 30px;
-    margin-bottom: 30px;
-    @media ${({ theme }) => theme.media.md} {
-      margin-top: 0;
-    }
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    order: 1;
-    height: auto;
-  `,
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media ${({ theme }) => theme.media.md} {
+    margin-top: 0;
+  }
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+`,
   'text-container-projects': css`
     margin-top: 30px;
     margin-bottom: 30px;
