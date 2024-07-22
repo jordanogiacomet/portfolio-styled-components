@@ -1,28 +1,31 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import P from 'prop-types';
 import { useColorMode } from './ColorModeContext';
+import  { useTheme } from 'styled-components';
 
 const ColorContext = createContext();
 
 export const ColorProvider = ({ children }) => {
   const { colorMode } = useColorMode();
+  const theme = useTheme();
+
   const defaultColors = {
     light: {
-      primary: '#000000',
-      secondary: '#FFFFFF',
+      primary: theme.colors.primaryColor,
+      secondary: theme.colors.secondaryColor,
       gradient: {
-        from: '#4169E1',
-        via: '#2B6DE1',
-        to: '#00008B'
-      }
+        from: theme.colors.gradientColors.light.from,
+        via: theme.colors.gradientColors.light.via,
+        to: theme.colors.gradientColors.light.to,
+      },
     },
     dark: {
-      primary: '#FFFFFF',
-      secondary: '#000000',
+      primary: theme.colors.secondaryColor,
+      secondary: theme.colors.primaryColor,
       gradient: {
-        from: '#1E90FF',
-        via: '#4169E1',
-        to: '#00008B'
+        from: theme.colors.gradientColors.dark.from,
+        via: theme.colors.gradientColors.dark.via,
+        to: theme.colors.gradientColors.dark.to,
       }
     }
   };

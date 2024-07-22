@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  border-top: 1px solid #33353F;
+  border-top: 1px solid ${({ theme }) => theme.colors.borderFooter};
   border-left: transparent;
   border-right: transparent;
   z-index: 10;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   width: 100%;
-  background-color: #18191E;
+  background-color: ${({ theme }) => theme.colors.backgroundFooterDark};
 
   &.light {
-    background-color: #1E3A8A;
-  }
+    background-color: ${({ theme }) => theme.colors.backgroundFooterLight};
+  };
 `;
 
 export const Wrapper = styled.div`
@@ -20,23 +20,23 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 640px) {
+  @media ${({ theme }) => theme.mediaMax.sm} {
     flex-direction: column;
     gap: 20px;
-  }
+  };
 `;
 
 export const Text = styled.p`
   text-align: center;
   margin-top: 2rem;
-  color: #ADB7BE;
+  color: ${({ theme }) => theme.colors.textColor};
 
   &.light {
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
 export const Logo = styled.span`
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.font.sizes.base};
   font-weight: bold;
 `;

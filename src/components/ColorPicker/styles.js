@@ -6,13 +6,13 @@ export const PickerContainer = styled.div`
   align-items: center;
   width: 100%;
   
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaMax.md} {
     margin: 0;
-  } 
+  };
 
-  @media (min-width: 768px) {
+  @media ${({ theme }) => theme.media.md} {
     align-items: flex-start;
-  }
+  };
 `;
 
 export const TopRow = styled.div`
@@ -26,12 +26,12 @@ export const TopRow = styled.div`
   > div > h3 {
     margin-bottom: 20px;
     text-align: center;
-  }
+  };
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.mediaMax.md} {
     flex-direction: column;
     align-items: center;
-  }
+  };
 `;
 
 export const BottomRow = styled.div`
@@ -40,10 +40,10 @@ export const BottomRow = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.mediaMax.md} {
     flex-direction: column;
     align-items: center;
-  }
+  };
 `;
 
 export const TitleDiv = styled.div`
@@ -52,7 +52,7 @@ export const TitleDiv = styled.div`
   > h3 {
     text-align: center;
     margin-bottom: 20px;
-  }
+  };
 `;
 
 export const GradientContainer = styled.div`
@@ -62,14 +62,14 @@ export const GradientContainer = styled.div`
   width: 100%;
   gap: 50px;
 
-  @media (max-width: 767px) {
+  @media ${({ theme }) => theme.mediaMax.md} {
     flex-direction: column;
     align-items: center;
-  }
+  };
 `;
 
 export const Title = styled.h3`
   ${({ color }) => css`
     color: ${color};
-  `}
+  `};
 `;

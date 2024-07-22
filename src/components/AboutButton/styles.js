@@ -8,13 +8,13 @@ export const Container = styled.button`
   margin-right: 12px;
   cursor: pointer;
   padding: 0.5rem 1rem;
-
   ${({ primaryColor }) => css`
     color: ${primaryColor};
   `}
-
   &.light {
-    color: black;
+    ${({ primaryColor }) => css`
+      color: ${primaryColor};
+    `}
     font-weight: 500;
     ${({ active, color }) =>
       active &&
@@ -25,14 +25,12 @@ export const Container = styled.button`
           width: 100%;
         }
       `}
-  }
-
+    }
   &:hover {
     ${({ color }) => css`
       color: ${color};
     `}
   }
-
   &::after {
     content: '';
     display: block;
@@ -47,17 +45,16 @@ export const Container = styled.button`
       background: linear-gradient(to right, ${from}, ${via}, ${to});
     `}
   }
-
   &:hover::after {
     width: 100%;
   }
 
-  @media (min-width: 768px) {
-    font-size: 2rem;
-  }
+  @media ${({ theme }) => theme.media.md} {
+    font-size: ${({ theme }) => theme.font.sizes.xl}
+  };
 
-  @media (max-width: 640px) {
-    font-size: 1.6rem;
+  @media ${({ theme }) => theme.mediaMax.sm} {
+    font-size:  ${({ theme }) => theme.font.sizes.base}
   }
 
   ${({ active, color }) =>

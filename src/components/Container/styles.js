@@ -57,7 +57,7 @@ const containerStyles = {
   'text-container-about': css`
     margin-top: 30px;
     margin-bottom: 30px;
-    @media (min-width: 768px) {
+    @media ${({ theme }) => theme.media.md} {
       margin-top: 0;
     }
     text-align: left;
@@ -69,7 +69,7 @@ const containerStyles = {
   'text-container-projects': css`
     margin-top: 30px;
     margin-bottom: 30px;
-    @media (min-width: 768px) {
+    @media ${({ theme }) => theme.media.md} {
       margin-top: 0;
     }
     text-align: left;

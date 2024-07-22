@@ -5,8 +5,7 @@ export const Container = styled.div`
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
-
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaMax.md} {
     flex-direction: column;
-  }
+  };
 `;

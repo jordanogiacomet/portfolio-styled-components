@@ -19,6 +19,7 @@ export const AnimatedText = () => {
   return (
     <Styled.Container
       className="animated-text"
+      primaryColor
       sequence={[
         'Jordano',
         1000,

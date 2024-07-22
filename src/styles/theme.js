@@ -1,22 +1,35 @@
 export const theme = {
   colors: {
-    primaryColor: '#0A1128',
-    secondaryColor: '#dc143c',
+    primaryColor: '#000000',
+    secondaryColor: '#FFFFFF',
     white: '#FFFFFF',
-    mediumGray: '#DDDDDD',
+    mediumGray: '#CCCCCC',
     textColor: '#ADB7BE',
-    gradientFrom: '#1E90FF',
-    gradientVia: '#4169E1',
-    gradientTo: '#00008B',
+    backgroundWhatsapp: '#25d366',
+    borderFooter: '#33353F',
+    backgroundFooterDark: '#18191E',
+    backgroundFooterLight: '#1E3A8A',
     hoverBgColor: 'slategray',
     hoverInnerBgColor: 'darkslategray',
     innerBgColor: '#121212',
+    gradientColors: {
+      light: {
+        from: '#4169E1',
+        via: '#2B6DE1',
+        to: '#00008B'
+      },
+      dark: {
+        from: '#1E90FF',
+        via: '#4169E1',
+        to: '#00008B',
+      },
+    },
   },
   font: {
     sizes: {
-      xsmall: '0.8rem',
+      xsmall: '1.2rem',
       small: '1.6rem',
-      base: '1.5rem', // text-base
+      base: '1.6rem', // text-base
       lg: '1.8rem', // text-lg
       xl: '2rem', // text-xl
       medium: '2.4rem',
@@ -34,6 +47,13 @@ export const theme = {
     lg: '(min-width: 1024px)', // Adicionando breakpoint lg
     xl: '(min-width: 1280px)', // Adicionando breakpoint xl
     xxl: '(min-width: 1536px)', // Adicionando breakpoint xxl
+  },
+  mediaMax: {
+    sm: '(max-width: 640px)', // Adicionando breakpoint sm
+    md: '(max-width: 768px)', // Adicionando breakpoint md
+    lg: '(max-width: 1024px)', // Adicionando breakpoint lg
+    xl: '(max-width: 1280px)', // Adicionando breakpoint xl
+    xxl: '(max-width: 1536px)', // Adicionando breakpoint xxl
   },
   container: {
     maxWidth: {
