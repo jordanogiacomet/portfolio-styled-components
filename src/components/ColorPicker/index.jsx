@@ -5,16 +5,13 @@ import { PickerContainer, TopRow, BottomRow, TitleDiv, GradientContainer, Title 
 import { useLanguage } from '../../contexts/LanguageContext';
 
 export const ColorPicker = () => {
-  const { primaryColor, setPrimaryColor, secondaryColor, setSecondaryColor, gradientColors, setGradientColors } = useColorCustomization();
+  const { primaryColor, setPrimaryColor, gradientColors, setGradientColors } = useColorCustomization();
   const { language } = useLanguage();
 
   const handlePrimaryChangeComplete = (color) => {
     setPrimaryColor(color.hex);
   };
 
-  const handleSecondaryChangeComplete = (color) => {
-    setSecondaryColor(color.hex);
-  };
 
   const handleGradientChangeComplete = (color, key) => {
     setGradientColors((prevColors) => ({
@@ -31,12 +28,6 @@ export const ColorPicker = () => {
             {language === 'en' ? 'Cor do Texto' : 'Text Color'}
           </Title>
           <SketchPicker color={primaryColor} onChangeComplete={handlePrimaryChangeComplete} />
-        </div>
-        <div>
-          <Title color={primaryColor}>
-            {language === 'en' ? 'Cor do Fundo' : 'Background Color'}
-          </Title>
-          <SketchPicker color={secondaryColor} onChangeComplete={handleSecondaryChangeComplete} />
         </div>
       </TopRow>
       <TitleDiv>

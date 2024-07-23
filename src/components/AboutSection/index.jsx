@@ -110,7 +110,7 @@ const TAB_DATA_EN = [
   },
 ];
 
-const AboutSection = () => {
+export const AboutSection = () => {
   const { language } = useLanguage();
   const [tab, setTab] = useState("hard-skills");
   const [isPending, startTransition] = useTransition();
@@ -182,4 +182,4 @@ const AboutSection = () => {
 
 AboutSection.propTypes = {};
 
-export default AboutSection;
+

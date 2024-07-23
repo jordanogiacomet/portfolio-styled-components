@@ -53,8 +53,8 @@ export const Container = styled.button`
     font-size: ${({ theme }) => theme.font.sizes.xl}
   };
 
-  @media ${({ theme }) => theme.mediaMax.sm} {
-    font-size:  ${({ theme }) => theme.font.sizes.base}
+  @media ${({ theme }) => theme.mediaMax.md} {
+    font-size:  ${({ theme }) => theme.font.sizes.lg}
   }
 
   ${({ active, color }) =>

@@ -32,14 +32,13 @@ export const Heading = styled.h2`
   top: 45%;
   width: 100%;
   line-break: auto;
-  font-size: ${({ theme }) => theme.font.sizes.medium};
+  
+  font-size: ${({ theme }) => theme.font.sizes.xl};
  
   @media ${({ theme }) => theme.mediaMax.md} {
     width: 100%;
     top: 75%;
-  };
-  @media ${({ theme }) => theme.mediaMax.sm} {
-    font-size: ${({ theme }) => theme.font.sizes.lg};
+
   };
   @media ${({ theme }) => theme.media.md} {
     bottom: 1rem;

@@ -1,7 +1,9 @@
 import * as Styled from './styles';
 import { useEffect } from 'react';
+import { useColorMode } from '../../contexts/ColorModeContext';
 
 export const ParallaxBackground = () => {
+  const { colorMode } = useColorMode();
   const handleScroll = () => {
     const scrollPosition = window.pageYOffset;
     const parallaxElement = document.querySelector('#parallax-element');
@@ -16,7 +18,7 @@ export const ParallaxBackground = () => {
 
   return (
     <Styled.ParallaxContainer>
-      <Styled.ParallaxElement id='parallax-element' />
+      <Styled.ParallaxElement id='parallax-element' className={colorMode} />
     </Styled.ParallaxContainer>
   );
 };

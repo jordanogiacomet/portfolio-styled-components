@@ -13,7 +13,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { AnimatedSection } from '../AnimatedSection';
 
 
-const HeroSection = () => {
+export const HeroSection = () => {
   const { language } = useLanguage();
 
   const handleDownload = () => {
@@ -63,4 +63,3 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;

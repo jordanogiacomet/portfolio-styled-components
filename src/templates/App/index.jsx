@@ -4,10 +4,11 @@ import * as Styled from './styles';
 import { useColorCustomization } from '../../contexts/ColorCustomizationContext';
 import { ParallaxBackground } from '../../components/ParallaxBackground';
 
+import { Navbar } from '../../components/Navbar';
+import { HeroSection } from '../../components/HeroSection';
+import { AboutSection } from '../../components/AboutSection';
+
 // Lazy loading components
-const Navbar = lazy(() => import('../../components/Navbar'));
-const HeroSection = lazy(() => import('../../components/HeroSection'));
-const AboutSection = lazy(() => import('../../components/AboutSection'));
 const ContactSection = lazy(() => import('../../components/ContactSection'));
 const EmailSection = lazy(() => import('../../components/EmailSection'));
 const Footer = lazy(() => import('../../components/Footer'));
@@ -21,16 +22,10 @@ function Home() {
     <div className="App">
       <Styled.Wrapper color={secondaryColor}>
         <ParallaxBackground />
-        <Suspense fallback={<div>Loading Navbar...</div>}>
-          <Navbar />
-        </Suspense>
+        <Navbar />
         <Container type='home-container'>
-          <Suspense fallback={<div>Loading Hero Section...</div>}>
-            <HeroSection />
-          </Suspense>
-          <Suspense fallback={<div>Loading About Section...</div>}>
-            <AboutSection />
-          </Suspense>
+          <HeroSection />
+          <AboutSection />
           <Suspense fallback={<div>Loading Projects...</div>}>
             <ProjectSection />
           </Suspense>
