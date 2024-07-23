@@ -49,6 +49,16 @@ const containerStyles = {
     margin-top: 8px;
     margin-bottom: 25px;
 `,
+'radar-chart-container': css`
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+@media ${({ theme }) => theme.media.md} {
+  order: 1;
+  margin-top: 0;
+}
+`,
   'tag-container': css`
     display: flex;
     justify-content: center;
@@ -60,6 +70,7 @@ const containerStyles = {
   margin-bottom: 30px;
   @media ${({ theme }) => theme.media.md} {
     margin-top: 0;
+    order: 2;
   }
   text-align: left;
   display: flex;

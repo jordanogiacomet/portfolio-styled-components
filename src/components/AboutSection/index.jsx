@@ -8,13 +8,12 @@ import { List } from '../List';
 import { StyledImage } from '../StyledImage/styles';
 import { GradientText } from '../GradientText';
 import { Section } from '../Section';
-import { ImageWrapper } from '../ImageWrapper';
 import { Container } from '../Container';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { AnimatedSection } from '../AnimatedSection';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ParallaxProvider } from '../../contexts/ParallaxContext';
-import { Parallax } from '../Parallax';
+import RadarChart from '../RadarChart';
+
 
 const TAB_DATA_PT = [
   {
@@ -132,9 +131,6 @@ export const AboutSection = () => {
   return (
     <div id='about'>
       <Section type='about-section'>
-        <ImageWrapper type='about-wrapper' className='image-content'>
-          <StyledImage src='/images/casual-image.webp' alt='About image'/>
-        </ImageWrapper>
         <Container type='text-container-about'>
           <GradientText>
             <Heading as='h2' size='medium' colorDark={false}>
@@ -148,32 +144,37 @@ export const AboutSection = () => {
                 : 'I am a full stack developer with a passion for creating interactive and responsive web applications. I have experience with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, Next.js, Laravel and Git. I am a quick learner and am always looking to expand my knowledge and skills. I stand out for my effective communication, teamwork, problem solving, adaptability, time management, critical thinking, innovation and creativity, leadership, empathy and emotional intelligence, as well as a strong professional ethic.'}
             </TextComponent>
           </AnimatedSection>
-          <Container type='tab-container'>
-            {tabData.map((tabItem) => (
-              <AboutButton
-                key={tabItem.id}
-                selectTab={() => handleTabChange(tabItem.id)}
-                active={tab === tabItem.id}
-              >
-                {tabItem.title}
-              </AboutButton>
-            ))}
-          </Container>
-          <TabContent>
-            <AnimatePresence initial={false} onExitComplete={handleExitComplete}>
-              {!isTransitioning && (
-                <motion.div
-                  key={tab}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.2 }}
+          <AnimatedSection x={30} y={0}>
+            <Container type='tab-container'>
+              {tabData.map((tabItem) => (
+                <AboutButton
+                  key={tabItem.id}
+                  selectTab={() => handleTabChange(tabItem.id)}
+                  active={tab === tabItem.id}
                 >
-                  {tabData.find((t) => t.id === tab).content}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </TabContent>
+                  {tabItem.title}
+                </AboutButton>
+              ))}
+            </Container>
+            <TabContent>
+              <AnimatePresence initial={false} onExitComplete={handleExitComplete}>
+                {!isTransitioning && (
+                  <motion.div
+                    key={tab}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {tabData.find((t) => t.id === tab).content}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </TabContent>
+          </AnimatedSection>
+        </Container>
+        <Container type='radar-chart-container'>
+          <RadarChart />
         </Container>
       </Section>
     </div>

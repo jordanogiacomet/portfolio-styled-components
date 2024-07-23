@@ -4,7 +4,7 @@ export const Container = styled.footer`
   border-top: 1px solid ${({ theme }) => theme.colors.borderFooter};
   border-left: transparent;
   border-right: transparent;
-  z-index: 10;
+  position: relative;
   color: ${({ theme }) => theme.colors.white};
   width: 100%;
   background-color: ${({ theme }) => theme.colors.backgroundFooterDark};
