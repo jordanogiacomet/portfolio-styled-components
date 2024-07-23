@@ -6,7 +6,7 @@ import { LanguageProvider } from '../../contexts/LanguageContext';
 import { ColorModeProvider } from '../../contexts/ColorModeContext';
 
 export default {
-  title: 'Components/AboutButton',
+  title: 'AboutButton',
   component: AboutButton,
   argTypes: {
     active: { control: 'boolean' },
@@ -16,31 +16,33 @@ export default {
     gradientFrom: { control: 'color' },
     gradientVia: { control: 'color' },
     gradientTo: { control: 'color' },
+    backgroundMode: {
+      control: {
+        type: 'inline-radio',
+        options: ['dark', 'light'],
+      },
+      defaultValue: 'dark',
+    },
   },
   decorators: [
-    (Story) => (
-      <ColorModeProvider>
-        <ColorProvider>
-          <LanguageProvider>
-            <Story />
-          </LanguageProvider>
-        </ColorProvider>
-      </ColorModeProvider>
-    ),
+    (Story, context) => {
+      const backgroundMode = context.args.backgroundMode;
+      return (
+        <ColorModeProvider>
+          <ColorProvider>
+            <LanguageProvider>
+              <div style={{ background: backgroundMode === 'dark' ? '#000000' : '#FFFFFF', padding: '20px' }}>
+                <Story />
+              </div>
+            </LanguageProvider>
+          </ColorProvider>
+        </ColorModeProvider>
+      );
+    },
   ],
   parameters: {
     backgrounds: {
-      default: 'dark',
-      values: [
-        {
-          name: 'light',
-          value: '#FFFFFF',
-        },
-        {
-          name: 'dark',
-          value: '#000000',
-        },
-      ],
+      disable: true, // Desabilita o seletor de fundo padrão do Storybook
     },
   },
 };
@@ -56,15 +58,7 @@ Default.args = {
   gradientFrom: '#1E90FF',
   gradientVia: '#4169E1',
   gradientTo: '#00008B',
+  backgroundMode: 'dark',
 };
 
-export const Active = Template.bind({});
-Active.args = {
-  children: 'Active Button',
-  active: true,
-  selectTab: () => alert('Button clicked'),
-  primaryColor: '#1E90FF',
-  gradientFrom: '#1E90FF',
-  gradientVia: '#4169E1',
-  gradientTo: '#00008B',
-};
+

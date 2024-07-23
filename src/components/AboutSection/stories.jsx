@@ -5,18 +5,29 @@ import { ColorProvider } from '../../contexts/ColorCustomizationContext';
 import { LanguageProvider } from '../../contexts/LanguageContext';
 import { ColorModeProvider } from '../../contexts/ColorModeContext';
 
+// src/components/AboutSection/index.stories.js
 export default {
   title: 'AboutSection',
   component: AboutSection,
+  argTypes: {
+    backgroundMode: {
+      control: {
+        type: 'inline-radio',
+        options: ['dark', 'light'],
+      },
+      defaultValue: 'dark',
+    },
+  },
   decorators: [
-    (Story) => {
-      const initialMode = '#000000';
-
+    (Story, context) => {
+      const backgroundMode = context.args.backgroundMode;
       return (
-        <ColorModeProvider initialMode={initialMode}>
+        <ColorModeProvider>
           <ColorProvider>
             <LanguageProvider>
-              <Story />
+              <div style={{ background: backgroundMode === 'dark' ? '#000000' : '#FFFFFF', padding: '20px', color: backgroundMode === 'dark' ? '#FFFFFF' : '#000000' }}>
+                <Story />
+              </div>
             </LanguageProvider>
           </ColorProvider>
         </ColorModeProvider>
@@ -25,17 +36,7 @@ export default {
   ],
   parameters: {
     backgrounds: {
-      default: 'dark',
-      values: [
-        {
-          name: 'light',
-          value: '#FFFFFF',
-        },
-        {
-          name: 'dark',
-          value: '#000000',
-        },
-      ],
+      disable: true,
     },
   },
 };
@@ -43,4 +44,7 @@ export default {
 const Template = (args) => <AboutSection {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  backgroundMode: 'dark',
+};
+
